@@ -5,32 +5,291 @@ import Header from '../components/Header.astro';
 
 <BaseLayout title="AuthBrain | Contact" description="Get in touch about Python AI services and agent workflows.">
   <Header />
-  <main class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
-    <section class="grid gap-6 lg:grid-cols-[1fr_0.9fr] lg:items-start">
-      <div class="space-y-5">
+  <main>
+    <!-- 1. Hero Section -->
+    <section class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-24 text-center">
+      <div class="max-w-4xl mx-auto space-y-8">
         <span class="inline-flex rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-mono uppercase tracking-[0.28em] text-white/[0.72]">
-          Contact
+          Get in Touch
         </span>
-        <h1 class="text-5xl font-semibold leading-none tracking-[-0.05em] text-white sm:text-6xl">
-          Start with one Python page and one clear problem.
+        <h1 class="text-5xl font-semibold leading-none tracking-[-0.05em] text-white sm:text-6xl lg:text-7xl">
+          Let's Build the Future with AI.
         </h1>
-        <p class="max-w-2xl text-base leading-7 text-white/[0.72] sm:text-lg">
-          If you want the site turned into a real service funnel, this is where the first conversation starts.
+        <p class="text-base leading-7 text-white/[0.72] sm:text-lg max-w-3xl mx-auto">
+          Whether you're exploring Agentic AI, Medical Imaging, Computer Vision, or Enterprise Automation, our team is ready to help turn ideas into scalable solutions.
         </p>
-      </div>
-
-      <div class="clinical-frame rounded-[1.75rem] p-6 sm:p-8">
-        <p class="metric-label">Best fit</p>
-        <ul class="mt-4 space-y-4 text-sm leading-7 text-white/[0.72]">
-          <li>Python services and APIs</li>
-          <li>Agent workflows with simple control points</li>
-          <li>Internal tools and dashboards</li>
-          <li>Small AI sites with a clear message</li>
-        </ul>
-        <a href="mailto:authbrain.tech@gmail.com" class="mt-6 inline-flex items-center rounded-full bg-accent px-5 py-3 text-sm font-medium text-white transition hover:bg-accent/90">
-          Email: authbrain.tech@gmail.com
-        </a>
+        <div class="flex flex-col sm:flex-row justify-center gap-4 pt-4">
+          <a href="#booking" class="inline-flex items-center justify-center rounded-full bg-accent px-8 py-4 text-sm font-medium text-white transition hover:bg-accent/90">
+            Schedule a Consultation
+          </a>
+          <a href="#contact-form" class="inline-flex items-center justify-center rounded-full border border-white/[0.12] bg-white/5 px-8 py-4 text-sm font-medium text-white/[0.80] transition hover:bg-white/[0.1]">
+            Send an Inquiry
+          </a>
+        </div>
       </div>
     </section>
+
+    <!-- 2. Additional Contact Information Section -->
+    <section class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
+      <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <div class="clinical-frame rounded-2xl p-6 text-center hover:bg-white/[0.03] transition">
+          <div class="text-2xl mb-3">📧</div>
+          <h3 class="text-sm font-semibold text-white mb-1">Email</h3>
+          <a href="mailto:authbrain.tech@gmail.com" class="text-sm text-accent hover:underline">authbrain.tech@gmail.com</a>
+        </div>
+        <div class="clinical-frame rounded-2xl p-6 text-center hover:bg-white/[0.03] transition">
+          <div class="text-2xl mb-3">📱</div>
+          <h3 class="text-sm font-semibold text-white mb-1">Phone</h3>
+          <a href="tel:+610480569667" class="text-sm text-white/70 hover:text-white transition">+61 0480 569 667</a>
+        </div>
+        <div class="clinical-frame rounded-2xl p-6 text-center hover:bg-white/[0.03] transition">
+          <div class="text-2xl mb-3">⏰</div>
+          <h3 class="text-sm font-semibold text-white mb-1">Office Hours</h3>
+          <p class="text-sm text-white/70">Mon - Fri, 9:00 AM - 6:00 PM</p>
+        </div>
+        <div class="clinical-frame rounded-2xl p-6 text-center hover:bg-white/[0.03] transition">
+          <div class="text-2xl mb-3">🌍</div>
+          <h3 class="text-sm font-semibold text-white mb-1">Location</h3>
+          <p class="text-sm text-white/70">Global Presence<br/><span class="text-xs text-white/40">Serving Clients Worldwide</span></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Dual Contact Section: Booking & Form -->
+    <section class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 border-t border-white/[0.08]">
+      <div class="grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
+        
+        <!-- Left: Booking Side -->
+        <div id="booking" class="space-y-8">
+          <div>
+            <h2 class="text-3xl font-semibold tracking-[-0.04em] text-white mb-4">Book a Consultation</h2>
+            <p class="text-sm leading-7 text-white/70">Serious business clients prefer booking directly. Schedule a time that works for you, and let's jump straight into solving your challenges.</p>
+          </div>
+          
+          <div class="clinical-frame rounded-[1.75rem] p-8 border-accent/30 bg-accent/5 relative overflow-hidden">
+            <div class="absolute -right-10 -top-10 h-32 w-32 rounded-full bg-accent/20 blur-[50px]"></div>
+            <div class="relative z-10">
+              <p class="text-sm font-mono text-accent uppercase tracking-widest mb-4">🗓️ 30-Minute Discovery Call</p>
+              <h3 class="text-xl font-bold text-white mb-4">Discuss Your Project</h3>
+              <ul class="space-y-3 text-sm text-white/80 mb-8">
+                <li class="flex items-center gap-2"><span class="text-accent">✓</span> Agentic AI & Automation</li>
+                <li class="flex items-center gap-2"><span class="text-accent">✓</span> Medical AI & 3D Imaging</li>
+                <li class="flex items-center gap-2"><span class="text-accent">✓</span> Computer Vision Systems</li>
+                <li class="flex items-center gap-2"><span class="text-accent">✓</span> Research Collaboration</li>
+              </ul>
+              <!-- Replace the '#' below with your actual Calendly or Google Calendar booking link -->
+              <a href="#" target="_blank" rel="noopener noreferrer" class="flex w-full items-center justify-center rounded-xl bg-white px-6 py-4 text-sm font-bold text-black transition hover:bg-white/90">
+                Book Meeting on Calendar &rarr;
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Formspree Form Side -->
+        <div id="contact-form" class="clinical-frame rounded-[2rem] p-8 sm:p-10">
+          <div class="mb-8">
+            <h2 class="text-2xl font-semibold tracking-[-0.04em] text-white">Send an Inquiry</h2>
+            <p class="mt-2 text-sm text-white/60">Prefer to email? Fill out the details below and we'll get back to you within 24 hours.</p>
+          </div>
+
+          <!-- FORMSPREE INTEGRATION -->
+          <form id="inquiry-form" action="https://formspree.io/f/maqzlwnv" method="POST" class="space-y-6">
+            <div class="grid gap-6 sm:grid-cols-2">
+              <div class="space-y-2">
+                <label for="name" class="block text-sm font-medium text-white/80">Full Name *</label>
+                <input type="text" name="name" id="name" required class="w-full rounded-xl border border-white/10 bg-black/20 px-4 py-3 text-sm text-white placeholder-white/30 focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent" placeholder="Jane Doe" />
+              </div>
+              <div class="space-y-2">
+                <label for="company" class="block text-sm font-medium text-white/80">Company / Organization</label>
+                <input type="text" name="company" id="company" class="w-full rounded-xl border border-white/10 bg-black/20 px-4 py-3 text-sm text-white placeholder-white/30 focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent" placeholder="TechHealth Inc." />
+              </div>
+            </div>
+
+            <div class="grid gap-6 sm:grid-cols-2">
+              <div class="space-y-2">
+                <label for="email" class="block text-sm font-medium text-white/80">Email Address *</label>
+                <input type="email" name="email" id="email" required class="w-full rounded-xl border border-white/10 bg-black/20 px-4 py-3 text-sm text-white placeholder-white/30 focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent" placeholder="jane@example.com" />
+              </div>
+              <div class="space-y-2">
+                <label for="phone" class="block text-sm font-medium text-white/80">Phone Number</label>
+                <input type="tel" name="phone" id="phone" class="w-full rounded-xl border border-white/10 bg-black/20 px-4 py-3 text-sm text-white placeholder-white/30 focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent" placeholder="+1 (555) 000-0000" />
+              </div>
+            </div>
+
+            <div class="grid gap-6 sm:grid-cols-2">
+              <div class="space-y-2">
+                <label for="service" class="block text-sm font-medium text-white/80">Service Interested In</label>
+                <select name="service" id="service" class="w-full rounded-xl border border-white/10 bg-[#0f1115] px-4 py-3 text-sm text-white focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent">
+                  <option value="Agentic AI">Agentic AI</option>
+                  <option value="Machine Learning">Machine Learning</option>
+                  <option value="Medical AI">Medical AI</option>
+                  <option value="3D Imaging">3D Imaging</option>
+                  <option value="Computer Vision">Computer Vision</option>
+                  <option value="Software Development">Software Development</option>
+                  <option value="Research Collaboration">Research Collaboration</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+              <div class="space-y-2">
+                <label for="budget" class="block text-sm font-medium text-white/80">Project Budget</label>
+                <select name="budget" id="budget" class="w-full rounded-xl border border-white/10 bg-[#0f1115] px-4 py-3 text-sm text-white focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent">
+                  <option value="<$5,000">&lt;$5,000</option>
+                  <option value="$5,000-$20,000">$5,000 - $20,000</option>
+                  <option value="$20,000-$50,000">$20,000 - $50,000</option>
+                  <option value="$50,000+">$50,000+</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="space-y-2">
+              <label for="message" class="block text-sm font-medium text-white/80">Message *</label>
+              <textarea name="message" id="message" rows="4" required class="w-full rounded-xl border border-white/10 bg-black/20 px-4 py-3 text-sm text-white placeholder-white/30 focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent" placeholder="Tell us about your project goals and technical challenges..."></textarea>
+            </div>
+
+            <button id="submit-btn" type="submit" class="inline-flex w-full items-center justify-center rounded-xl bg-accent px-6 py-4 text-sm font-bold text-white transition hover:bg-accent/90">
+              Send Inquiry
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 4. Why Contact AuthBrain -->
+    <section class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 border-t border-white/[0.08] bg-white/[0.01]">
+      <div class="mb-10 text-center">
+        <h2 class="text-3xl font-semibold tracking-[-0.04em] text-white">Why Partner With Us?</h2>
+      </div>
+      <div class="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto">
+        <span class="rounded-full border border-white/10 bg-white/5 px-6 py-3 text-sm font-medium text-white/90">✓ Free Initial Consultation</span>
+        <span class="rounded-full border border-white/10 bg-white/5 px-6 py-3 text-sm font-medium text-white/90">✓ AI & Medical Imaging Specialists</span>
+        <span class="rounded-full border border-white/10 bg-white/5 px-6 py-3 text-sm font-medium text-white/90">✓ Research-Driven Solutions</span>
+        <span class="rounded-full border border-white/10 bg-white/5 px-6 py-3 text-sm font-medium text-white/90">✓ Enterprise-Grade Development</span>
+        <span class="rounded-full border border-white/10 bg-white/5 px-6 py-3 text-sm font-medium text-white/90">✓ Global Remote Collaboration</span>
+      </div>
+    </section>
+
+    <!-- Toast Notification Container -->
+    <div id="toast-container" class="fixed bottom-6 right-6 z-50 flex flex-col gap-2 transition-all duration-300 transform translate-y-20 opacity-0 pointer-events-none">
+      <!-- Success Toast -->
+      <div id="toast-success" class="hidden items-center gap-3 rounded-xl border border-green-500/30 bg-green-500/10 px-5 py-4 text-sm text-green-400 backdrop-blur-md shadow-2xl shadow-black/50">
+        <svg class="h-6 w-6 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+        <span class="font-medium">Your message received and we committed to response by 24 hours shortly.</span>
+      </div>
+      <!-- Error Toast -->
+      <div id="toast-error" class="hidden items-center gap-3 rounded-xl border border-red-500/30 bg-red-500/10 px-5 py-4 text-sm text-red-400 backdrop-blur-md shadow-2xl shadow-black/50">
+        <svg class="h-6 w-6 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+        <span class="font-medium">Failed, need assistance? Email us directly.</span>
+      </div>
+    </div>
   </main>
+
+   <!-- 12. Footer -->
+  <footer class="border-t border-white/[0.08] bg-white/[0.02]">
+    <div class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+      <div class="grid gap-8 grid-cols-2 md:grid-cols-4">
+        <div>
+          <p class="font-semibold text-white mb-4">Company</p>
+          <ul class="space-y-3 text-sm text-white/[0.6]">
+            <li><a href="#" class="hover:text-white transition">About Us</a></li>
+            <li><a href="#" class="hover:text-white transition">Leadership</a></li>
+            <li><a href="#" class="hover:text-white transition">Careers</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="font-semibold text-white mb-4">Solutions</p>
+          <ul class="space-y-3 text-sm text-white/[0.6]">
+            <li><a href={`${import.meta.env.BASE_URL}services/`} class="hover:text-white transition">Healthcare Analytics</a></li>
+            <li><a href={`${import.meta.env.BASE_URL}services/`} class="hover:text-white transition">Medical Imaging AI</a></li>
+            <li><a href={`${import.meta.env.BASE_URL}services/`} class="hover:text-white transition">Predictive Intelligence</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="font-semibold text-white mb-4">Resources</p>
+          <ul class="space-y-3 text-sm text-white/[0.6]">
+            <li><a href="#" class="hover:text-white transition">Blog</a></li>
+            <li><a href="#" class="hover:text-white transition">Whitepapers</a></li>
+            <li><a href="#" class="hover:text-white transition">Case Studies</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="font-semibold text-white mb-4">Contact</p>
+          <ul class="space-y-3 text-sm text-white/[0.6]">
+            <li><a href="mailto:authbrain.tech@gmail.com" class="hover:text-white transition">Email</a></li>
+            <li><a href="#" class="hover:text-white transition">Phone</a></li>
+            <li><a href="#" class="hover:text-white transition">LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="mt-12 border-t border-white/[0.08] pt-8 text-sm text-white/[0.52] flex flex-col sm:flex-row justify-between items-center gap-4">
+        <p>© 2026 AuthBrain. AI-Powered Healthcare Intelligence.</p>
+        <p class="font-mono uppercase tracking-[0.2em] text-[10px]">Empowering Data-Driven Healthcare</p>
+      </div>
+    </div>
+  </footer>
 </BaseLayout>
+
+<script>
+  // In Astro, standard <script> tags are processed as modules and run deferred,
+  // so the DOM is guaranteed to be ready. We do not need DOMContentLoaded.
+  const form = document.getElementById('inquiry-form') as HTMLFormElement;
+  const submitBtn = document.getElementById('submit-btn') as HTMLButtonElement;
+  const toastContainer = document.getElementById('toast-container');
+  const toastSuccess = document.getElementById('toast-success');
+  const toastError = document.getElementById('toast-error');
+
+  function showToast(type: 'success' | 'error') {
+    if (!toastSuccess || !toastError || !toastContainer) return;
+    
+    toastSuccess.classList.add('hidden');
+    toastError.classList.add('hidden');
+    toastSuccess.classList.remove('flex');
+    toastError.classList.remove('flex');
+
+    if (type === 'success') {
+      toastSuccess.classList.remove('hidden');
+      toastSuccess.classList.add('flex');
+    } else {
+      toastError.classList.remove('hidden');
+      toastError.classList.add('flex');
+    }
+
+    toastContainer.classList.remove('translate-y-20', 'opacity-0', 'pointer-events-none');
+    setTimeout(() => {
+      toastContainer.classList.add('translate-y-20', 'opacity-0', 'pointer-events-none');
+    }, 5000);
+  }
+
+  if (form) {
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      if (!submitBtn) return;
+      
+      const originalBtnText = submitBtn.innerText;
+      submitBtn.innerText = 'Sending...';
+      submitBtn.disabled = true;
+      submitBtn.classList.add('opacity-70', 'cursor-not-allowed');
+
+      try {
+        const response = await fetch(form.action, {
+          method: form.method,
+          body: new FormData(form),
+          headers: { 'Accept': 'application/json' }
+        });
+        
+        if (response.ok) {
+          showToast('success');
+          form.reset();
+        } else {
+          showToast('error');
+        }
+      } catch (error) {
+        showToast('error');
+      } finally {
+        submitBtn.innerText = originalBtnText;
+        submitBtn.disabled = false;
+        submitBtn.classList.remove('opacity-70', 'cursor-not-allowed');
+      }
+    });
+  }
+</script>
