@@ -43,4 +43,47 @@ import Header from '../components/Header.astro';
       </article>
     </section>
   </main>
+ <!-- 12. Footer -->
+  <footer class="border-t border-white/[0.08] bg-white/[0.02]">
+    <div class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+      <div class="grid gap-8 grid-cols-2 md:grid-cols-4">
+        <div>
+          <p class="font-semibold text-white mb-4">Company</p>
+          <ul class="space-y-3 text-sm text-white/[0.6]">
+            <li><a href="#" class="hover:text-white transition">About Us</a></li>
+            <li><a href="#" class="hover:text-white transition">Leadership</a></li>
+            <li><a href="#" class="hover:text-white transition">Careers</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="font-semibold text-white mb-4">Solutions</p>
+          <ul class="space-y-3 text-sm text-white/[0.6]">
+            <li><a href={`${import.meta.env.BASE_URL}services/`} class="hover:text-white transition">Healthcare Analytics</a></li>
+            <li><a href={`${import.meta.env.BASE_URL}services/`} class="hover:text-white transition">Medical Imaging AI</a></li>
+            <li><a href={`${import.meta.env.BASE_URL}services/`} class="hover:text-white transition">Predictive Intelligence</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="font-semibold text-white mb-4">Resources</p>
+          <ul class="space-y-3 text-sm text-white/[0.6]">
+            <li><a href="#" class="hover:text-white transition">Blog</a></li>
+            <li><a href="#" class="hover:text-white transition">Whitepapers</a></li>
+            <li><a href="#" class="hover:text-white transition">Case Studies</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="font-semibold text-white mb-4">Contact</p>
+          <ul class="space-y-3 text-sm text-white/[0.6]">
+            <li><a href="mailto:authbrain.tech@gmail.com" class="hover:text-white transition">Email</a></li>
+            <li><a href="#" class="hover:text-white transition">Phone</a></li>
+            <li><a href="#" class="hover:text-white transition">LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="mt-12 border-t border-white/[0.08] pt-8 text-sm text-white/[0.52] flex flex-col sm:flex-row justify-between items-center gap-4">
+        <p>© 2026 AuthBrain. AI-Powered Healthcare Intelligence.</p>
+        <p class="font-mono uppercase tracking-[0.2em] text-[10px]">Empowering Data-Driven Healthcare</p>
+      </div>
+    </div>
+  </footer>
 </BaseLayout>

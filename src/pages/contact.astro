@@ -229,16 +229,14 @@ import Header from '../components/Header.astro';
   </footer>
 </BaseLayout>
 
-<script>
-  // In Astro, standard <script> tags are processed as modules and run deferred,
-  // so the DOM is guaranteed to be ready. We do not need DOMContentLoaded.
-  const form = document.getElementById('inquiry-form') as HTMLFormElement;
-  const submitBtn = document.getElementById('submit-btn') as HTMLButtonElement;
+<script is:inline>
+  const form = document.getElementById('inquiry-form');
+  const submitBtn = document.getElementById('submit-btn');
   const toastContainer = document.getElementById('toast-container');
   const toastSuccess = document.getElementById('toast-success');
   const toastError = document.getElementById('toast-error');
 
-  function showToast(type: 'success' | 'error') {
+  function showToast(type) {
     if (!toastSuccess || !toastError || !toastContainer) return;
     
     toastSuccess.classList.add('hidden');

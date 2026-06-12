@@ -3,52 +3,273 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import Header from '../components/Header.astro';
 ---
 
-<BaseLayout title="AuthBrain | Services" description="Python-first AI services for agents, automation, and internal tools.">
+<BaseLayout title="AuthBrain | AI & Enterprise Solutions" description="Enterprise-grade AI solutions, medical imaging platforms, autonomous agents, and scalable software products.">
   <Header />
-  <main class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
-    <section class="max-w-3xl space-y-5">
-      <span class="inline-flex rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-mono uppercase tracking-[0.28em] text-white/[0.72]">
-        Services
-      </span>
-      <h1 class="text-5xl font-semibold leading-none tracking-[-0.05em] text-white sm:text-6xl">
-        Clear Python services for practical AI delivery.
-      </h1>
-      <p class="text-base leading-7 text-white/[0.72] sm:text-lg">
-        The offer is intentionally small. Each service can stand alone, but they also connect into one agentic delivery path.
-      </p>
-    </section>
-
-    <section class="mt-12 grid gap-5 lg:grid-cols-3">
-      <article class="clinical-frame rounded-[1.75rem] p-6">
-        <p class="metric-label">Service 01</p>
-        <h2 class="mt-4 text-2xl font-semibold tracking-[-0.04em] text-white">Python automation</h2>
-        <p class="mt-4 text-sm leading-7 text-white/[0.68]">Scripts, internal tools, and task pipelines that remove repetitive work and keep the stack easy to maintain.</p>
-      </article>
-      <article class="clinical-frame rounded-[1.75rem] p-6">
-        <p class="metric-label">Service 02</p>
-        <h2 class="mt-4 text-2xl font-semibold tracking-[-0.04em] text-white">AI agent systems</h2>
-        <p class="mt-4 text-sm leading-7 text-white/[0.68]">Plan, act, verify flows for assistants that can handle multi-step work without hiding the logic.</p>
-      </article>
-      <article class="clinical-frame rounded-[1.75rem] p-6">
-        <p class="metric-label">Service 03</p>
-        <h2 class="mt-4 text-2xl font-semibold tracking-[-0.04em] text-white">Simple product pages</h2>
-        <p class="mt-4 text-sm leading-7 text-white/[0.68]">Focused landing pages and dashboards for Python-backed services, tools, and agent demos.</p>
-      </article>
-    </section>
-
-    <section class="mt-12 grid gap-5 lg:grid-cols-[0.9fr_1.1fr]">
-      <div class="clinical-frame rounded-[1.75rem] p-6">
-        <p class="metric-label">Working style</p>
-        <h2 class="mt-4 text-3xl font-semibold tracking-[-0.04em] text-white">Small scope. Fast delivery. Easy handoff.</h2>
+  <main>
+    <!-- 1. Hero Banner -->
+    <section class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-24 text-center">
+      <div class="max-w-4xl mx-auto space-y-8">
+        <span class="inline-flex rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-mono uppercase tracking-[0.28em] text-white/[0.72]">
+          Enterprise AI Services
+        </span>
+        <h1 class="text-5xl font-semibold leading-none tracking-[-0.05em] text-white sm:text-6xl lg:text-7xl">
+          Transforming Industries Through AI, Agentic Systems & Automation.
+        </h1>
+        <p class="text-base leading-7 text-white/[0.72] sm:text-lg max-w-3xl mx-auto">
+          We design enterprise-grade AI solutions, medical imaging platforms, autonomous agents, computer vision systems, and scalable software products that drive measurable business outcomes.
+        </p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4 pt-4">
+          <a href={`${import.meta.env.BASE_URL}contact/`} class="inline-flex items-center justify-center rounded-full bg-accent px-8 py-4 text-sm font-medium text-white transition hover:bg-accent/90">
+            Request Consultation
+          </a>
+          <a href="#case-studies" class="inline-flex items-center justify-center rounded-full border border-white/[0.12] bg-white/5 px-8 py-4 text-sm font-medium text-white/[0.80] transition hover:bg-white/[0.1]">
+            View Case Studies
+          </a>
+        </div>
       </div>
-      <div class="clinical-frame rounded-[1.75rem] p-6">
-        <ul class="space-y-4 text-sm leading-7 text-white/[0.72]">
-          <li>Python logic stays readable and reusable.</li>
-          <li>Pages stay simple and route-based.</li>
-          <li>AI details are visible instead of buried.</li>
-          <li>Each page has one job and one message.</li>
-        </ul>
+    </section>
+
+    <!-- 2. Core Services Grid -->
+    <section class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 border-t border-white/[0.08]">
+      <div class="mb-12 text-center">
+        <h2 class="text-3xl font-semibold tracking-[-0.04em] text-white">Core Services</h2>
+      </div>
+      <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+        <!-- Agentic AI -->
+        <div class="clinical-frame rounded-[1.75rem] p-6 hover:bg-white/[0.03] transition">
+          <div class="h-12 w-12 rounded-xl bg-white/5 flex items-center justify-center text-2xl mb-6">🧠</div>
+          <h3 class="text-xl font-semibold text-white mb-4">Agentic AI Systems</h3>
+          <ul class="space-y-2 text-sm text-white/[0.68]">
+            <li>• Multi-Agent Systems</li>
+            <li>• Autonomous Workflows</li>
+            <li>• AI Decision Support</li>
+            <li>• Agent Orchestration</li>
+            <li>• Knowledge Agents</li>
+            <li>• AI Assistants</li>
+          </ul>
+        </div>
+        <!-- ML & Predictive -->
+        <div class="clinical-frame rounded-[1.75rem] p-6 hover:bg-white/[0.03] transition">
+          <div class="h-12 w-12 rounded-xl bg-white/5 flex items-center justify-center text-2xl mb-6">📈</div>
+          <h3 class="text-xl font-semibold text-white mb-4">ML & Predictive Analytics</h3>
+          <ul class="space-y-2 text-sm text-white/[0.68]">
+            <li>• Predictive Maintenance</li>
+            <li>• Forecasting</li>
+            <li>• Classification Models</li>
+            <li>• Recommendation Systems</li>
+            <li>• Demand Prediction</li>
+            <li>• Data Mining</li>
+          </ul>
+        </div>
+        <!-- Medical AI -->
+        <div class="clinical-frame rounded-[1.75rem] p-6 hover:bg-white/[0.03] transition border-accent/30 bg-accent/5">
+          <div class="h-12 w-12 rounded-xl bg-accent/20 flex items-center justify-center text-2xl mb-6">🏥</div>
+          <h3 class="text-xl font-semibold text-white mb-4">Medical AI Solutions</h3>
+          <ul class="space-y-2 text-sm text-white/[0.68]">
+            <li>• Liver Segmentation</li>
+            <li>• Tumor Detection</li>
+            <li>• Radiology AI</li>
+            <li>• Clinical Decision Support</li>
+            <li>• Medical Data Analytics</li>
+            <li>• AI-Assisted Diagnostics</li>
+          </ul>
+        </div>
+        <!-- 3D Imaging -->
+        <div class="clinical-frame rounded-[1.75rem] p-6 hover:bg-white/[0.03] transition border-accent/30 bg-accent/5">
+          <div class="h-12 w-12 rounded-xl bg-accent/20 flex items-center justify-center text-2xl mb-6">🧬</div>
+          <h3 class="text-xl font-semibold text-white mb-4">3D Imaging & Recon</h3>
+          <ul class="space-y-2 text-sm text-white/[0.68]">
+            <li>• 3D Organ Reconstruction</li>
+            <li>• CT/MRI Visualization</li>
+            <li>• Medical Volume Rendering</li>
+            <li>• Digital Twin Generation</li>
+            <li>• Surgical Planning Models</li>
+            <li>• Scientific Visualization</li>
+          </ul>
+        </div>
+        <!-- Computer Vision -->
+        <div class="clinical-frame rounded-[1.75rem] p-6 hover:bg-white/[0.03] transition">
+          <div class="h-12 w-12 rounded-xl bg-white/5 flex items-center justify-center text-2xl mb-6">👁️</div>
+          <h3 class="text-xl font-semibold text-white mb-4">Computer Vision</h3>
+          <ul class="space-y-2 text-sm text-white/[0.68]">
+            <li>• Object Detection</li>
+            <li>• Image Segmentation</li>
+            <li>• OCR Systems</li>
+            <li>• Video Analytics</li>
+            <li>• Quality Inspection</li>
+            <li>• Smart Surveillance</li>
+          </ul>
+        </div>
+        <!-- AI Research -->
+        <div class="clinical-frame rounded-[1.75rem] p-6 hover:bg-white/[0.03] transition">
+          <div class="h-12 w-12 rounded-xl bg-white/5 flex items-center justify-center text-2xl mb-6">🔬</div>
+          <h3 class="text-xl font-semibold text-white mb-4">AI Research & Dev</h3>
+          <ul class="space-y-2 text-sm text-white/[0.68]">
+            <li>• Research Partnerships</li>
+            <li>• Prototype Development</li>
+            <li>• Scientific AI</li>
+            <li>• Grant Projects</li>
+            <li>• Publication Support</li>
+            <li>• Innovation Labs</li>
+          </ul>
+        </div>
+        <!-- Enterprise Software -->
+        <div class="clinical-frame rounded-[1.75rem] p-6 hover:bg-white/[0.03] transition">
+          <div class="h-12 w-12 rounded-xl bg-white/5 flex items-center justify-center text-2xl mb-6">⚙️</div>
+          <h3 class="text-xl font-semibold text-white mb-4">Enterprise Software</h3>
+          <ul class="space-y-2 text-sm text-white/[0.68]">
+            <li>• Web Applications</li>
+            <li>• SaaS Platforms</li>
+            <li>• Cloud Solutions</li>
+            <li>• APIs & Microservices</li>
+            <li>• Database Architecture</li>
+            <li>• Enterprise Integration</li>
+          </ul>
+        </div>
+        <!-- MLOps -->
+        <div class="clinical-frame rounded-[1.75rem] p-6 hover:bg-white/[0.03] transition">
+          <div class="h-12 w-12 rounded-xl bg-white/5 flex items-center justify-center text-2xl mb-6">☁️</div>
+          <h3 class="text-xl font-semibold text-white mb-4">Data & MLOps</h3>
+          <ul class="space-y-2 text-sm text-white/[0.68]">
+            <li>• Data Pipelines</li>
+            <li>• Model Deployment</li>
+            <li>• Lifecycle MLOps</li>
+            <li>• System Monitoring</li>
+            <li>• Kubernetes</li>
+            <li>• GPU Infrastructure</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Industry Solutions -->
+    <section class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 border-y border-white/[0.08] bg-white/[0.01]">
+      <div class="mb-12 text-center">
+        <h2 class="text-3xl font-semibold tracking-[-0.04em] text-white">Industry Solutions</h2>
+      </div>
+      <div class="grid gap-6 md:grid-cols-3 lg:grid-cols-5 text-center">
+        <div class="p-6"><h3 class="font-semibold text-white mb-2">Healthcare</h3><p class="text-xs text-white/[0.6] leading-6">Medical AI<br/>Imaging<br/>Clinical Analytics</p></div>
+        <div class="p-6"><h3 class="font-semibold text-white mb-2">Manufacturing</h3><p class="text-xs text-white/[0.6] leading-6">Predictive Maintenance<br/>Quality Control<br/>Automation</p></div>
+        <div class="p-6"><h3 class="font-semibold text-white mb-2">Agriculture</h3><p class="text-xs text-white/[0.6] leading-6">Smart Farming<br/>Crop Monitoring<br/>Yield Prediction</p></div>
+        <div class="p-6"><h3 class="font-semibold text-white mb-2">Finance</h3><p class="text-xs text-white/[0.6] leading-6">Fraud Detection<br/>Risk Analytics<br/>Forecasting</p></div>
+        <div class="p-6"><h3 class="font-semibold text-white mb-2">Gov & Research</h3><p class="text-xs text-white/[0.6] leading-6">Scientific Computing<br/>Large Data Analysis<br/>Decision Intelligence</p></div>
+      </div>
+    </section>
+
+    <!-- 4. Featured Technologies -->
+    <section class="mx-auto max-w-5xl px-4 py-16 sm:px-6 lg:px-8">
+      <div class="mb-10 text-center">
+        <h2 class="text-xl font-semibold tracking-[-0.04em] text-white/[0.6]">Powered By</h2>
+      </div>
+      <div class="flex flex-wrap justify-center gap-4">
+        {['Python', 'TensorFlow', 'PyTorch', 'MONAI', 'FastAPI', 'Docker', 'Kubernetes', 'Azure', 'AWS', 'PostgreSQL'].map(tech => (
+          <span class="rounded-full border border-white/10 bg-white/5 px-6 py-2 text-sm font-mono text-white/80">{tech}</span>
+        ))}
+      </div>
+    </section>
+
+    <!-- 5. Project Workflow -->
+    <section class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+      <div class="mb-12 text-center">
+        <h2 class="text-3xl font-semibold tracking-[-0.04em] text-white">End-to-End Workflow</h2>
+      </div>
+      <div class="grid gap-4 md:grid-cols-6 text-center">
+        <div class="clinical-frame p-6 rounded-2xl"><div class="text-2xl mb-2">🔍</div><h3 class="text-sm font-bold text-white mb-1">Discover</h3><p class="text-xs text-white/60">Requirements & Data</p></div>
+        <div class="clinical-frame p-6 rounded-2xl"><div class="text-2xl mb-2">📐</div><h3 class="text-sm font-bold text-white mb-1">Design</h3><p class="text-xs text-white/60">Architecture & ML</p></div>
+        <div class="clinical-frame p-6 rounded-2xl"><div class="text-2xl mb-2">🧪</div><h3 class="text-sm font-bold text-white mb-1">Prototype</h3><p class="text-xs text-white/60">PoC & Viability</p></div>
+        <div class="clinical-frame p-6 rounded-2xl"><div class="text-2xl mb-2">💻</div><h3 class="text-sm font-bold text-white mb-1">Develop</h3><p class="text-xs text-white/60">Code & Train</p></div>
+        <div class="clinical-frame p-6 rounded-2xl"><div class="text-2xl mb-2">🚀</div><h3 class="text-sm font-bold text-white mb-1">Deploy</h3><p class="text-xs text-white/60">Cloud & MLOps</p></div>
+        <div class="clinical-frame p-6 rounded-2xl"><div class="text-2xl mb-2">📈</div><h3 class="text-sm font-bold text-white mb-1">Optimize</h3><p class="text-xs text-white/60">Scale & Support</p></div>
+      </div>
+    </section>
+
+    <!-- 6. Case Studies -->
+    <section id="case-studies" class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 border-t border-white/[0.08]">
+      <div class="mb-12 flex justify-between items-end">
+        <h2 class="text-3xl font-semibold tracking-[-0.04em] text-white">Featured Case Studies</h2>
+      </div>
+      <div class="grid gap-6 md:grid-cols-2">
+        <div class="clinical-frame p-8 rounded-[1.5rem] hover:bg-white/[0.03] transition cursor-pointer"><p class="text-xs font-mono text-accent mb-2 uppercase">Healthcare</p><h3 class="text-xl font-bold text-white mb-2">AI Liver Segmentation & 3D Imaging Platform</h3><p class="text-sm text-white/70">Automated processing of CT/MRI scans for rapid anomaly detection and 3D organ reconstruction.</p></div>
+        <div class="clinical-frame p-8 rounded-[1.5rem] hover:bg-white/[0.03] transition cursor-pointer"><p class="text-xs font-mono text-accent mb-2 uppercase">Research</p><h3 class="text-xl font-bold text-white mb-2">Multi-Agent Research & Knowledge Assistant</h3><p class="text-sm text-white/70">Autonomous agents orchestrating large-scale data mining and publication report generation.</p></div>
+        <div class="clinical-frame p-8 rounded-[1.5rem] hover:bg-white/[0.03] transition cursor-pointer"><p class="text-xs font-mono text-accent mb-2 uppercase">Industrial</p><h3 class="text-xl font-bold text-white mb-2">Predictive Maintenance Analytics Solution</h3><p class="text-sm text-white/70">IoT data integration and machine learning forecasting to predict equipment failure before it happens.</p></div>
+        <div class="clinical-frame p-8 rounded-[1.5rem] hover:bg-white/[0.03] transition cursor-pointer"><p class="text-xs font-mono text-accent mb-2 uppercase">Manufacturing</p><h3 class="text-xl font-bold text-white mb-2">Smart Computer Vision Inspection</h3><p class="text-sm text-white/70">Real-time object detection and quality control deployed directly on the manufacturing line.</p></div>
+      </div>
+    </section>
+
+    <!-- 7. Why Choose AuthBrain -->
+    <section class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+      <div class="mb-10 text-center">
+        <h2 class="text-3xl font-semibold tracking-[-0.04em] text-white">Why Choose AuthBrain</h2>
+      </div>
+      <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <div class="flex items-center gap-3 rounded-2xl border border-white/[0.08] bg-white/[0.02] p-5"><span class="text-accent">✓</span><span class="font-medium text-white">AI & Medical Imaging Expertise</span></div>
+        <div class="flex items-center gap-3 rounded-2xl border border-white/[0.08] bg-white/[0.02] p-5"><span class="text-accent">✓</span><span class="font-medium text-white">Custom Enterprise Solutions</span></div>
+        <div class="flex items-center gap-3 rounded-2xl border border-white/[0.08] bg-white/[0.02] p-5"><span class="text-accent">✓</span><span class="font-medium text-white">Research-Driven Development</span></div>
+        <div class="flex items-center gap-3 rounded-2xl border border-white/[0.08] bg-white/[0.02] p-5"><span class="text-accent">✓</span><span class="font-medium text-white">Scalable Cloud Deployment</span></div>
+        <div class="flex items-center gap-3 rounded-2xl border border-white/[0.08] bg-white/[0.02] p-5"><span class="text-accent">✓</span><span class="font-medium text-white">End-to-End Delivery</span></div>
+        <div class="flex items-center gap-3 rounded-2xl border border-white/[0.08] bg-white/[0.02] p-5"><span class="text-accent">✓</span><span class="font-medium text-white">Industry-Focused Innovation</span></div>
+      </div>
+    </section>
+
+    <!-- 8. Final CTA -->
+    <section class="mx-auto max-w-5xl px-4 py-16 sm:px-6 lg:px-8 text-center">
+      <div class="clinical-frame rounded-[2rem] p-10 lg:p-16 bg-accent/5 border-accent/20 relative overflow-hidden">
+        <div class="absolute -left-20 -top-20 h-64 w-64 rounded-full bg-accent/10 blur-[80px]"></div>
+        <h2 class="relative z-10 text-4xl font-semibold tracking-tight text-white mb-10">Ready to Transform Your Business with AI?</h2>
+        <div class="relative z-10 flex flex-col sm:flex-row justify-center gap-4">
+          <a href={`${import.meta.env.BASE_URL}contact/`} class="inline-flex items-center justify-center rounded-full bg-white px-8 py-4 text-sm font-medium text-black transition hover:bg-white/90">
+            Schedule Consultation
+          </a>
+          <a href={`${import.meta.env.BASE_URL}contact/`} class="inline-flex items-center justify-center rounded-full border border-white/[0.2] bg-black/20 px-8 py-4 text-sm font-medium text-white transition hover:bg-black/40">
+            Contact Our Team
+          </a>
+        </div>
       </div>
     </section>
   </main>
+
+   <!-- 12. Footer -->
+  <footer class="border-t border-white/[0.08] bg-white/[0.02]">
+    <div class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+      <div class="grid gap-8 grid-cols-2 md:grid-cols-4">
+        <div>
+          <p class="font-semibold text-white mb-4">Company</p>
+          <ul class="space-y-3 text-sm text-white/[0.6]">
+            <li><a href="#" class="hover:text-white transition">About Us</a></li>
+            <li><a href="#" class="hover:text-white transition">Leadership</a></li>
+            <li><a href="#" class="hover:text-white transition">Careers</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="font-semibold text-white mb-4">Solutions</p>
+          <ul class="space-y-3 text-sm text-white/[0.6]">
+            <li><a href={`${import.meta.env.BASE_URL}services/`} class="hover:text-white transition">Healthcare Analytics</a></li>
+            <li><a href={`${import.meta.env.BASE_URL}services/`} class="hover:text-white transition">Medical Imaging AI</a></li>
+            <li><a href={`${import.meta.env.BASE_URL}services/`} class="hover:text-white transition">Predictive Intelligence</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="font-semibold text-white mb-4">Resources</p>
+          <ul class="space-y-3 text-sm text-white/[0.6]">
+            <li><a href="#" class="hover:text-white transition">Blog</a></li>
+            <li><a href="#" class="hover:text-white transition">Whitepapers</a></li>
+            <li><a href="#" class="hover:text-white transition">Case Studies</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="font-semibold text-white mb-4">Contact</p>
+          <ul class="space-y-3 text-sm text-white/[0.6]">
+            <li><a href="mailto:authbrain.tech@gmail.com" class="hover:text-white transition">Email</a></li>
+            <li><a href="#" class="hover:text-white transition">Phone</a></li>
+            <li><a href="#" class="hover:text-white transition">LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="mt-12 border-t border-white/[0.08] pt-8 text-sm text-white/[0.52] flex flex-col sm:flex-row justify-between items-center gap-4">
+        <p>© 2026 AuthBrain. AI-Powered Healthcare Intelligence.</p>
+        <p class="font-mono uppercase tracking-[0.2em] text-[10px]">Empowering Data-Driven Healthcare</p>
+      </div>
+    </div>
+  </footer>
+  
 </BaseLayout>
