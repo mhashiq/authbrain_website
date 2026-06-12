@@ -1,0 +1,36 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+---
+
+<BaseLayout title="AuthBrain | Contact" description="Get in touch about Python AI services and agent workflows.">
+  <Header />
+  <main class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
+    <section class="grid gap-6 lg:grid-cols-[1fr_0.9fr] lg:items-start">
+      <div class="space-y-5">
+        <span class="inline-flex rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-mono uppercase tracking-[0.28em] text-white/[0.72]">
+          Contact
+        </span>
+        <h1 class="text-5xl font-semibold leading-none tracking-[-0.05em] text-white sm:text-6xl">
+          Start with one Python page and one clear problem.
+        </h1>
+        <p class="max-w-2xl text-base leading-7 text-white/[0.72] sm:text-lg">
+          If you want the site turned into a real service funnel, this is where the first conversation starts.
+        </p>
+      </div>
+
+      <div class="clinical-frame rounded-[1.75rem] p-6 sm:p-8">
+        <p class="metric-label">Best fit</p>
+        <ul class="mt-4 space-y-4 text-sm leading-7 text-white/[0.72]">
+          <li>Python services and APIs</li>
+          <li>Agent workflows with simple control points</li>
+          <li>Internal tools and dashboards</li>
+          <li>Small AI sites with a clear message</li>
+        </ul>
+        <a href="mailto:authbrain.tech@gmail.com" class="mt-6 inline-flex items-center rounded-full bg-accent px-5 py-3 text-sm font-medium text-white transition hover:bg-accent/90">
+          Email: authbrain.tech@gmail.com
+        </a>
+      </div>
+    </section>
+  </main>
+</BaseLayout>

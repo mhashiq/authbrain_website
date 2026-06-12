@@ -1,0 +1,45 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+---
+
+<BaseLayout title="AuthBrain | Python Stack" description="How Python fits into the AI service site and delivery workflow.">
+  <Header />
+  <main class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
+    <section class="max-w-3xl space-y-5">
+      <span class="inline-flex rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-mono uppercase tracking-[0.28em] text-white/[0.72]">
+        Python stack
+      </span>
+      <h1 class="text-5xl font-semibold leading-none tracking-[-0.05em] text-white sm:text-6xl">
+        Python is the execution layer behind the pages.
+      </h1>
+      <p class="text-base leading-7 text-white/[0.72] sm:text-lg">
+        The site itself stays simple, while Python handles the real work: services, APIs, automation, and the agent logic that powers the delivery.
+      </p>
+    </section>
+
+    <section class="mt-12 grid gap-5 lg:grid-cols-2">
+      <article class="clinical-frame rounded-[1.75rem] p-6">
+        <p class="metric-label">Layer 01</p>
+        <h2 class="mt-4 text-2xl font-semibold tracking-[-0.04em] text-white">FastAPI-style services</h2>
+        <p class="mt-4 text-sm leading-7 text-white/[0.68]">A clean API layer for forms, requests, task triggers, and future integrations.</p>
+      </article>
+      <article class="clinical-frame rounded-[1.75rem] p-6">
+        <p class="metric-label">Layer 02</p>
+        <h2 class="mt-4 text-2xl font-semibold tracking-[-0.04em] text-white">Automation jobs</h2>
+        <p class="mt-4 text-sm leading-7 text-white/[0.68]">Scheduled tasks, data cleanup, and lightweight background work that supports the site.</p>
+      </article>
+      <article class="clinical-frame rounded-[1.75rem] p-6">
+        <p class="metric-label">Layer 03</p>
+        <h2 class="mt-4 text-2xl font-semibold tracking-[-0.04em] text-white">Agent orchestration</h2>
+        <p class="mt-4 text-sm leading-7 text-white/[0.68]">A plan-and-verify loop with clear checkpoints, not a black box interface.</p>
+      </article>
+      <article class="clinical-frame rounded-[1.75rem] p-6">
+        <p class="metric-label">Layer 04</p>
+        <h2 class="mt-4 text-2xl font-semibold tracking-[-0.04em] text-white">Readable handoff</h2>
+        <p class="mt-4 text-sm leading-7 text-white/[0.68]">The result is easy for a client or teammate to understand, extend, and run.
+        </p>
+      </article>
+    </section>
+  </main>
+</BaseLayout>

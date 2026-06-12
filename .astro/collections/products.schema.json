@@ -1,0 +1,45 @@
+{
+  "$ref": "#/definitions/products",
+  "definitions": {
+    "products": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "summary": {
+          "type": "string"
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "sandbox",
+            "coming-soon"
+          ]
+        },
+        "focus": {
+          "type": "string"
+        },
+        "ctaLabel": {
+          "type": "string",
+          "default": "Join waitlist"
+        },
+        "href": {
+          "type": "string",
+          "format": "uri"
+        },
+        "$schema": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "title",
+        "summary",
+        "status",
+        "focus"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}

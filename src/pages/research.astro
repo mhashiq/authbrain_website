@@ -1,0 +1,290 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+---
+
+<BaseLayout title="AuthBrain | Research & Publications" description="Explore our peer-reviewed publications, books, and research driving innovation in Healthcare AI.">
+  <Header />
+  <main>
+    <!-- 1. Hero Section -->
+    <section class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
+      <div class="text-center max-w-4xl mx-auto space-y-8">
+        <span class="inline-flex rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-mono uppercase tracking-[0.28em] text-white/[0.72]">
+          Scientific Excellence
+        </span>
+        <h1 class="text-5xl font-semibold leading-none tracking-[-0.05em] text-white sm:text-6xl lg:text-7xl">
+          Research That Advances Healthcare AI.
+        </h1>
+        <p class="text-base leading-7 text-white/[0.72] sm:text-lg">
+          Driving innovation in neuroscience, medical imaging, healthcare analytics, cardiovascular health, federated learning, and artificial intelligence.
+        </p>
+      </div>
+
+      <!-- Research Statistics (Animated Counters Concept) -->
+      <div class="mt-16 grid grid-cols-2 gap-4 sm:grid-cols-5 border-y border-white/[0.08] bg-white/[0.02] py-10 px-4 rounded-3xl">
+        <div class="text-center"><p class="text-3xl font-bold text-white sm:text-4xl">9+</p><p class="mt-2 text-xs font-mono uppercase tracking-widest text-white/[0.5]">Books Published</p></div>
+        <div class="text-center"><p class="text-3xl font-bold text-white sm:text-4xl">100+</p><p class="mt-2 text-xs font-mono uppercase tracking-widest text-white/[0.5]">Publications</p></div>
+        <div class="text-center"><p class="text-3xl font-bold text-accent sm:text-4xl">2,100+</p><p class="mt-2 text-xs font-mono uppercase tracking-widest text-white/[0.5]">Citations</p></div>
+        <div class="text-center"><p class="text-3xl font-bold text-white sm:text-4xl">24</p><p class="mt-2 text-xs font-mono uppercase tracking-widest text-white/[0.5]">h-index</p></div>
+        <div class="text-center col-span-2 sm:col-span-1"><p class="text-3xl font-bold text-white sm:text-4xl">47</p><p class="mt-2 text-xs font-mono uppercase tracking-widest text-white/[0.5]">i10-index</p></div>
+      </div>
+    </section>
+
+    <!-- 2. Featured Books -->
+    <section class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+      <div class="mb-12 flex justify-between items-end">
+        <h2 class="text-3xl font-semibold tracking-[-0.04em] text-white">Featured Books</h2>
+      </div>
+      <div class="grid gap-8 lg:grid-cols-3">
+        <!-- Book 1 -->
+        <a href="https://www.routledge.com/Brain-Networks-in-Neuroscience-Personalization-Unveiled-Via-Artificial-Intelligence/Hassan-Yasmin-Islam-Bairagi-Aung/p/book/9788770047364" target="_blank" class="clinical-frame group flex flex-col overflow-hidden rounded-[1.75rem] transition hover:border-white/[0.2]">
+          <div class="bg-white/[0.04] py-8 flex items-center justify-center">
+            <img src="/Brain-network-book.webp" alt="Brain Networks in Neuroscience" class="h-72 w-48 object-cover shadow-2xl transition duration-300 group-hover:scale-105 rounded-sm" />
+          </div>
+          <div class="p-6">
+            <p class="text-xs font-mono text-accent uppercase tracking-widest mb-3">AI • Neuroscience • Networks</p>
+            <h3 class="text-xl font-semibold text-white">Brain Networks in Neuroscience</h3>
+            <p class="mt-2 text-sm text-white/[0.6]">Personalization Unveiled Via Artificial Intelligence (2025)</p>
+            <p class="mt-6 text-sm font-medium text-white group-hover:text-accent flex items-center gap-2">View Book <span aria-hidden="true">&rarr;</span></p>
+          </div>
+        </a>
+        <!-- Book 2 -->
+        <a href="https://link.springer.com/book/10.1007/978-3-032-04315-3" target="_blank" class="clinical-frame group flex flex-col overflow-hidden rounded-[1.75rem] transition hover:border-white/[0.2]">
+          <div class="bg-white/[0.04] py-8 flex items-center justify-center">
+            <img src="/GNN-book.webp" alt="Graph Neural Networks" class="h-72 w-48 object-cover shadow-2xl transition duration-300 group-hover:scale-105 rounded-sm" />
+          </div>
+          <div class="p-6">
+            <p class="text-xs font-mono text-accent uppercase tracking-widest mb-3">GNN • Diagnostics • Brain</p>
+            <h3 class="text-xl font-semibold text-white">Graph Neural Networks for Neurological Disorders</h3>
+            <p class="mt-2 text-sm text-white/[0.6]">Fundamentals, Applications and Benefits in Research (2025)</p>
+            <p class="mt-6 text-sm font-medium text-white group-hover:text-accent flex items-center gap-2">View Book <span aria-hidden="true">&rarr;</span></p>
+          </div>
+        </a>
+        <!-- Book 3 -->
+        <a href="https://link.springer.com/book/10.1007/978-3-032-12470-8" target="_blank" class="clinical-frame group flex flex-col overflow-hidden rounded-[1.75rem] transition hover:border-white/[0.2]">
+          <div class="bg-white/[0.04] py-8 flex items-center justify-center">
+            <img src="/Heart-book.webp" alt="Deep Learning in Cardiovascular Health" class="h-72 w-48 object-cover shadow-2xl transition duration-300 group-hover:scale-105 rounded-sm" />
+          </div>
+          <div class="p-6">
+            <p class="text-xs font-mono text-accent uppercase tracking-widest mb-3">Cardiovascular • ECG • AI</p>
+            <h3 class="text-xl font-semibold text-white">Deep Learning in Cardiovascular Health</h3>
+            <p class="mt-2 text-sm text-white/[0.6]">Sustainable AI Approaches for Heart Disease Diagnosis (2026)</p>
+            <p class="mt-6 text-sm font-medium text-white group-hover:text-accent flex items-center gap-2">View Book <span aria-hidden="true">&rarr;</span></p>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- 3. Research Areas -->
+    <section class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+      <div class="mb-10 text-center">
+        <h2 class="text-3xl font-semibold tracking-[-0.04em] text-white">Core Research Areas</h2>
+      </div>
+      <div class="grid grid-cols-2 gap-4 sm:grid-cols-4">
+        <div class="clinical-frame flex flex-col items-center rounded-2xl p-6 text-center transition hover:bg-white/[0.05]"><span class="text-3xl mb-3">🧠</span><span class="text-sm font-medium text-white">Neuroscience & Brain Networks</span></div>
+        <div class="clinical-frame flex flex-col items-center rounded-2xl p-6 text-center transition hover:bg-white/[0.05]"><span class="text-3xl mb-3">🏥</span><span class="text-sm font-medium text-white">Healthcare AI</span></div>
+        <div class="clinical-frame flex flex-col items-center rounded-2xl p-6 text-center transition hover:bg-white/[0.05]"><span class="text-3xl mb-3">📊</span><span class="text-sm font-medium text-white">Medical Imaging</span></div>
+        <div class="clinical-frame flex flex-col items-center rounded-2xl p-6 text-center transition hover:bg-white/[0.05]"><span class="text-3xl mb-3">❤️</span><span class="text-sm font-medium text-white">Cardiovascular Analytics</span></div>
+        <div class="clinical-frame flex flex-col items-center rounded-2xl p-6 text-center transition hover:bg-white/[0.05]"><span class="text-3xl mb-3">🤖</span><span class="text-sm font-medium text-white">Deep Learning</span></div>
+        <div class="clinical-frame flex flex-col items-center rounded-2xl p-6 text-center transition hover:bg-white/[0.05]"><span class="text-3xl mb-3">🔗</span><span class="text-sm font-medium text-white">Graph Neural Networks</span></div>
+        <div class="clinical-frame flex flex-col items-center rounded-2xl p-6 text-center transition hover:bg-white/[0.05]"><span class="text-3xl mb-3">☁️</span><span class="text-sm font-medium text-white">Federated Learning</span></div>
+        <div class="clinical-frame flex flex-col items-center rounded-2xl p-6 text-center transition hover:bg-white/[0.05]"><span class="text-3xl mb-3">🩺</span><span class="text-sm font-medium text-white">Predictive Healthcare</span></div>
+      </div>
+    </section>
+
+    <!-- 4. Selected Publications & Categories -->
+    <section class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 border-t border-white/[0.08]">
+      <div class="mb-10 lg:flex lg:items-center lg:justify-between">
+        <h2 class="text-3xl font-semibold tracking-[-0.04em] text-white">Highly Cited Research</h2>
+        
+        <!-- Publication Categories Tabs (UI Presentation) -->
+        <div class="mt-6 flex flex-wrap gap-2 lg:mt-0">
+          <button data-filter="all" class="filter-tab cursor-pointer rounded-full bg-white px-4 py-2 text-xs font-medium text-black transition">All</button>
+          <button data-filter="healthcare-ai" class="filter-tab cursor-pointer rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-medium text-white/70 hover:bg-white/10 hover:text-white transition">Healthcare AI</button>
+          <button data-filter="neuroscience" class="filter-tab cursor-pointer rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-medium text-white/70 hover:bg-white/10 hover:text-white transition">Neuroscience</button>
+          <button data-filter="medical-imaging" class="filter-tab cursor-pointer rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-medium text-white/70 hover:bg-white/10 hover:text-white transition">Medical Imaging</button>
+          <button data-filter="federated-learning" class="filter-tab cursor-pointer rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-medium text-white/70 hover:bg-white/10 hover:text-white transition">Federated Learning</button>
+        </div>
+      </div>
+
+      <div class="space-y-4">
+        <!-- Paper 1 -->
+        <div data-categories="healthcare-ai neuroscience medical-imaging" class="paper-card clinical-frame flex flex-col md:flex-row md:items-center justify-between rounded-[1.5rem] p-6 lg:p-8 transition hover:bg-white/[0.03]">
+          <div class="max-w-3xl">
+            <h3 class="text-lg font-semibold text-white">NeuroNet19: An Explainable Deep Neural Network Model for Brain Tumor Classification</h3>
+            <p class="mt-2 text-sm text-white/[0.6]">Scientific Reports (2024)</p>
+            <div class="mt-4 flex gap-2">
+              <span class="rounded bg-white/5 px-2 py-1 text-xs text-white/50">Brain MRI</span>
+              <span class="rounded bg-white/5 px-2 py-1 text-xs text-white/50">Deep Learning</span>
+              <span class="rounded bg-white/5 px-2 py-1 text-xs text-white/50">Explainable AI</span>
+            </div>
+          </div>
+          <div class="mt-6 md:mt-0 md:text-right">
+            <p class="text-3xl font-bold text-accent">95+</p>
+            <p class="text-xs font-mono uppercase tracking-widest text-white/[0.5]">Citations</p>
+          </div>
+        </div>
+
+        <!-- Paper 2 -->
+        <div data-categories="healthcare-ai" class="paper-card clinical-frame flex flex-col md:flex-row md:items-center justify-between rounded-[1.5rem] p-6 lg:p-8 transition hover:bg-white/[0.03]">
+          <div class="max-w-3xl">
+            <h3 class="text-lg font-semibold text-white">Efficient Prediction of Coronary Artery Disease Using Machine Learning Algorithms</h3>
+            <p class="mt-2 text-sm text-white/[0.6]">Computers and Electrical Engineering (2024)</p>
+            <div class="mt-4 flex gap-2">
+              <span class="rounded bg-white/5 px-2 py-1 text-xs text-white/50">Cardiovascular Health</span>
+              <span class="rounded bg-white/5 px-2 py-1 text-xs text-white/50">Machine Learning</span>
+            </div>
+          </div>
+          <div class="mt-6 md:mt-0 md:text-right">
+            <p class="text-3xl font-bold text-accent">55+</p>
+            <p class="text-xs font-mono uppercase tracking-widest text-white/[0.5]">Citations</p>
+          </div>
+        </div>
+
+        <!-- Paper 3 -->
+        <div data-categories="medical-imaging" class="paper-card clinical-frame flex flex-col md:flex-row md:items-center justify-between rounded-[1.5rem] p-6 lg:p-8 transition hover:bg-white/[0.03]">
+          <div class="max-w-3xl">
+            <h3 class="text-lg font-semibold text-white">PoxNet22: Classification of Monkeypox Disease Using Transfer Learning</h3>
+            <p class="mt-2 text-sm text-white/[0.6]">IEEE Access (2023)</p>
+            <div class="mt-4 flex gap-2">
+              <span class="rounded bg-white/5 px-2 py-1 text-xs text-white/50">Medical Imaging</span>
+              <span class="rounded bg-white/5 px-2 py-1 text-xs text-white/50">Transfer Learning</span>
+            </div>
+          </div>
+          <div class="mt-6 md:mt-0 md:text-right">
+            <p class="text-3xl font-bold text-accent">106+</p>
+            <p class="text-xs font-mono uppercase tracking-widest text-white/[0.5]">Citations</p>
+          </div>
+        </div>
+
+        <!-- Paper 4 -->
+        <div data-categories="healthcare-ai medical-imaging" class="paper-card clinical-frame flex flex-col md:flex-row md:items-center justify-between rounded-[1.5rem] p-6 lg:p-8 transition hover:bg-white/[0.03]">
+          <div class="max-w-3xl">
+            <h3 class="text-lg font-semibold text-white">GastroNet: Gastrointestinal Polyp Detection and Classification</h3>
+            <p class="mt-2 text-sm text-white/[0.6]">IEEE Access (2023)</p>
+            <div class="mt-4 flex gap-2">
+              <span class="rounded bg-white/5 px-2 py-1 text-xs text-white/50">Endoscopy</span>
+              <span class="rounded bg-white/5 px-2 py-1 text-xs text-white/50">Deep Learning</span>
+            </div>
+          </div>
+          <div class="mt-6 md:mt-0 md:text-right">
+            <p class="text-3xl font-bold text-accent">38+</p>
+            <p class="text-xs font-mono uppercase tracking-widest text-white/[0.5]">Citations</p>
+          </div>
+        </div>
+
+        <!-- Paper 5 -->
+        <div data-categories="medical-imaging federated-learning" class="paper-card clinical-frame flex flex-col md:flex-row md:items-center justify-between rounded-[1.5rem] p-6 lg:p-8 transition hover:bg-white/[0.03]">
+          <div class="max-w-3xl">
+            <h3 class="text-lg font-semibold text-white">FedVGM: Enhancing Federated Learning Performance on Medical Images</h3>
+            <p class="mt-2 text-sm text-white/[0.6]">IEEE Journal of Biomedical and Health Informatics (2025)</p>
+            <div class="mt-4 flex gap-2">
+              <span class="rounded bg-white/5 px-2 py-1 text-xs text-white/50">Medical Imaging</span>
+              <span class="rounded bg-white/5 px-2 py-1 text-xs text-white/50">Federated Learning</span>
+            </div>
+          </div>
+          <div class="mt-6 md:mt-0 md:text-right">
+            <p class="text-3xl font-bold text-accent">12+</p>
+            <p class="text-xs font-mono uppercase tracking-widest text-white/[0.5]">Citations</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="mt-10 text-center">
+        <a href="https://scholar.google.com/citations?user=Ts2F72QAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" class="inline-flex items-center rounded-full border border-white/[0.12] bg-white/5 px-6 py-3 text-sm font-medium text-white/[0.80] transition hover:border-white/[0.25] hover:bg-white/[0.08]">
+          View All 100+ Publications on Google Scholar
+        </a>
+      </div>
+    </section>
+
+    <!-- 5. Timeline & Chapters -->
+    <section class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 border-y border-white/[0.08] bg-white/[0.01]">
+      <div class="grid lg:grid-cols-2 gap-16">
+        
+        <!-- Timeline -->
+        <div>
+          <h2 class="text-3xl font-semibold tracking-[-0.04em] text-white mb-10">Research Journey</h2>
+          <div class="border-l border-white/10 pl-8 space-y-10 relative">
+            <div class="relative"><span class="absolute -left-[41px] top-1 h-4 w-4 rounded-full bg-accent border-4 border-[#0b0c10]"></span><h3 class="text-xl font-bold text-white">2026</h3><p class="text-white/70 mt-1">Quantum Machine Learning & AgenticAI</p></div>
+            <div class="relative"><span class="absolute -left-[41px] top-1 h-4 w-4 rounded-full bg-white/40 border-4 border-[#0b0c10]"></span><h3 class="text-xl font-bold text-white">2025</h3><p class="text-white/70 mt-1">Brain Networks & GNN Book Publication</p></div>
+            <div class="relative"><span class="absolute -left-[41px] top-1 h-4 w-4 rounded-full bg-white/40 border-4 border-[#0b0c10]"></span><h3 class="text-xl font-bold text-white">2024</h3><p class="text-white/70 mt-1">Brain Tumor Classification & Federated Learning</p></div>
+            <div class="relative"><span class="absolute -left-[41px] top-1 h-4 w-4 rounded-full bg-white/40 border-4 border-[#0b0c10]"></span><h3 class="text-xl font-bold text-white">2023</h3><p class="text-white/70 mt-1">Medical Imaging Expansion</p></div>
+            <div class="relative"><span class="absolute -left-[41px] top-1 h-4 w-4 rounded-full bg-white/40 border-4 border-[#0b0c10]"></span><h3 class="text-xl font-bold text-white">2022</h3><p class="text-white/70 mt-1">Diabetes & Early Disease Prediction</p></div>
+            <div class="relative"><span class="absolute -left-[41px] top-1 h-4 w-4 rounded-full bg-white/40 border-4 border-[#0b0c10]"></span><h3 class="text-xl font-bold text-white">2021</h3><p class="text-white/70 mt-1">Healthcare Analytics Research Foundational Work</p></div>
+          </div>
+        </div>
+
+        <!-- Book Chapters & Additional Books -->
+        <div>
+          <h2 class="text-3xl font-semibold tracking-[-0.04em] text-white mb-10">Books & Chapters</h2>
+          <div class="clinical-frame rounded-[1.5rem] p-8">
+             <h3 class="text-lg font-semibold text-accent mb-4">Additional Books</h3>
+             <ul class="space-y-3 text-sm text-white/80">
+               <li>• Federated Deep Learning for Healthcare</li>
+               <li>• Generative AI in Neurodegenerative Disorders</li>
+             </ul>
+
+             <h3 class="text-lg font-semibold text-accent mt-8 mb-4">Featured Book Chapters</h3>
+             <ul class="space-y-3 text-sm text-white/80">
+               <li>• Graph Neural Network Architectures and Algorithms</li>
+               <li>• Brain Connectomics and Graph Theory</li>
+               <li>• GNNs for Neurological Disease Classification</li>
+               <li>• Artificial Intelligence in Neuroscience</li>
+               <li>• Neuroinformatics in the Era of Personalized Neuroscience</li>
+             </ul>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 6. Call-To-Action Section -->
+    <section class="mx-auto max-w-5xl px-4 py-16 sm:px-6 lg:px-8 text-center">
+      <div class="clinical-frame rounded-[2rem] p-10 lg:p-16">
+        <h2 class="text-4xl font-semibold tracking-tight text-white mb-6">Collaborate With AuthHealth Research</h2>
+        <p class="text-lg text-white/[0.72] mb-8 max-w-2xl mx-auto">Partner with us in Healthcare AI, Neuroscience, Medical Imaging, Predictive Analytics, Federated Learning, and Deep Learning Research.</p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+          <a href="/contact/" class="inline-flex items-center justify-center rounded-full bg-accent px-8 py-4 text-sm font-medium text-white transition hover:bg-accent/90">
+            Research Collaboration
+          </a>
+          <a href="/contact/" class="inline-flex items-center justify-center rounded-full border border-white/[0.12] bg-white/5 px-8 py-4 text-sm font-medium text-white/[0.80] transition hover:bg-white/[0.1]">
+            Contact Us
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const tabs = document.querySelectorAll('.filter-tab');
+      const cards = document.querySelectorAll('.paper-card');
+
+      tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+          // Reset all tabs
+          tabs.forEach(t => {
+            t.classList.remove('bg-white', 'text-black');
+            t.classList.add('border', 'border-white/10', 'bg-white/5', 'text-white/70', 'hover:bg-white/10', 'hover:text-white');
+          });
+          
+          // Set clicked tab to active
+          tab.classList.remove('border', 'border-white/10', 'bg-white/5', 'text-white/70', 'hover:bg-white/10', 'hover:text-white');
+          tab.classList.add('bg-white', 'text-black');
+
+          // Filter logic
+          const filter = tab.getAttribute('data-filter');
+          cards.forEach(card => {
+            const categories = card.getAttribute('data-categories') || '';
+            if (filter === 'all' || categories.includes(filter)) {
+              card.style.display = ''; // Show (resets back to tailwind's 'flex')
+            } else {
+              card.style.display = 'none'; // Hide
+            }
+          });
+        });
+      });
+    });
+  </script>
+</BaseLayout>
