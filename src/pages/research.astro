@@ -39,7 +39,7 @@ import Header from '../components/Header.astro';
         <!-- Book 1 -->
         <a href="https://www.routledge.com/Brain-Networks-in-Neuroscience-Personalization-Unveiled-Via-Artificial-Intelligence/Hassan-Yasmin-Islam-Bairagi-Aung/p/book/9788770047364" target="_blank" class="clinical-frame group flex flex-col overflow-hidden rounded-[1.75rem] transition hover:border-white/[0.2]">
           <div class="bg-white/[0.04] py-8 flex items-center justify-center">
-            <img src="/Brain-network-book.webp" alt="Brain Networks in Neuroscience" class="h-72 w-48 object-cover shadow-2xl transition duration-300 group-hover:scale-105 rounded-sm" />
+            <img src={`${import.meta.env.BASE_URL}Brain-network-book.webp`} alt="Brain Networks in Neuroscience" class="h-72 w-48 object-cover shadow-2xl transition duration-300 group-hover:scale-105 rounded-sm" />
           </div>
           <div class="p-6">
             <p class="text-xs font-mono text-accent uppercase tracking-widest mb-3">AI • Neuroscience • Networks</p>
@@ -51,7 +51,7 @@ import Header from '../components/Header.astro';
         <!-- Book 2 -->
         <a href="https://link.springer.com/book/10.1007/978-3-032-04315-3" target="_blank" class="clinical-frame group flex flex-col overflow-hidden rounded-[1.75rem] transition hover:border-white/[0.2]">
           <div class="bg-white/[0.04] py-8 flex items-center justify-center">
-            <img src="/GNN-book.webp" alt="Graph Neural Networks" class="h-72 w-48 object-cover shadow-2xl transition duration-300 group-hover:scale-105 rounded-sm" />
+            <img src={`${import.meta.env.BASE_URL}GNN-book.webp`} alt="Graph Neural Networks" class="h-72 w-48 object-cover shadow-2xl transition duration-300 group-hover:scale-105 rounded-sm" />
           </div>
           <div class="p-6">
             <p class="text-xs font-mono text-accent uppercase tracking-widest mb-3">GNN • Diagnostics • Brain</p>
@@ -63,7 +63,7 @@ import Header from '../components/Header.astro';
         <!-- Book 3 -->
         <a href="https://link.springer.com/book/10.1007/978-3-032-12470-8" target="_blank" class="clinical-frame group flex flex-col overflow-hidden rounded-[1.75rem] transition hover:border-white/[0.2]">
           <div class="bg-white/[0.04] py-8 flex items-center justify-center">
-            <img src="/Heart-book.webp" alt="Deep Learning in Cardiovascular Health" class="h-72 w-48 object-cover shadow-2xl transition duration-300 group-hover:scale-105 rounded-sm" />
+            <img src={`${import.meta.env.BASE_URL}Heart-book.webp`} alt="Deep Learning in Cardiovascular Health" class="h-72 w-48 object-cover shadow-2xl transition duration-300 group-hover:scale-105 rounded-sm" />
           </div>
           <div class="p-6">
             <p class="text-xs font-mono text-accent uppercase tracking-widest mb-3">Cardiovascular • ECG • AI</p>
@@ -244,10 +244,10 @@ import Header from '../components/Header.astro';
         <h2 class="text-4xl font-semibold tracking-tight text-white mb-6">Collaborate With AuthHealth Research</h2>
         <p class="text-lg text-white/[0.72] mb-8 max-w-2xl mx-auto">Partner with us in Healthcare AI, Neuroscience, Medical Imaging, Predictive Analytics, Federated Learning, and Deep Learning Research.</p>
         <div class="flex flex-col sm:flex-row justify-center gap-4">
-          <a href="/contact/" class="inline-flex items-center justify-center rounded-full bg-accent px-8 py-4 text-sm font-medium text-white transition hover:bg-accent/90">
+          <a href={`${import.meta.env.BASE_URL}contact/`} class="inline-flex items-center justify-center rounded-full bg-accent px-8 py-4 text-sm font-medium text-white transition hover:bg-accent/90">
             Research Collaboration
           </a>
-          <a href="/contact/" class="inline-flex items-center justify-center rounded-full border border-white/[0.12] bg-white/5 px-8 py-4 text-sm font-medium text-white/[0.80] transition hover:bg-white/[0.1]">
+          <a href={`${import.meta.env.BASE_URL}contact/`} class="inline-flex items-center justify-center rounded-full border border-white/[0.12] bg-white/5 px-8 py-4 text-sm font-medium text-white/[0.80] transition hover:bg-white/[0.1]">
             Contact Us
           </a>
         </div>
