@@ -556,9 +556,25 @@ import Header from '../components/Header.astro';
           </ul>
         </div>
       </div>
-      <div class="mt-12 border-t border-white/[0.08] pt-8 text-sm text-white/[0.52] flex flex-col sm:flex-row justify-between items-center gap-4">
-        <p>© 2026 AuthBrain. AI-Powered Healthcare Intelligence.</p>
-        <p class="font-mono uppercase tracking-[0.2em] text-[10px]">Empowering Data-Driven Healthcare</p>
+      <div class="mt-12 border-t border-white/[0.08] pt-8 flex flex-col lg:flex-row justify-between items-center gap-8 lg:gap-4 text-center lg:text-left">
+        
+        <!-- Company Logo -->
+        <a href={import.meta.env.BASE_URL} class="shrink-0 group">
+          <img src={`${import.meta.env.BASE_URL}company-logo.jpeg`} alt="Company Logo" class="h-10 sm:h-12 w-auto object-contain opacity-80 transition-all duration-300 group-hover:opacity-100 group-hover:-translate-y-1" />
+        </a>
+
+        <p class="text-sm text-white/[0.52]">© 2026 AuthBrain. AI-Powered Healthcare Intelligence.</p>
+
+        <!-- Bangladesh 1971 Tribute -->
+        <div class="group flex items-center gap-3 rounded-full border border-white/5 bg-white/[0.02] px-4 py-2 hover:bg-white/10 hover:border-green-500/30 transition-all duration-500 shrink-0 cursor-default">
+          <div class="relative flex h-4 w-6 items-center justify-center rounded-[2px] bg-[#006a4e] overflow-hidden shadow-sm">
+            <div class="h-2.5 w-2.5 rounded-full bg-[#f42a41] animate-pulse"></div>
+          </div>
+          <p class="text-[11px] sm:text-xs font-medium text-white/60 group-hover:text-white/90 transition-colors">
+            Honoring the <span class="text-green-400">1971</span> Freedom Fighters of <span class="text-red-400">Bangladesh</span>.
+          </p>
+        </div>
+
       </div>
     </div>
   </footer>

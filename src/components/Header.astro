@@ -3,8 +3,6 @@ const navItems = [
   { label: 'Home', href: import.meta.env.BASE_URL },
   { label: 'Services', href: `${import.meta.env.BASE_URL}services/` },
   { label: 'Publications & Books', href: `${import.meta.env.BASE_URL}research/` },
-  { label: 'Python Stack', href: `${import.meta.env.BASE_URL}python-stack/` },
-  { label: 'Agent Lab', href: `${import.meta.env.BASE_URL}agent-lab/` },
   { label: 'Contact', href: `${import.meta.env.BASE_URL}contact/` },
 ];
 
@@ -13,15 +11,16 @@ const currentPath = Astro.url.pathname;
 
 <header class="sticky top-0 z-50 border-b border-white/[0.08] bg-ink/80 backdrop-blur-xl">
   <div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-4 sm:px-6 lg:px-8 relative z-50">
-    <a href={import.meta.env.BASE_URL} class="flex items-center gap-3">
-      <img
-        src={`${import.meta.env.BASE_URL}company-logo.jpeg`}
-        alt="AuthBrain logo"
-        class="h-12 w-auto sm:h-14"
-      />
-      <span class="hidden text-xs font-mono uppercase tracking-[0.32em] text-white/[0.60] sm:inline">
-        Python AI Services
-      </span>
+    <a href={import.meta.env.BASE_URL} class="flex items-center gap-3 group">
+      <div class="relative flex h-12 w-12 items-center justify-center">
+        <span class="absolute text-2xl auth-brain-anim">🧠</span>
+        <span class="absolute text-xl -ml-8 mt-4 auth-key-anim origin-bottom-right drop-shadow-md">🔑</span>
+        <span class="absolute text-2xl -mt-10 auth-idea-anim opacity-0 drop-shadow-[0_0_12px_rgba(250,204,21,0.8)]">💡</span>
+      </div>
+      <div class="text-left transition-opacity group-hover:opacity-80">
+        <p class="font-bold text-white tracking-wide">AuthBrain</p>
+        <p class="text-[10px] uppercase tracking-[0.2em] text-accent">Unlocking Ideas</p>
+      </div>
     </a>
 
     <!-- Desktop Navigation -->
@@ -147,3 +146,25 @@ const currentPath = Astro.url.pathname;
   // Optional: Run script properly if you ever enable Astro's ViewTransitions!
   document.addEventListener('astro:page-load', setupMobileMenu);
 </script>
+
+<style>
+  .auth-brain-anim { animation: brainPulse 4s infinite ease-in-out; }
+  .auth-key-anim { animation: keyUnlock 4s infinite ease-in-out; }
+  .auth-idea-anim { animation: ideaPop 4s infinite ease-in-out; }
+
+  @keyframes brainPulse {
+    0%, 100% { transform: scale(1); filter: grayscale(100%) opacity(0.6); }
+    30%, 80% { transform: scale(1.1); filter: grayscale(0%) opacity(1); }
+  }
+  @keyframes keyUnlock {
+    0%, 100% { transform: translate(-15px, 15px) rotate(-45deg); opacity: 0; }
+    15% { transform: translate(-4px, 4px) rotate(0deg); opacity: 1; }
+    25% { transform: translate(-4px, 4px) rotate(90deg); opacity: 1; }
+    35%, 90% { transform: translate(15px, 15px) rotate(90deg); opacity: 0; }
+  }
+  @keyframes ideaPop {
+    0%, 25% { opacity: 0; transform: translateY(10px) scale(0.5); }
+    35%, 75% { opacity: 1; transform: translateY(-5px) scale(1.1); }
+    85%, 100% { opacity: 0; transform: translateY(-15px) scale(1); }
+  }
+</style>
