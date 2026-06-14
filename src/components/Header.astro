@@ -12,7 +12,7 @@ const currentPath = Astro.url.pathname;
 ---
 
 <header class="sticky top-0 z-50 border-b border-white/[0.08] bg-ink/80 backdrop-blur-xl">
-  <div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-4 sm:px-6 lg:px-8">
+  <div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-4 sm:px-6 lg:px-8 relative z-50">
     <a href={import.meta.env.BASE_URL} class="flex items-center gap-3">
       <img
         src={`${import.meta.env.BASE_URL}company-logo.jpeg`}
@@ -24,7 +24,8 @@ const currentPath = Astro.url.pathname;
       </span>
     </a>
 
-    <nav class="flex flex-wrap items-center justify-end gap-4 text-sm text-white/[0.70] sm:gap-5">
+    <!-- Desktop Navigation -->
+    <nav class="hidden md:flex flex-wrap items-center justify-end gap-4 text-sm text-white/[0.70] sm:gap-5">
       {navItems.map((item) => (
         <a
           aria-current={currentPath === item.href ? 'page' : undefined}
@@ -38,5 +39,111 @@ const currentPath = Astro.url.pathname;
         </a>
       ))}
     </nav>
+
+    <!-- Mobile Menu Toggle Button (3 dots) -->
+    <button 
+      id="mobile-menu-btn" 
+      class="flex md:hidden relative h-10 w-10 items-center justify-center rounded-full border border-white/[0.12] bg-white/5 text-white transition-all hover:bg-white/10 focus:outline-none"
+      aria-label="Toggle Mobile Menu"
+    >
+      <!-- 3 Dots Icon -->
+      <svg id="menu-icon" class="absolute h-5 w-5 transition-all duration-300 transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
+      </svg>
+      <!-- Close Icon -->
+      <svg id="close-icon" class="absolute h-5 w-5 transition-all duration-300 transform scale-50 opacity-0 -rotate-90" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </button>
+  </div>
+
+  <!-- Mobile Navigation Overlay (Grid Transition) -->
+  <div 
+    id="mobile-menu" 
+    class="absolute left-0 w-full grid transition-all duration-500 ease-in-out md:hidden bg-ink/95 backdrop-blur-2xl shadow-2xl border-b border-white/[0.08]"
+    style="grid-template-rows: 0fr; opacity: 0; visibility: hidden; top: 100%;"
+  >
+    <div class="overflow-hidden">
+      <nav class="flex flex-col px-6 py-8 space-y-6">
+        {navItems.map((item, index) => (
+          <a
+            aria-current={currentPath === item.href ? 'page' : undefined}
+            class:list={[
+              'mobile-nav-link flex items-center justify-between text-lg font-medium tracking-wide transition-all duration-500 transform -translate-x-4 opacity-0',
+              currentPath === item.href ? 'text-white' : 'text-white/[0.60] hover:text-white',
+            ]}
+            href={item.href}
+            style={`transition-delay: ${index * 50}ms;`}
+          >
+            <span>{item.label}</span>
+            <svg class="h-4 w-4 opacity-50" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+          </a>
+        ))}
+      </nav>
+    </div>
   </div>
 </header>
+
+<script is:inline>
+  const setupMobileMenu = () => {
+    const btn = document.getElementById('mobile-menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    const menuIcon = document.getElementById('menu-icon');
+    const closeIcon = document.getElementById('close-icon');
+    const links = document.querySelectorAll('.mobile-nav-link');
+    
+    // Prevents binding listeners multiple times (useful with frameworks/view transitions)
+    if (!btn || !menu || btn.dataset.menuSetup) return;
+    btn.dataset.menuSetup = "true";
+
+    let isMenuOpen = false;
+
+    btn.addEventListener('click', () => {
+      isMenuOpen = !isMenuOpen;
+      
+      if (isMenuOpen) {
+        // Open Menu
+        menu.style.visibility = 'visible';
+        menu.style.gridTemplateRows = '1fr';
+        menu.style.opacity = '1';
+        
+        // Morph Icons
+        menuIcon.classList.add('opacity-0', 'scale-50', 'rotate-90');
+        closeIcon.classList.remove('opacity-0', 'scale-50', '-rotate-90');
+        closeIcon.classList.add('opacity-100', 'scale-100', 'rotate-0');
+        
+        // Animate Links
+        links.forEach(link => {
+          link.classList.remove('-translate-x-4', 'opacity-0');
+          link.classList.add('translate-x-0', 'opacity-100');
+        });
+        
+      } else {
+        // Close Menu
+        menu.style.gridTemplateRows = '0fr';
+        menu.style.opacity = '0';
+        
+        setTimeout(() => {
+          if(!isMenuOpen) menu.style.visibility = 'hidden';
+        }, 500);
+
+        // Morph Icons
+        menuIcon.classList.remove('opacity-0', 'scale-50', 'rotate-90');
+        closeIcon.classList.remove('opacity-100', 'scale-100', 'rotate-0');
+        closeIcon.classList.add('opacity-0', 'scale-50', '-rotate-90');
+        
+        // Reset Links
+        links.forEach(link => {
+          link.classList.add('-translate-x-4', 'opacity-0');
+          link.classList.remove('translate-x-0', 'opacity-100');
+        });
+      }
+    });
+  };
+
+  setupMobileMenu();
+  // Optional: Run script properly if you ever enable Astro's ViewTransitions!
+  document.addEventListener('astro:page-load', setupMobileMenu);
+</script>
