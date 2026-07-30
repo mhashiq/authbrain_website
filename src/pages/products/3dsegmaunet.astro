@@ -1,0 +1,130 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+---
+
+<BaseLayout
+  title="3DSegmaUNet — AI-Powered 3D Medical Imaging & Volumetric Liver Segmentation | AuthBrain"
+  description="End-to-end medical AI application for automated 3D volumetric liver segmentation from CT scans using a lightweight 3D U-Net architecture with high Dice similarity coefficients."
+>
+  <Header />
+  <main>
+
+    <!-- Breadcrumb -->
+    <nav class="mx-auto max-w-7xl px-4 pt-8 sm:px-6 lg:px-8">
+      <ol class="flex items-center gap-2 text-xs font-mono text-white/40">
+        <li><a href={import.meta.env.BASE_URL} class="hover:text-white transition">Home</a></li>
+        <li class="text-white/20">/</li>
+        <li><a href={`${import.meta.env.BASE_URL}products/`} class="hover:text-white transition">Products</a></li>
+        <li class="text-white/20">/</li>
+        <li class="text-white/70">3DSegmaUNet</li>
+      </ol>
+    </nav>
+
+    <!-- Hero -->
+    <section class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
+      <div class="grid gap-12 lg:grid-cols-[1fr_auto] lg:items-start">
+        <div>
+          <div class="flex flex-wrap items-center gap-3 mb-6">
+            <span class="inline-flex items-center gap-1.5 rounded-full border border-emerald-400/20 bg-emerald-400/10 px-3 py-1 text-[11px] font-mono uppercase tracking-widest text-emerald-400">
+              Medical AI
+            </span>
+            <span class="rounded-full border border-amber-500/20 bg-amber-500/10 px-3 py-1 text-[11px] font-mono uppercase tracking-wide text-amber-400">
+              ● Research
+            </span>
+          </div>
+
+          <h1 class="text-4xl font-semibold tracking-[-0.04em] text-white sm:text-5xl mb-4">3DSegmaUNet</h1>
+          <p class="text-base font-mono text-white/50 mb-6">AI-Powered 3D Medical Imaging & Volumetric Liver Segmentation</p>
+          <p class="text-base leading-7 text-white/[0.72] max-w-2xl mb-8">
+            Designed and deployed an end-to-end medical AI application for automated 3D volumetric liver segmentation from CT scans. Implements a lightweight 3D U-Net deep learning architecture optimized for high Dice Similarity Coefficients (DSC) and low inference latency, packaged into a web workflow for radiologists and clinical researchers.
+          </p>
+
+          <div class="flex flex-wrap gap-4">
+            <span class="inline-flex items-center gap-2 rounded-full border border-white/[0.12] bg-white/5 px-6 py-3 text-sm font-medium text-white/50 cursor-not-allowed">
+              <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              Repository Private (Research)
+            </span>
+            <a href={`${import.meta.env.BASE_URL}products/`} class="inline-flex items-center gap-2 rounded-full border border-white/[0.12] bg-white/5 px-6 py-3 text-sm font-medium text-white/80 transition hover:bg-white/10">
+              ← Back to Products
+            </a>
+          </div>
+        </div>
+
+        <div class="rounded-2xl border border-white/[0.08] bg-white/[0.02] p-6 min-w-[220px]">
+          <p class="text-xs font-mono uppercase tracking-widest text-white/40 mb-4">Tech Stack</p>
+          <div class="flex flex-col gap-2">
+            {['Python', 'PyTorch', 'MONAI', 'SimpleITK', 'Flask', 'Docker', '3D Slicer'].map((t) => (
+              <span class="rounded-lg border border-white/[0.08] bg-white/[0.03] px-3 py-2 text-xs font-mono text-white/70">{t}</span>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Key Highlights -->
+    <section class="mx-auto max-w-7xl px-4 pb-16 sm:px-6 lg:px-8">
+      <h2 class="text-2xl font-semibold tracking-[-0.04em] text-white mb-8">Key Engineering Highlights</h2>
+      <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        {[
+          { title: 'Lightweight 3D U-Net Architecture', body: 'Designed a memory-efficient 3D U-Net variant suitable for clinical CT volumes, achieving high segmentation accuracy without requiring GPU memory beyond clinical workstation specifications.' },
+          { title: 'High Dice Similarity Coefficient', body: 'Segmentation models are evaluated and optimized against DSC — the clinical gold standard for volumetric organ segmentation accuracy — ensuring results meet radiologist precision requirements.' },
+          { title: 'CT Scan Volumetric Processing', body: 'Processes DICOM CT series to produce complete 3D liver boundary meshes from raw multi-slice scans, replacing the manual slice-by-slice contouring workflow.' },
+          { title: 'MONAI Medical Imaging Framework', body: 'Built on MONAI, the PyTorch-based framework for medical imaging AI, ensuring clinical-grade preprocessing pipelines, augmentation strategies, and reproducible inference.' },
+          { title: 'Dockerized Clinical Workflow', body: 'Entire segmentation pipeline — from DICOM ingestion to 3D mesh output — is containerized for deployment into clinical PACS environments and research compute clusters.' },
+          { title: '3D Slicer Export Integration', body: 'Segmentation outputs are exported in formats compatible with 3D Slicer, enabling radiologists and surgical planners to visualize and interact with volumetric results in standard clinical tooling.' },
+        ].map((h) => (
+          <div class="rounded-2xl border border-white/[0.08] bg-white/[0.02] p-6">
+            <h3 class="text-sm font-semibold text-white mb-2">{h.title}</h3>
+            <p class="text-xs leading-5 text-white/60">{h.body}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- Imaging Pipeline Panel -->
+    <section class="mx-auto max-w-7xl px-4 pb-20 sm:px-6 lg:px-8">
+      <div class="rounded-[2rem] border border-white/10 bg-black/60 p-6 backdrop-blur-xl">
+        <div class="flex items-center justify-between border-b border-white/10 pb-4 mb-5">
+          <span class="font-mono text-xs font-semibold tracking-wider text-white/60">3DSEGMAUNET // INFERENCE PIPELINE TRACE</span>
+          <span class="rounded-full bg-amber-500/10 px-2.5 py-1 font-mono text-[11px] font-medium text-amber-400 border border-amber-500/20">RESEARCH BUILD</span>
+        </div>
+        <div class="space-y-3 font-mono text-xs">
+          <div class="rounded-xl border border-white/[0.06] bg-white/[0.02] p-4">
+            <div class="flex items-center justify-between text-white/40 text-[11px] mb-1.5">
+              <span>DICOM_INGEST // CT_SERIES_LOAD</span><span>0ms</span>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="font-sans text-sm font-medium text-white">512×512×186 axial CT series loaded</span>
+              <span class="rounded bg-blue-500/10 px-2 py-0.5 text-[10px] text-blue-400 border border-blue-500/20">DICOM: 186 SLICES</span>
+            </div>
+            <p class="mt-1 font-sans text-xs text-white/50">HU normalization complete · Voxel spacing: 0.74mm × 0.74mm × 1.5mm</p>
+          </div>
+          <div class="rounded-xl border border-white/[0.06] bg-white/[0.02] p-4">
+            <div class="flex items-center justify-between text-white/40 text-[11px] mb-1.5">
+              <span>3D_UNET_INFERENCE // LIVER_SEGMENTATION</span><span>1.8s</span>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="font-sans text-sm font-medium text-white">Liver Boundary Computed — Dice: 0.943</span>
+              <span class="rounded bg-emerald-500/10 px-2 py-0.5 text-[10px] text-emerald-400 border border-emerald-500/20">DSC: 94.3%</span>
+            </div>
+            <p class="mt-1 font-sans text-xs text-white/50">3D U-Net forward pass complete · 1,347 cm³ liver volume computed</p>
+          </div>
+          <div class="rounded-xl border border-white/[0.06] bg-white/[0.02] p-4">
+            <div class="flex items-center justify-between text-white/40 text-[11px] mb-1.5">
+              <span>MESH_EXPORT // 3D_SLICER_COMPAT</span><span>2.1s</span>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="font-sans text-sm font-medium text-white">STL mesh exported for surgical planning</span>
+              <span class="rounded bg-purple-500/10 px-2 py-0.5 text-[10px] text-purple-400 border border-purple-500/20">0.4mm PRECISION</span>
+            </div>
+            <p class="mt-1 font-sans text-xs text-white/50">Sub-millimeter boundary resolution · PACS-ready NIfTI also generated</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <Footer />
+</BaseLayout>

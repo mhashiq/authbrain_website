@@ -1,0 +1,335 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<BaseLayout
+  title="About — AuthBrain | Mission, Vision & Team"
+  description="AuthBrain builds rigorous AI for healthcare and enterprise security. Meet the team, understand the mission, and learn why we exist."
+>
+  <Header />
+  <main class="overflow-x-hidden">
+
+    <!-- ═══════════════════════
+         HERO
+    ═══════════════════════ -->
+    <section class="relative mx-auto max-w-7xl px-4 pt-12 pb-8 sm:px-6 lg:px-8 lg:pt-16">
+      <!-- Faint radial glow -->
+      <div class="pointer-events-none absolute left-1/2 top-0 -translate-x-1/2 h-[420px] w-[680px] rounded-full bg-gradient-to-b from-cyan-500/[0.08] via-purple-500/[0.04] to-transparent blur-3xl" aria-hidden="true"></div>
+
+      <div class="relative max-w-3xl">
+        <span class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-xs font-mono uppercase tracking-[0.28em] text-white/[0.65] mb-5">
+          <span class="h-1.5 w-1.5 rounded-full bg-accent animate-pulse"></span>
+          About AuthBrain
+        </span>
+        <h1 class="text-4xl font-semibold tracking-[-0.05em] text-white leading-[1.1] sm:text-5xl mb-4">
+          AI built for<br />
+          <span class="text-white/40">the hardest problems.</span>
+        </h1>
+        <p class="text-lg leading-8 text-white/60 max-w-xl">
+          AuthBrain is an applied AI engineering company. We work on clinical intelligence and enterprise security — two domains where wrong answers carry real consequences.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════
+         MISSION & VISION
+    ═══════════════════════ -->
+    <section class="mx-auto max-w-7xl px-4 pb-10 sm:px-6 lg:px-8">
+      <div class="grid gap-6 lg:grid-cols-2">
+
+        <!-- Mission -->
+        <div class="group relative overflow-hidden rounded-[2rem] border border-white/[0.08] bg-white/[0.02] p-7">
+          <div class="pointer-events-none absolute -top-12 -right-12 h-48 w-48 rounded-full bg-cyan-500/[0.07] blur-3xl group-hover:bg-cyan-500/[0.12] transition-all duration-700" aria-hidden="true"></div>
+          <div class="relative">
+            <div class="flex h-11 w-11 items-center justify-center rounded-2xl border border-cyan-500/20 bg-cyan-500/10 mb-4">
+              <svg class="h-5 w-5 text-cyan-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122" />
+              </svg>
+            </div>
+            <p class="mb-3 font-mono text-xs uppercase tracking-[0.28em] text-cyan-400/70">Mission</p>
+            <h2 class="text-xl font-semibold tracking-[-0.04em] text-white mb-3 leading-snug">
+              Ship AI that earns clinical and enterprise trust.
+            </h2>
+            <p class="text-sm leading-7 text-white/60">
+              Every system we build starts from a validated methodology. We do not cut corners on evaluation, benchmarking, or explainability. If a model cannot be justified to a clinician or a CISO, it does not ship.
+            </p>
+            <ul class="mt-4 space-y-2">
+              {['Research-grounded, not demo-ware', 'Every claim is measurable', 'Clinical and security-grade by default'].map((pt) => (
+                <li class="flex items-start gap-3 text-sm text-white/[0.65]">
+                  <span class="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-cyan-400/60"></span>
+                  {pt}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+
+        <!-- Vision -->
+        <div class="group relative overflow-hidden rounded-[2rem] border border-white/[0.08] bg-white/[0.02] p-7">
+          <div class="pointer-events-none absolute -top-12 -left-12 h-48 w-48 rounded-full bg-purple-500/[0.07] blur-3xl group-hover:bg-purple-500/[0.12] transition-all duration-700" aria-hidden="true"></div>
+          <div class="relative">
+            <div class="flex h-11 w-11 items-center justify-center rounded-2xl border border-purple-500/20 bg-purple-500/10 mb-4">
+              <svg class="h-5 w-5 text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+            </div>
+            <p class="mb-3 font-mono text-xs uppercase tracking-[0.28em] text-purple-400/70">Vision</p>
+            <h2 class="text-xl font-semibold tracking-[-0.04em] text-white mb-3 leading-snug">
+              A world where AI is infrastructure, not a feature.
+            </h2>
+            <p class="text-sm leading-7 text-white/60">
+              We believe the next decade of healthcare and security will be defined by AI systems that operate quietly, reliably, and at scale — not as point solutions, but as foundational infrastructure embedded in clinical and enterprise workflows.
+            </p>
+            <ul class="mt-4 space-y-2">
+              {['AI as infrastructure, not a product add-on', 'Accessible to healthcare systems globally', 'Security that adapts faster than threats'].map((pt) => (
+                <li class="flex items-start gap-3 text-sm text-white/[0.65]">
+                  <span class="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-purple-400/60"></span>
+                  {pt}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════
+         VALUES / PRINCIPLES
+    ═══════════════════════ -->
+    <section class="border-t border-white/[0.06] bg-white/[0.015]">
+      <div class="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
+        <div class="max-w-2xl mb-6">
+          <span class="inline-block mb-4 font-mono text-xs uppercase tracking-[0.28em] text-white/40">How We Work</span>
+          <h2 class="text-3xl font-semibold tracking-[-0.04em] text-white">Operating principles</h2>
+        </div>
+        <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {[
+            {
+              icon: `<svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.75 3.104v5.714a2.25 2.25 0 01-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 014.5 0m0 0v5.714c0 .597.237 1.17.659 1.591L19.8 15.3M14.25 3.104c.251.023.501.05.75.082M19.8 15.3l-1.57.393A9.065 9.065 0 0112 15a9.065 9.065 0 00-6.23-.693L5 14.5m14.8.8l1.402 1.402c1.232 1.232.65 3.318-1.067 3.611A48.309 48.309 0 0112 21c-2.773 0-5.491-.235-8.135-.687-1.718-.293-2.3-2.379-1.067-3.61L5 14.5" /></svg>`,
+              label: 'Research-first',
+              body: 'Every method is validated before it enters production. We do not ship intuition.',
+            },
+            {
+              icon: `<svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" /></svg>`,
+              label: 'Measurable impact',
+              body: 'We define success with numbers — Dice coefficients, risk scores, false-positive rates.',
+            },
+            {
+              icon: `<svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" /></svg>`,
+              label: 'Responsible by design',
+              body: 'Explainability, auditability, and privacy are requirements — not afterthoughts.',
+            },
+            {
+              icon: `<svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13.5 16.875h3.375m0 0h3.375m-3.375 0V13.5m0 3.375v3.375M6 10.5h2.25a2.25 2.25 0 002.25-2.25V6a2.25 2.25 0 00-2.25-2.25H6A2.25 2.25 0 003.75 6v2.25A2.25 2.25 0 006 10.5zm0 9.75h2.25A2.25 2.25 0 0010.5 18v-2.25a2.25 2.25 0 00-2.25-2.25H6a2.25 2.25 0 00-2.25 2.25V18A2.25 2.25 0 006 20.25zm9.75-9.75H18a2.25 2.25 0 002.25-2.25V6A2.25 2.25 0 0018 3.75h-2.25A2.25 2.25 0 0013.5 6v2.25a2.25 2.25 0 002.25 2.25z" /></svg>`,
+              label: 'Systems thinking',
+              body: 'We build components that compose — not islands. Authentication and diagnostics share the same engineering culture.',
+            },
+          ].map((v) => (
+            <div class="rounded-2xl border border-white/[0.08] bg-white/[0.02] p-5">
+              <div class="flex h-9 w-9 items-center justify-center rounded-xl border border-white/10 bg-white/5 text-white/70 mb-4">
+                <Fragment set:html={v.icon} />
+              </div>
+              <h3 class="text-sm font-semibold text-white mb-2">{v.label}</h3>
+              <p class="text-xs leading-5 text-white/55">{v.body}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════
+         WHAT WE BUILD
+    ═══════════════════════ -->
+    <section class="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
+      <div class="max-w-2xl mb-6">
+        <span class="inline-block mb-4 font-mono text-xs uppercase tracking-[0.28em] text-white/40">Focus Areas</span>
+        <h2 class="text-3xl font-semibold tracking-[-0.04em] text-white">Two domains. One engineering team.</h2>
+      </div>
+      <div class="grid gap-6 lg:grid-cols-2">
+
+        <!-- Healthcare AI -->
+        <div class="rounded-3xl border border-white/[0.08] bg-white/[0.02] p-6">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="inline-flex h-9 w-9 items-center justify-center rounded-xl border border-emerald-500/20 bg-emerald-500/10">
+              <svg class="h-5 w-5 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" /></svg>
+            </span>
+            <div>
+              <span class="block text-xs font-mono uppercase tracking-widest text-emerald-400/70">Healthcare AI</span>
+              <h3 class="text-base font-semibold text-white">Clinical Intelligence</h3>
+            </div>
+          </div>
+          <p class="text-sm leading-6 text-white/60 mb-4">AI systems for clinical decision support, medical imaging analysis, predictive diagnostics, and population health — built to meet clinical validation standards.</p>
+          <div class="flex flex-wrap gap-2">
+            {['Medical Imaging AI', '3D Segmentation', 'Predictive Analytics', 'EEG / Signal AI', 'Population Health'].map((t) => (
+              <span class="rounded-full border border-emerald-500/[0.15] bg-emerald-500/[0.06] px-3 py-1 text-[11px] font-mono text-emerald-300/70">{t}</span>
+            ))}
+          </div>
+        </div>
+
+        <!-- Enterprise Security -->
+        <div class="rounded-3xl border border-white/[0.08] bg-white/[0.02] p-6">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="inline-flex h-9 w-9 items-center justify-center rounded-xl border border-cyan-500/20 bg-cyan-500/10">
+              <svg class="h-5 w-5 text-cyan-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" /></svg>
+            </span>
+            <div>
+              <span class="block text-xs font-mono uppercase tracking-widest text-cyan-400/70">Enterprise Security</span>
+              <h3 class="text-base font-semibold text-white">Adaptive Authentication</h3>
+            </div>
+          </div>
+          <p class="text-sm leading-6 text-white/60 mb-4">Risk-based B2B authentication and biometric fraud detection — zero-trust systems that evaluate every session in real time without degrading user experience.</p>
+          <div class="flex flex-wrap gap-2">
+            {['Adaptive Auth', 'Risk Scoring', 'Biometric AI', 'Fraud Detection', 'Zero-Trust'].map((t) => (
+              <span class="rounded-full border border-cyan-500/[0.15] bg-cyan-500/[0.06] px-3 py-1 text-[11px] font-mono text-cyan-300/70">{t}</span>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════
+         FOUNDER CARD (summary)
+    ═══════════════════════ -->
+    <section class="border-t border-white/[0.06] bg-white/[0.015]">
+      <div class="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
+        <div class="max-w-2xl mb-6">
+          <span class="inline-block mb-4 font-mono text-xs uppercase tracking-[0.28em] text-white/40">Leadership</span>
+          <h2 class="text-3xl font-semibold tracking-[-0.04em] text-white">Founder</h2>
+        </div>
+
+        <div class="rounded-[2rem] border border-white/[0.08] bg-white/[0.02] p-6 lg:p-8">
+          <div class="grid gap-6 lg:grid-cols-[auto_1fr]">
+
+            <!-- Photo -->
+            <div class="flex flex-col items-center lg:items-start gap-5">
+              <div class="relative w-36 h-36 lg:w-44 lg:h-44 flex-shrink-0">
+                <div class="absolute inset-0 rounded-2xl bg-gradient-to-br from-cyan-500/20 to-purple-500/10 blur-xl"></div>
+                <img
+                  src="/founder-profile.png"
+                  alt="Md. Mehedi Hassan — Founder of AuthBrain"
+                  class="relative w-full h-full rounded-2xl object-cover border border-white/10"
+                  loading="lazy"
+                />
+              </div>
+              <!-- Quick links -->
+              <div class="flex flex-col gap-1.5 w-full">
+                <a href="https://scholar.google.com/citations?user=Ts2F72QAAAAJ" target="_blank" rel="noopener noreferrer"
+                  class="inline-flex items-center gap-2 text-[11px] font-mono text-white/45 hover:text-white transition">
+                  <svg class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+                  Google Scholar
+                </a>
+                <a href="https://www.linkedin.com/in/mh-ashiq/" target="_blank" rel="noopener noreferrer"
+                  class="inline-flex items-center gap-2 text-[11px] font-mono text-white/45 hover:text-white transition">
+                  <svg class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+                  LinkedIn
+                </a>
+                <a href="mailto:mehedihassan@ieee.org"
+                  class="inline-flex items-center gap-2 text-[11px] font-mono text-white/45 hover:text-white transition">
+                  <svg class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                  mehedihassan@ieee.org
+                </a>
+              </div>
+            </div>
+
+            <!-- Summary -->
+            <div>
+              <div class="flex flex-wrap items-center gap-3 mb-4">
+                <h3 class="text-2xl font-semibold tracking-[-0.03em] text-white">Md. Mehedi Hassan</h3>
+                <span class="rounded-full border border-blue-500/20 bg-blue-500/10 px-2.5 py-1 text-[10px] font-mono text-blue-400">IEEE Member</span>
+              </div>
+              <p class="text-sm font-mono text-white/45 mb-3">
+                Ph.D. Candidate — Biomedical AI & Medical Imaging<br />
+                Texas Tech University · Lubbock, TX, USA
+              </p>
+              <p class="text-sm leading-7 text-white/65 mb-4 max-w-xl">
+                Md. Mehedi Hassan is a researcher and engineer working on AI-driven medical imaging and enterprise security systems. He holds M.Sc. and B.Sc. degrees in Computer Science, and has authored over 100 peer-reviewed publications. He founded AuthBrain in 2020 and serves as Associate Editor at Frontiers in Oncology and Discover Applied Sciences (Springer Nature).
+              </p>
+
+              <!-- Compact stat row -->
+              <div class="grid grid-cols-2 gap-3 sm:grid-cols-4">
+                {[
+                  { v: '109', l: 'Publications' },
+                  { v: '2,226+', l: 'Citations' },
+                  { v: 'h‑25', l: 'h-Index' },
+                  { v: '8', l: 'Books Edited' },
+                ].map((s) => (
+                  <div class="rounded-xl border border-white/[0.07] bg-white/[0.02] px-4 py-3 text-center">
+                    <p class="text-lg font-bold tracking-tight text-white">{s.v}</p>
+                    <p class="text-[10px] font-mono uppercase tracking-wider text-white/40 mt-0.5">{s.l}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════
+         ORIGIN
+    ═══════════════════════ -->
+    <section class="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
+      <div class="grid gap-8 lg:grid-cols-2 items-center">
+        <div>
+          <span class="inline-block mb-4 font-mono text-xs uppercase tracking-[0.28em] text-white/40">Origin</span>
+          <h2 class="text-2xl font-semibold tracking-[-0.04em] text-white mb-4">Founded 2020.<br/>Khulna, Bangladesh.</h2>
+          <p class="text-sm leading-7 text-white/60 mb-4">
+            AuthBrain began as an IT consultancy — enterprise software and digital infrastructure for international clients. Over time, the demand from those clients shifted toward AI: adaptive authentication, imaging tools, fraud detection. The company followed that demand.
+          </p>
+          <p class="text-sm leading-7 text-white/60">
+            Today, every system AuthBrain ships is grounded in peer-reviewed methodology. Research and engineering share the same standard: if it cannot be validated, it does not ship.
+          </p>
+        </div>
+
+        <!-- Mini milestone timeline -->
+        <div class="rounded-3xl border border-white/[0.08] bg-white/[0.02] p-6">
+          <p class="font-mono text-xs uppercase tracking-widest text-white/35 mb-4">Key Milestones</p>
+          <ol class="relative border-l border-white/[0.08] space-y-0">
+            {[
+              { y: '2020', t: 'AuthBrain founded', c: 'bg-accent' },
+              { y: '2021', t: 'Best Paper Award — IEEE YESIST12', c: 'bg-cyan-400' },
+              { y: '2022', t: '2 Patents granted — Indian Patent Office', c: 'bg-purple-400' },
+              { y: '2023', t: 'National ICT Research Fellowship', c: 'bg-emerald-400' },
+              { y: '2024', t: 'Associate Editor × 3 journals (Q1/Q2)', c: 'bg-amber-400' },
+              { y: '2025', t: 'Keynote — DICTA 2025, Adelaide', c: 'bg-rose-400' },
+              { y: '2026', t: 'Ph.D. — Texas Tech University', c: 'bg-blue-400' },
+            ].map((m) => (
+              <li class="relative pl-6 pb-3 last:pb-0">
+                <div class={`absolute -left-[5px] top-1 h-2.5 w-2.5 rounded-full border-2 border-[#070707] ${m.c}`}></div>
+                <p class="font-mono text-[10px] text-white/30 mb-0.5">{m.y}</p>
+                <p class="text-sm text-white/75">{m.t}</p>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════
+         CTA
+    ═══════════════════════ -->
+    <section class="border-t border-white/[0.06] mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
+      <div class="rounded-[2rem] border border-white/[0.08] bg-white/[0.02] p-8 sm:p-10 text-center">
+        <h2 class="text-3xl font-semibold tracking-[-0.04em] text-white mb-4">Ready to work together?</h2>
+        <p class="text-sm text-white/55 max-w-md mx-auto mb-8 leading-6">
+          Whether it's clinical AI or enterprise authentication — reach out to the team directly.
+        </p>
+        <div class="flex flex-wrap gap-4 justify-center">
+          <a href={`${import.meta.env.BASE_URL}contact/`}
+            class="inline-flex items-center gap-2 rounded-full bg-white px-8 py-3 text-sm font-semibold text-black hover:bg-white/90 transition focus:outline-none focus:ring-2 focus:ring-white">
+            Get in Touch
+          </a>
+          <a href={`${import.meta.env.BASE_URL}services/`}
+            class="inline-flex items-center gap-2 rounded-full border border-white/[0.12] bg-white/5 px-8 py-3 text-sm font-medium text-white/75 hover:bg-white/10 transition">
+            View Services
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <Footer />
+</BaseLayout>

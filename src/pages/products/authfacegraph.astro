@@ -1,0 +1,135 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+---
+
+<BaseLayout
+  title="AuthFaceGraph — Biometric Facial Recognition & Graph Neural Network Security | AuthBrain"
+  description="Enterprise identity verification combining CNN facial embeddings with Graph Neural Networks to detect fraud rings, identity spoofing, and unauthorized access in real time."
+>
+  <Header />
+  <main>
+
+    <!-- Breadcrumb -->
+    <nav class="mx-auto max-w-7xl px-4 pt-8 sm:px-6 lg:px-8">
+      <ol class="flex items-center gap-2 text-xs font-mono text-white/40">
+        <li><a href={import.meta.env.BASE_URL} class="hover:text-white transition">Home</a></li>
+        <li class="text-white/20">/</li>
+        <li><a href={`${import.meta.env.BASE_URL}products/`} class="hover:text-white transition">Products</a></li>
+        <li class="text-white/20">/</li>
+        <li class="text-white/70">AuthFaceGraph</li>
+      </ol>
+    </nav>
+
+    <!-- Hero -->
+    <section class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
+      <div class="grid gap-12 lg:grid-cols-[1fr_auto] lg:items-start">
+        <div>
+          <div class="flex flex-wrap items-center gap-3 mb-6">
+            <span class="inline-flex items-center gap-1.5 rounded-full border border-purple-400/20 bg-purple-400/10 px-3 py-1 text-[11px] font-mono uppercase tracking-widest text-purple-400">
+              Fraud Detection
+            </span>
+            <span class="rounded-full border border-emerald-500/20 bg-emerald-500/10 px-3 py-1 text-[11px] font-mono uppercase tracking-wide text-emerald-400">
+              ● Production
+            </span>
+          </div>
+
+          <h1 class="text-4xl font-semibold tracking-[-0.04em] text-white sm:text-5xl mb-4">AuthFaceGraph</h1>
+          <p class="text-base font-mono text-white/50 mb-6">Biometric Facial Recognition & Graph Neural Network Security</p>
+          <p class="text-base leading-7 text-white/[0.72] max-w-2xl mb-8">
+            Engineered an enterprise identity verification framework combining deep facial recognition with Graph Neural Networks (GNNs). Utilizes CNN feature extraction to compute high-dimensional facial embeddings and builds dynamic graph representations to detect fraud rings, identity spoofing, and unauthorized access attempts in real time.
+          </p>
+
+          <div class="flex flex-wrap gap-4">
+            <a
+              href="https://github.com/mhashiq/AuthFaceGraph"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-medium text-black transition hover:bg-white/90 focus:outline-none focus:ring-2 focus:ring-white"
+            >
+              <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              View on GitHub
+            </a>
+            <a href={`${import.meta.env.BASE_URL}products/`} class="inline-flex items-center gap-2 rounded-full border border-white/[0.12] bg-white/5 px-6 py-3 text-sm font-medium text-white/80 transition hover:bg-white/10">
+              ← Back to Products
+            </a>
+          </div>
+        </div>
+
+        <div class="rounded-2xl border border-white/[0.08] bg-white/[0.02] p-6 min-w-[220px]">
+          <p class="text-xs font-mono uppercase tracking-widest text-white/40 mb-4">Tech Stack</p>
+          <div class="flex flex-col gap-2">
+            {['PyTorch', 'DeepFace', 'GNN (PyG)', 'OpenCV', 'Flask', 'Neo4j'].map((t) => (
+              <span class="rounded-lg border border-white/[0.08] bg-white/[0.03] px-3 py-2 text-xs font-mono text-white/70">{t}</span>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Key Highlights -->
+    <section class="mx-auto max-w-7xl px-4 pb-16 sm:px-6 lg:px-8">
+      <h2 class="text-2xl font-semibold tracking-[-0.04em] text-white mb-8">Key Engineering Highlights</h2>
+      <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        {[
+          { title: 'CNN Facial Embedding Extraction', body: 'Utilizes deep convolutional networks to extract high-dimensional facial embeddings from identity frames, enabling precise biometric matching at scale.' },
+          { title: 'Graph Neural Network Fraud Detection', body: 'Builds dynamic identity graphs where nodes represent users and edges encode behavioral relationships, allowing GNNs to detect coordinated fraud rings invisible to per-user models.' },
+          { title: 'Real-Time Spoofing Prevention', body: 'Detects presentation attacks, deepfake inputs, and synthetic media in the biometric pipeline before identity verification completes.' },
+          { title: 'Neo4j Identity Graph Persistence', body: 'All identity relationships and fraud signal edges are persisted in a Neo4j graph database, enabling historical traversal and compound pattern detection over time.' },
+          { title: 'Multi-Modal Confidence Scoring', body: 'Combines biometric similarity scores with graph-structural anomaly scores into a single compound fraud confidence metric used for access decisions.' },
+          { title: 'Live Unauthorized Access Pipeline', body: 'Unauthorized access attempts trigger immediate pipeline alerts, logging incident context, biometric mismatch vectors, and graph fraud evidence for security review.' },
+        ].map((h) => (
+          <div class="rounded-2xl border border-white/[0.08] bg-white/[0.02] p-6">
+            <h3 class="text-sm font-semibold text-white mb-2">{h.title}</h3>
+            <p class="text-xs leading-5 text-white/60">{h.body}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- Live Detection Feed Panel -->
+    <section class="mx-auto max-w-7xl px-4 pb-20 sm:px-6 lg:px-8">
+      <div class="rounded-[2rem] border border-white/10 bg-black/60 p-6 backdrop-blur-xl">
+        <div class="flex items-center justify-between border-b border-white/10 pb-4 mb-5">
+          <span class="font-mono text-xs font-semibold tracking-wider text-white/60">AUTHFACEGRAPH // IDENTITY VERIFICATION FEED</span>
+          <span class="rounded-full bg-emerald-500/10 px-2.5 py-1 font-mono text-[11px] font-medium text-emerald-400 border border-emerald-500/20">LIVE</span>
+        </div>
+        <div class="space-y-3 font-mono text-xs">
+          <div class="rounded-xl border border-white/[0.06] bg-white/[0.02] p-4">
+            <div class="flex items-center justify-between text-white/40 text-[11px] mb-1.5">
+              <span>BIOMETRIC_VERIFY // CNN_EMBEDDING</span><span>6ms ago</span>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="font-sans text-sm font-medium text-white">Similarity: 0.974 → Identity Confirmed</span>
+              <span class="rounded bg-emerald-500/10 px-2 py-0.5 text-[10px] text-emerald-400 border border-emerald-500/20">VERIFIED [18ms]</span>
+            </div>
+            <p class="mt-1 font-sans text-xs text-white/50">512-dim embedding matched · Graph node trust score: 0.98 · No fraud ring association</p>
+          </div>
+          <div class="rounded-xl border border-white/[0.06] bg-white/[0.02] p-4">
+            <div class="flex items-center justify-between text-white/40 text-[11px] mb-1.5">
+              <span>GNN_ANALYSIS // FRAUD_RING_DETECTION</span><span>41ms ago</span>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="font-sans text-sm font-medium text-white">Identity Node → Fraud Ring Cluster Detected</span>
+              <span class="rounded bg-red-500/10 px-2 py-0.5 text-[10px] text-red-400 border border-red-500/20">BLOCKED [11ms]</span>
+            </div>
+            <p class="mt-1 font-sans text-xs text-white/50">Graph traversal: 4-hop ring · 12 connected synthetic identities · Neo4j cluster flagged</p>
+          </div>
+          <div class="rounded-xl border border-white/[0.06] bg-white/[0.02] p-4">
+            <div class="flex items-center justify-between text-white/40 text-[11px] mb-1.5">
+              <span>SPOOF_DETECT // PRESENTATION_ATTACK</span><span>78ms ago</span>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="font-sans text-sm font-medium text-white">Deepfake Frame Detected — Liveness Fail</span>
+              <span class="rounded bg-amber-500/10 px-2 py-0.5 text-[10px] text-amber-400 border border-amber-500/20">QUARANTINE [7ms]</span>
+            </div>
+            <p class="mt-1 font-sans text-xs text-white/50">Liveness confidence: 0.08 · Texture artifact score: HIGH · Session terminated</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <Footer />
+</BaseLayout>

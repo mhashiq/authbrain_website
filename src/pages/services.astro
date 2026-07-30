@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
 ---
 
 <BaseLayout title="AuthBrain | AI & Enterprise Solutions" description="Enterprise-grade AI solutions, medical imaging platforms, autonomous agents, and scalable software products.">
@@ -281,64 +282,5 @@ import Header from '../components/Header.astro';
       </div>
     </section>
   </main>
-
-   <!-- 12. Footer -->
-  <footer class="border-t border-white/[0.08] bg-white/[0.02]">
-    <div class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
-      <div class="grid gap-8 grid-cols-2 md:grid-cols-4">
-        <div>
-          <p class="font-semibold text-white mb-4">Company</p>
-          <ul class="space-y-3 text-sm text-white/[0.6]">
-            <li><a href="#" class="hover:text-white transition">About Us</a></li>
-            <li><a href="#" class="hover:text-white transition">Leadership</a></li>
-            <li><a href="#" class="hover:text-white transition">Careers</a></li>
-          </ul>
-        </div>
-        <div>
-          <p class="font-semibold text-white mb-4">Solutions</p>
-          <ul class="space-y-3 text-sm text-white/[0.6]">
-            <li><a href={`${import.meta.env.BASE_URL}services/`} class="hover:text-white transition">Healthcare Analytics</a></li>
-            <li><a href={`${import.meta.env.BASE_URL}services/`} class="hover:text-white transition">Medical Imaging AI</a></li>
-            <li><a href={`${import.meta.env.BASE_URL}services/`} class="hover:text-white transition">Predictive Intelligence</a></li>
-          </ul>
-        </div>
-        <div>
-          <p class="font-semibold text-white mb-4">Resources</p>
-          <ul class="space-y-3 text-sm text-white/[0.6]">
-            <li><a href="#" class="hover:text-white transition">Blog</a></li>
-            <li><a href="#" class="hover:text-white transition">Whitepapers</a></li>
-            <li><a href="#" class="hover:text-white transition">Case Studies</a></li>
-          </ul>
-        </div>
-        <div>
-          <p class="font-semibold text-white mb-4">Contact</p>
-          <ul class="space-y-3 text-sm text-white/[0.6]">
-            <li><a href="mailto:authbrain.tech@gmail.com" class="hover:text-white transition">Email</a></li>
-            <li><a href="#" class="hover:text-white transition">Phone</a></li>
-            <li><a href="#" class="hover:text-white transition">LinkedIn</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="mt-12 border-t border-white/[0.08] pt-8 flex flex-col lg:flex-row justify-between items-center gap-8 lg:gap-4 text-center lg:text-left">
-        
-        <!-- Company Logo -->
-        <a href={import.meta.env.BASE_URL} class="shrink-0 group">
-          <img src={`${import.meta.env.BASE_URL}company-logo.jpeg`} alt="Company Logo" class="h-10 sm:h-12 w-auto object-contain opacity-80 transition-all duration-300 group-hover:opacity-100 group-hover:-translate-y-1" />
-        </a>
-
-        <p class="text-sm text-white/[0.52]">© 2026 AuthBrain. AI-Powered Business Intelligence.</p>
-
-        <!-- Bangladesh 1971 Tribute -->
-        <div class="group flex items-center gap-3 rounded-full border border-white/5 bg-white/[0.02] px-4 py-2 hover:bg-white/10 hover:border-green-500/30 transition-all duration-500 shrink-0 cursor-default">
-          <div class="relative flex h-4 w-6 items-center justify-center rounded-[2px] bg-[#006a4e] overflow-hidden shadow-sm">
-            <div class="h-2.5 w-2.5 rounded-full bg-[#f42a41] animate-pulse"></div>
-          </div>
-          <p class="text-[11px] sm:text-xs font-medium text-white/60 group-hover:text-white/90 transition-colors">
-            Honoring the <span class="text-green-400">1971</span> Freedom Fighters of <span class="text-red-400">Bangladesh</span>.
-          </p>
-        </div>
-
-      </div>
-    </div>
-  </footer>
+  <Footer />
 </BaseLayout>

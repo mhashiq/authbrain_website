@@ -1,0 +1,145 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+---
+
+<BaseLayout
+  title="AuthB2B — Enterprise B2B AI-Driven Adaptive Authentication | AuthBrain"
+  description="High-concurrency B2B authentication engine with unsupervised ML risk scoring, RBAC/ABAC policy enforcement, and zero-trust access control."
+>
+  <Header />
+  <main>
+
+    <!-- Breadcrumb -->
+    <nav class="mx-auto max-w-7xl px-4 pt-8 sm:px-6 lg:px-8">
+      <ol class="flex items-center gap-2 text-xs font-mono text-white/40">
+        <li><a href={import.meta.env.BASE_URL} class="hover:text-white transition">Home</a></li>
+        <li class="text-white/20">/</li>
+        <li><a href={`${import.meta.env.BASE_URL}products/`} class="hover:text-white transition">Products</a></li>
+        <li class="text-white/20">/</li>
+        <li class="text-white/70">AuthB2B</li>
+      </ol>
+    </nav>
+
+    <!-- Hero -->
+    <section class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
+      <div class="grid gap-12 lg:grid-cols-[1fr_auto] lg:items-start">
+        <div>
+          <!-- Category + Status -->
+          <div class="flex flex-wrap items-center gap-3 mb-6">
+            <span class="inline-flex items-center gap-1.5 rounded-full border border-cyan-400/20 bg-cyan-400/10 px-3 py-1 text-[11px] font-mono uppercase tracking-widest text-cyan-400">
+              Enterprise Security
+            </span>
+            <span class="rounded-full border border-emerald-500/20 bg-emerald-500/10 px-3 py-1 text-[11px] font-mono uppercase tracking-wide text-emerald-400">
+              ● Production
+            </span>
+          </div>
+
+          <!-- Title -->
+          <h1 class="text-4xl font-semibold tracking-[-0.04em] text-white sm:text-5xl mb-4">AuthB2B</h1>
+          <p class="text-base font-mono text-white/50 mb-6">Enterprise B2B AI-Driven Adaptive Authentication Platform</p>
+          <p class="text-base leading-7 text-white/[0.72] max-w-2xl mb-8">
+            Architected a high-concurrency B2B authentication engine integrating real-time AI security models. Implements unsupervised machine learning for risk-based authentication, detecting login anomalies and contextual user behavior deviations to enforce zero-trust access control. Built with dynamic RBAC/ABAC policy enforcement and scalable microservices.
+          </p>
+
+          <!-- CTA Row -->
+          <div class="flex flex-wrap gap-4">
+            <a
+              href="https://github.com/mhashiq/AuthB2B"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-medium text-black transition hover:bg-white/90 focus:outline-none focus:ring-2 focus:ring-white"
+            >
+              <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              View on GitHub
+            </a>
+            <a
+              href={`${import.meta.env.BASE_URL}products/`}
+              class="inline-flex items-center gap-2 rounded-full border border-white/[0.12] bg-white/5 px-6 py-3 text-sm font-medium text-white/80 transition hover:bg-white/10"
+            >
+              ← Back to Products
+            </a>
+          </div>
+        </div>
+
+        <!-- Tech Stack Card -->
+        <div class="rounded-2xl border border-white/[0.08] bg-white/[0.02] p-6 min-w-[220px]">
+          <p class="text-xs font-mono uppercase tracking-widest text-white/40 mb-4">Tech Stack</p>
+          <div class="flex flex-col gap-2">
+            {['Python', 'PyTorch', 'FastAPI', 'OAuth2/OIDC', 'Docker', 'PostgreSQL'].map((t) => (
+              <span class="rounded-lg border border-white/[0.08] bg-white/[0.03] px-3 py-2 text-xs font-mono text-white/70">{t}</span>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Key Highlights -->
+    <section class="mx-auto max-w-7xl px-4 pb-16 sm:px-6 lg:px-8">
+      <h2 class="text-2xl font-semibold tracking-[-0.04em] text-white mb-8">Key Engineering Highlights</h2>
+      <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        {[
+          { title: 'Unsupervised ML Risk Scoring', body: 'Every login event is evaluated in real time by an unsupervised ML model that profiles normal session behavior and flags deviations without labeled training data.' },
+          { title: 'Zero-Trust Access Control', body: 'No implicit trust is granted to any authenticated session. Each request is re-evaluated against current behavioral context and network posture.' },
+          { title: 'Dynamic RBAC/ABAC Policy', body: 'Role and attribute-based access control policies are evaluated dynamically at request time, allowing fine-grained permission decisions without hardcoded rules.' },
+          { title: 'OAuth2/OIDC Compliance', body: 'Full OAuth2 authorization server with OIDC identity token issuance, supporting enterprise SSO federation and B2B client credential flows.' },
+          { title: 'Microservices Architecture', body: 'Decoupled authentication, risk scoring, and policy enforcement services enable independent horizontal scaling under high-concurrency enterprise load.' },
+          { title: 'Sub-50ms Decision Latency', body: 'End-to-end access decisions — including ML inference and policy evaluation — are delivered within 50ms at production traffic volumes.' },
+        ].map((h) => (
+          <div class="rounded-2xl border border-white/[0.08] bg-white/[0.02] p-6">
+            <h3 class="text-sm font-semibold text-white mb-2">{h.title}</h3>
+            <p class="text-xs leading-5 text-white/60">{h.body}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- Architecture Telemetry Panel -->
+    <section class="mx-auto max-w-7xl px-4 pb-20 sm:px-6 lg:px-8">
+      <div class="rounded-[2rem] border border-white/10 bg-black/60 p-6 backdrop-blur-xl">
+        <div class="flex items-center justify-between border-b border-white/10 pb-4 mb-5">
+          <span class="font-mono text-xs font-semibold tracking-wider text-white/60">AUTHB2B // LIVE ENGINE TRACE</span>
+          <span class="rounded-full bg-emerald-500/10 px-2.5 py-1 font-mono text-[11px] font-medium text-emerald-400 border border-emerald-500/20">PRODUCTION ACTIVE</span>
+        </div>
+        <div class="space-y-3 font-mono text-xs">
+          <div class="rounded-xl border border-white/[0.06] bg-white/[0.02] p-4">
+            <div class="flex items-center justify-between text-white/40 text-[11px] mb-1.5">
+              <span>ACCESS_REQUEST // USER_SESSION_EVAL</span>
+              <span>8ms ago</span>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="font-sans text-sm font-medium text-white">Risk Score: 0.018 → ALLOW</span>
+              <span class="rounded bg-emerald-500/10 px-2 py-0.5 text-[10px] text-emerald-400 border border-emerald-500/20">RBAC: GRANTED [12ms]</span>
+            </div>
+            <p class="mt-1 font-sans text-xs text-white/50">Device fingerprint matched · IP reputation clean · Behavioral vector nominal</p>
+          </div>
+          <div class="rounded-xl border border-white/[0.06] bg-white/[0.02] p-4">
+            <div class="flex items-center justify-between text-white/40 text-[11px] mb-1.5">
+              <span>ACCESS_REQUEST // ANOMALY_DETECTED</span>
+              <span>34ms ago</span>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="font-sans text-sm font-medium text-white">Risk Score: 0.91 → BLOCK</span>
+              <span class="rounded bg-red-500/10 px-2 py-0.5 text-[10px] text-red-400 border border-red-500/20">ZERO-TRUST: DENIED [9ms]</span>
+            </div>
+            <p class="mt-1 font-sans text-xs text-white/50">Credential stuffing pattern detected · New device · Geo-velocity anomaly flagged</p>
+          </div>
+          <div class="rounded-xl border border-white/[0.06] bg-white/[0.02] p-4">
+            <div class="flex items-center justify-between text-white/40 text-[11px] mb-1.5">
+              <span>TOKEN_ISSUE // OAUTH2_OIDC</span>
+              <span>61ms ago</span>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="font-sans text-sm font-medium text-white">Client Credentials Flow · access_token issued</span>
+              <span class="rounded bg-blue-500/10 px-2 py-0.5 text-[10px] text-blue-400 border border-blue-500/20">TTL: 3600s [5ms]</span>
+            </div>
+            <p class="mt-1 font-sans text-xs text-white/50">Scope: read:records write:events · ABAC policy evaluated · Audit log written</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <Footer />
+</BaseLayout>

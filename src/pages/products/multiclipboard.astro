@@ -1,0 +1,135 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+---
+
+<BaseLayout
+  title="MultiClipboard — Modern Chrome Extension for Smart Multi-Item Clipboard Management | AuthBrain"
+  description="Manifest V3 Chrome Extension for multi-item clipboard history, NLP-powered content tagging, smart snippet categorization, and real-time sync."
+>
+  <Header />
+  <main>
+
+    <!-- Breadcrumb -->
+    <nav class="mx-auto max-w-7xl px-4 pt-8 sm:px-6 lg:px-8">
+      <ol class="flex items-center gap-2 text-xs font-mono text-white/40">
+        <li><a href={import.meta.env.BASE_URL} class="hover:text-white transition">Home</a></li>
+        <li class="text-white/20">/</li>
+        <li><a href={`${import.meta.env.BASE_URL}products/`} class="hover:text-white transition">Products</a></li>
+        <li class="text-white/20">/</li>
+        <li class="text-white/70">MultiClipboard</li>
+      </ol>
+    </nav>
+
+    <!-- Hero -->
+    <section class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
+      <div class="grid gap-12 lg:grid-cols-[1fr_auto] lg:items-start">
+        <div>
+          <div class="flex flex-wrap items-center gap-3 mb-6">
+            <span class="inline-flex items-center gap-1.5 rounded-full border border-amber-400/20 bg-amber-400/10 px-3 py-1 text-[11px] font-mono uppercase tracking-widest text-amber-400">
+              Developer Tools
+            </span>
+            <span class="rounded-full border border-blue-500/20 bg-blue-500/10 px-3 py-1 text-[11px] font-mono uppercase tracking-wide text-blue-400">
+              ● Published
+            </span>
+          </div>
+
+          <h1 class="text-4xl font-semibold tracking-[-0.04em] text-white sm:text-5xl mb-4">MultiClipboard</h1>
+          <p class="text-base font-mono text-white/50 mb-6">Modern Chrome Extension for Smart Multi-Item Clipboard Management</p>
+          <p class="text-base leading-7 text-white/[0.72] max-w-2xl mb-8">
+            Architected and published a Manifest V3 Chrome Extension for multi-item clipboard history, smart snippet categorization, and rich-text/plain-text formatting. Integrated client-side NLP algorithms for automated content tagging, fast search indexing, and real-time synchronization, delivering an optimized productivity workflow for developers and power users.
+          </p>
+
+          <div class="flex flex-wrap gap-4">
+            <a
+              href="https://github.com/mhashiq/MultiClipboard"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-medium text-black transition hover:bg-white/90 focus:outline-none focus:ring-2 focus:ring-white"
+            >
+              <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              View on GitHub
+            </a>
+            <a href={`${import.meta.env.BASE_URL}products/`} class="inline-flex items-center gap-2 rounded-full border border-white/[0.12] bg-white/5 px-6 py-3 text-sm font-medium text-white/80 transition hover:bg-white/10">
+              ← Back to Products
+            </a>
+          </div>
+        </div>
+
+        <div class="rounded-2xl border border-white/[0.08] bg-white/[0.02] p-6 min-w-[220px]">
+          <p class="text-xs font-mono uppercase tracking-widest text-white/40 mb-4">Tech Stack</p>
+          <div class="flex flex-col gap-2">
+            {['JavaScript (ES6+)', 'Manifest V3', 'Web Extension API', 'HTML5/CSS3', 'Chrome Storage API'].map((t) => (
+              <span class="rounded-lg border border-white/[0.08] bg-white/[0.03] px-3 py-2 text-xs font-mono text-white/70">{t}</span>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Key Highlights -->
+    <section class="mx-auto max-w-7xl px-4 pb-16 sm:px-6 lg:px-8">
+      <h2 class="text-2xl font-semibold tracking-[-0.04em] text-white mb-8">Key Engineering Highlights</h2>
+      <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        {[
+          { title: 'Multi-Item Clipboard History', body: 'Persists a full categorized history of clipboard items across browser sessions using the Chrome Storage API, eliminating data loss from clipboard overwrites.' },
+          { title: 'NLP-Powered Auto-Tagging', body: 'Client-side NLP algorithms analyze clipboard content at write time to automatically assign categories (code, URL, text, data) without requiring user input.' },
+          { title: 'Rich-Text & Plain-Text Formatting', body: 'Every clipboard item can be retrieved in either rich-text or plain-text format, giving users precise control over paste behavior across different contexts.' },
+          { title: 'Fast Search Indexing', body: 'Full-text search across the entire clipboard history is indexed client-side, returning instant results without any server roundtrips or storage backend.' },
+          { title: 'Real-Time Chrome Storage Sync', body: 'Clipboard state is synchronized in real time via the Chrome Storage API, ensuring clipboard history remains consistent across multiple active browser windows.' },
+          { title: 'Manifest V3 Architecture', body: 'Built on Chrome Manifest V3 — the current security-first extension standard — ensuring full compliance with Chrome Web Store publishing requirements and permission minimization.' },
+        ].map((h) => (
+          <div class="rounded-2xl border border-white/[0.08] bg-white/[0.02] p-6">
+            <h3 class="text-sm font-semibold text-white mb-2">{h.title}</h3>
+            <p class="text-xs leading-5 text-white/60">{h.body}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- Extension Activity Panel -->
+    <section class="mx-auto max-w-7xl px-4 pb-20 sm:px-6 lg:px-8">
+      <div class="rounded-[2rem] border border-white/10 bg-black/60 p-6 backdrop-blur-xl">
+        <div class="flex items-center justify-between border-b border-white/10 pb-4 mb-5">
+          <span class="font-mono text-xs font-semibold tracking-wider text-white/60">MULTICLIPBOARD // EXTENSION ACTIVITY LOG</span>
+          <span class="rounded-full bg-blue-500/10 px-2.5 py-1 font-mono text-[11px] font-medium text-blue-400 border border-blue-500/20">PUBLISHED MV3</span>
+        </div>
+        <div class="space-y-3 font-mono text-xs">
+          <div class="rounded-xl border border-white/[0.06] bg-white/[0.02] p-4">
+            <div class="flex items-center justify-between text-white/40 text-[11px] mb-1.5">
+              <span>CLIPBOARD_WRITE // NLP_TAG</span><span>just now</span>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="font-sans text-sm font-medium text-white">Item captured → auto-tagged: <span class="text-blue-300">code/python</span></span>
+              <span class="rounded bg-blue-500/10 px-2 py-0.5 text-[10px] text-blue-400 border border-blue-500/20">INDEXED [2ms]</span>
+            </div>
+            <p class="mt-1 font-sans text-xs text-white/50 font-mono">def predict_risk(user_session: dict) → float: ...</p>
+          </div>
+          <div class="rounded-xl border border-white/[0.06] bg-white/[0.02] p-4">
+            <div class="flex items-center justify-between text-white/40 text-[11px] mb-1.5">
+              <span>CLIPBOARD_SEARCH // FULL_TEXT</span><span>5s ago</span>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="font-sans text-sm font-medium text-white">Query: "auth token" → 3 results returned</span>
+              <span class="rounded bg-emerald-500/10 px-2 py-0.5 text-[10px] text-emerald-400 border border-emerald-500/20">SEARCH [1ms]</span>
+            </div>
+            <p class="mt-1 font-sans text-xs text-white/50">Items [12, 7, 3] matched · Ranked by recency · Plain-text mode</p>
+          </div>
+          <div class="rounded-xl border border-white/[0.06] bg-white/[0.02] p-4">
+            <div class="flex items-center justify-between text-white/40 text-[11px] mb-1.5">
+              <span>STORAGE_SYNC // CHROME_API</span><span>12s ago</span>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="font-sans text-sm font-medium text-white">48 clipboard items synced across 2 windows</span>
+              <span class="rounded bg-amber-500/10 px-2 py-0.5 text-[10px] text-amber-400 border border-amber-500/20">SYNC [4ms]</span>
+            </div>
+            <p class="mt-1 font-sans text-xs text-white/50">Chrome storage quota: 12% used · Encrypted at rest</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <Footer />
+</BaseLayout>

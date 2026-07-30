@@ -397,7 +397,7 @@ import Header from '../components/Header.astro';
       submitBtn.classList.add('opacity-70', 'cursor-not-allowed');
 
       try {
-        const response = await fetch(form.action, {
+        await fetch(form.action, {
           method: form.method,
           body: new FormData(form),
           mode: 'no-cors' // Prevents CORS blocking from Google Apps Script
