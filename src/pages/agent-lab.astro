@@ -1,89 +1,46 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
 ---
 
-<BaseLayout title="AuthBrain | Agent Lab" description="A simple agentic workflow page with Python-first thinking.">
+<BaseLayout title="AuthBrain | Agent Lab" description="Enterprise agentic workflows, intake, planning, execution, and verification engines.">
   <Header />
-  <main class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
-    <section class="max-w-3xl space-y-5">
-      <span class="inline-flex rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-mono uppercase tracking-[0.28em] text-white/[0.72]">
-        Agent lab
+  <main class="bg-[#FAFAFA] text-gray-900 mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
+    <section class="max-w-3xl space-y-4">
+      <span class="inline-flex rounded-full bg-blue-100 px-3.5 py-1 text-xs font-semibold uppercase tracking-wider text-blue-700">
+        Agent Lab
       </span>
-      <h1 class="text-5xl font-semibold leading-none tracking-[-0.05em] text-white sm:text-6xl">
-        Agentic, but still simple.
+      <h1 class="text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl">
+        Agentic Execution Architecture
       </h1>
-      <p class="text-base leading-7 text-white/[0.72] sm:text-lg">
-        This page shows the workflow in plain language: intake, plan, execute, and verify. That keeps the AI feel without adding noise.
+      <p class="text-base sm:text-lg text-gray-600 leading-relaxed">
+        Structured AI agent pipelines: intake, planning, execution, and real-time validation for enterprise operations.
       </p>
     </section>
 
-    <section class="mt-12 grid gap-5 lg:grid-cols-4">
-      <article class="clinical-frame rounded-[1.75rem] p-6">
-        <p class="metric-label">Step 01</p>
-        <h2 class="mt-4 text-xl font-semibold text-white">Intake</h2>
-        <p class="mt-4 text-sm leading-7 text-white/[0.68]">Capture the task, constraint, and desired result.</p>
+    <section class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+      <article class="rounded-2xl border border-gray-200 bg-white p-6 shadow-xs">
+        <p class="text-xs font-mono font-bold text-blue-600 uppercase">Step 01</p>
+        <h2 class="mt-2 text-xl font-bold text-gray-900">Intake</h2>
+        <p class="mt-2 text-sm text-gray-600 leading-relaxed">Capture task payloads, identity constraints, and desired enterprise output.</p>
       </article>
-      <article class="clinical-frame rounded-[1.75rem] p-6">
-        <p class="metric-label">Step 02</p>
-        <h2 class="mt-4 text-xl font-semibold text-white">Plan</h2>
-        <p class="mt-4 text-sm leading-7 text-white/[0.68]">Break the work into a small sequence the agent can follow.
-        </p>
+      <article class="rounded-2xl border border-gray-200 bg-white p-6 shadow-xs">
+        <p class="text-xs font-mono font-bold text-blue-600 uppercase">Step 02</p>
+        <h2 class="mt-2 text-xl font-bold text-gray-900">Plan</h2>
+        <p class="mt-2 text-sm text-gray-600 leading-relaxed">Decompose tasks into authenticated execution graphs.</p>
       </article>
-      <article class="clinical-frame rounded-[1.75rem] p-6">
-        <p class="metric-label">Step 03</p>
-        <h2 class="mt-4 text-xl font-semibold text-white">Execute</h2>
-        <p class="mt-4 text-sm leading-7 text-white/[0.68]">Use Python services to run tasks, transform data, or generate outputs.</p>
+      <article class="rounded-2xl border border-gray-200 bg-white p-6 shadow-xs">
+        <p class="text-xs font-mono font-bold text-blue-600 uppercase">Step 03</p>
+        <h2 class="mt-2 text-xl font-bold text-gray-900">Execute</h2>
+        <p class="mt-2 text-sm text-gray-600 leading-relaxed">Run inference models, transform medical data, or trigger zero-trust access controls.</p>
       </article>
-      <article class="clinical-frame rounded-[1.75rem] p-6">
-        <p class="metric-label">Step 04</p>
-        <h2 class="mt-4 text-xl font-semibold text-white">Verify</h2>
-        <p class="mt-4 text-sm leading-7 text-white/[0.68]">Check the result before the next action or page update.
-        </p>
+      <article class="rounded-2xl border border-gray-200 bg-white p-6 shadow-xs">
+        <p class="text-xs font-mono font-bold text-blue-600 uppercase">Step 04</p>
+        <h2 class="mt-2 text-xl font-bold text-gray-900">Verify</h2>
+        <p class="mt-2 text-sm text-gray-600 leading-relaxed">Validate output schema and security constraints before finalizing state.</p>
       </article>
     </section>
   </main>
- <!-- 12. Footer -->
-  <footer class="border-t border-white/[0.08] bg-white/[0.02]">
-    <div class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
-      <div class="grid gap-8 grid-cols-2 md:grid-cols-4">
-        <div>
-          <p class="font-semibold text-white mb-4">Company</p>
-          <ul class="space-y-3 text-sm text-white/[0.6]">
-            <li><a href="#" class="hover:text-white transition">About Us</a></li>
-            <li><a href="#" class="hover:text-white transition">Leadership</a></li>
-            <li><a href="#" class="hover:text-white transition">Careers</a></li>
-          </ul>
-        </div>
-        <div>
-          <p class="font-semibold text-white mb-4">Solutions</p>
-          <ul class="space-y-3 text-sm text-white/[0.6]">
-            <li><a href={`${import.meta.env.BASE_URL}services/`} class="hover:text-white transition">Healthcare Analytics</a></li>
-            <li><a href={`${import.meta.env.BASE_URL}services/`} class="hover:text-white transition">Medical Imaging AI</a></li>
-            <li><a href={`${import.meta.env.BASE_URL}services/`} class="hover:text-white transition">Predictive Intelligence</a></li>
-          </ul>
-        </div>
-        <div>
-          <p class="font-semibold text-white mb-4">Resources</p>
-          <ul class="space-y-3 text-sm text-white/[0.6]">
-            <li><a href="#" class="hover:text-white transition">Blog</a></li>
-            <li><a href="#" class="hover:text-white transition">Whitepapers</a></li>
-            <li><a href="#" class="hover:text-white transition">Case Studies</a></li>
-          </ul>
-        </div>
-        <div>
-          <p class="font-semibold text-white mb-4">Contact</p>
-          <ul class="space-y-3 text-sm text-white/[0.6]">
-            <li><a href="mailto:authbrain.tech@gmail.com" class="hover:text-white transition">Email</a></li>
-            <li><a href="#" class="hover:text-white transition">Phone</a></li>
-            <li><a href="#" class="hover:text-white transition">LinkedIn</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="mt-12 border-t border-white/[0.08] pt-8 text-sm text-white/[0.52] flex flex-col sm:flex-row justify-between items-center gap-4">
-        <p>© 2026 AuthBrain. AI-Powered Healthcare Intelligence.</p>
-        <p class="font-mono uppercase tracking-[0.2em] text-[10px]">Empowering Data-Driven Healthcare</p>
-      </div>
-    </div>
-  </footer>
+  <Footer />
 </BaseLayout>

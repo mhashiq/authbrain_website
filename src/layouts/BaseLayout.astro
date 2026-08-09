@@ -4,12 +4,43 @@ import '../styles/global.css';
 interface Props {
   title?: string;
   description?: string;
+  ogImage?: string;
+  ogType?: string;
+  canonicalUrl?: string;
+  jsonLdSchema?: Record<string, any> | Array<Record<string, any>>;
 }
 
 const {
-  title = 'AuthBrain | Python AI Services',
-  description = 'AuthBrain builds simple Python-first AI services, agent workflows, and internal tools.',
+  title = 'AuthBrain | Zero-Trust Authentication & Clinical AI for Healthcare & Finance',
+  description = 'Unified predictive AI and zero-trust access control for hospitals and financial enterprises. Sub-50ms authentication, HIPAA-compliant clinical AI, on-premise deployment.',
+  ogImage = '/Company_Logo.jpeg',
+  ogType = 'website',
+  canonicalUrl,
+  jsonLdSchema,
 } = Astro.props satisfies Props;
+
+const siteUrl = 'https://authbrain.tech';
+const currentUrl = canonicalUrl || `${siteUrl}${Astro.url.pathname}`;
+const fullOgImage = ogImage.startsWith('http') ? ogImage : `${siteUrl}${ogImage}`;
+
+const organizationSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  'name': 'AuthBrain',
+  'url': siteUrl,
+  'logo': `${siteUrl}/Company_Logo.jpeg`,
+  'email': 'authbrain.tech@gmail.com',
+  'description': 'Unified predictive AI and zero-trust access control infrastructure for healthcare systems and financial enterprises.',
+  'sameAs': [
+    'https://github.com/mhashiq',
+    'https://scholar.google.com/citations?user=Ts2F72QAAAAJ',
+    'https://www.linkedin.com/in/mh-ashiq/'
+  ]
+};
+
+const combinedSchema = jsonLdSchema
+  ? (Array.isArray(jsonLdSchema) ? [organizationSchema, ...jsonLdSchema] : [organizationSchema, jsonLdSchema])
+  : [organizationSchema];
 ---
 
 <!doctype html>
@@ -17,14 +48,37 @@ const {
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+    <!-- Primary Meta Tags -->
+    <title>{title}</title>
+    <meta name="title" content={title} />
     <meta name="description" content={description} />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href={currentUrl} />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content={ogType} />
+    <meta property="og:url" content={currentUrl} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={fullOgImage} />
+    <meta property="og:site_name" content="AuthBrain" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={currentUrl} />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content={fullOgImage} />
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
-    <title>{title}</title>
+
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-QFWEDQF9L2"></script>
     <script is:inline>
@@ -33,8 +87,13 @@ const {
       gtag('js', new Date());
       gtag('config', 'G-QFWEDQF9L2');
     </script>
+
+    <!-- Structured Data (JSON-LD) -->
+    {combinedSchema.map((schema) => (
+      <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+    ))}
   </head>
-  <body class="min-h-screen">
+  <body class="min-h-screen bg-[#FAFAFA] text-gray-900 antialiased selection:bg-blue-100 selection:text-blue-700">
     <slot />
   </body>
 </html>

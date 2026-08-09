@@ -1,52 +1,74 @@
 ---
 ---
 
-<footer class="border-t border-white/[0.08] bg-white/[0.02]">
-  <div class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+<footer class="border-t border-gray-200 bg-white">
+  <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
     <div class="grid gap-8 grid-cols-2 md:grid-cols-3">
+      <!-- Column 1: Company -->
       <div>
-        <p class="font-semibold text-white mb-4">Company</p>
-        <ul class="space-y-3 text-sm text-white/[0.6]">
-          <li><a href={`${import.meta.env.BASE_URL}about/`} class="hover:text-white transition">About</a></li>
-          <li><a href={`${import.meta.env.BASE_URL}services/`} class="hover:text-white transition">Services</a></li>
-          <li><a href={`${import.meta.env.BASE_URL}products/`} class="hover:text-white transition">Products</a></li>
-          <li><a href={`${import.meta.env.BASE_URL}research/`} class="hover:text-white transition">Publications</a></li>
-          <li><a href={`${import.meta.env.BASE_URL}contact/`} class="hover:text-white transition">Contact</a></li>
+        <p class="font-semibold text-gray-900 text-sm uppercase tracking-wider mb-4">Company</p>
+        <ul class="space-y-3 text-sm text-gray-600">
+          <li><a href={`${import.meta.env.BASE_URL}about/`} class="hover:text-blue-600 transition-colors">About</a></li>
+          <li><a href={`${import.meta.env.BASE_URL}services/`} class="hover:text-blue-600 transition-colors">Services</a></li>
+          <li><a href={`${import.meta.env.BASE_URL}products/`} class="hover:text-blue-600 transition-colors">Products</a></li>
+          <li><a href={`${import.meta.env.BASE_URL}research/`} class="hover:text-blue-600 transition-colors">Publications & Books</a></li>
+          <li><a href={`${import.meta.env.BASE_URL}contact/`} class="hover:text-blue-600 transition-colors">Contact</a></li>
         </ul>
       </div>
+
+      <!-- Column 2: Capabilities -->
       <div>
-        <p class="font-semibold text-white mb-4">Capabilities</p>
-        <ul class="space-y-3 text-sm text-white/[0.6]">
-          <li><a href={`${import.meta.env.BASE_URL}services/`} class="hover:text-white transition">Healthcare Intelligence</a></li>
-          <li><a href={`${import.meta.env.BASE_URL}services/`} class="hover:text-white transition">Medical Imaging AI</a></li>
-          <li><a href={`${import.meta.env.BASE_URL}services/`} class="hover:text-white transition">Predictive Analytics</a></li>
-          <li><a href={`${import.meta.env.BASE_URL}services/`} class="hover:text-white transition">Zero-Trust Authentication</a></li>
+        <p class="font-semibold text-gray-900 text-sm uppercase tracking-wider mb-4">Capabilities</p>
+        <ul class="space-y-3 text-sm text-gray-600">
+          <li><a href={`${import.meta.env.BASE_URL}services/`} class="hover:text-blue-600 transition-colors">Healthcare Intelligence</a></li>
+          <li><a href={`${import.meta.env.BASE_URL}services/`} class="hover:text-blue-600 transition-colors">Medical Imaging AI</a></li>
+          <li><a href={`${import.meta.env.BASE_URL}services/`} class="hover:text-blue-600 transition-colors">Predictive Analytics</a></li>
+          <li><a href={`${import.meta.env.BASE_URL}services/`} class="hover:text-blue-600 transition-colors">Zero-Trust Authentication</a></li>
         </ul>
       </div>
+
+      <!-- Column 3: Contact -->
       <div>
-        <p class="font-semibold text-white mb-4">Contact</p>
-        <ul class="space-y-3 text-sm text-white/[0.6]">
-          <li><a href="mailto:authbrain.tech@gmail.com" class="hover:text-white transition">Email Us</a></li>
-          <li><a href={`${import.meta.env.BASE_URL}contact/`} class="hover:text-white transition">Schedule Consultation</a></li>
+        <p class="font-semibold text-gray-900 text-sm uppercase tracking-wider mb-4">Contact</p>
+        <ul class="space-y-3 text-sm text-gray-600">
+          <li>
+            <a href="mailto:authbrain.tech@gmail.com" class="inline-flex items-center gap-2 hover:text-blue-600 transition-colors">
+              <svg class="h-4 w-4 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+              <span>authbrain.tech@gmail.com</span>
+            </a>
+          </li>
+          <li>
+            <a href={`${import.meta.env.BASE_URL}contact/`} class="inline-flex items-center gap-2 hover:text-blue-600 transition-colors">
+              <svg class="h-4 w-4 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+              </svg>
+              <span>Schedule Consultation</span>
+            </a>
+          </li>
         </ul>
       </div>
     </div>
 
-    <div class="mt-12 border-t border-white/[0.08] pt-8 flex flex-col lg:flex-row justify-between items-center gap-8 lg:gap-4 text-center lg:text-left">
-      <!-- Company Logo -->
+    <!-- Bottom Line -->
+    <div class="mt-12 border-t border-gray-200 pt-8 flex flex-col lg:flex-row justify-between items-center gap-6 text-center lg:text-left">
+      <!-- Company Logo (Restored) -->
       <a href={import.meta.env.BASE_URL} class="shrink-0 group">
-        <img src={`${import.meta.env.BASE_URL}company-logo.jpeg`} alt="AuthBrain Logo" class="h-10 sm:h-12 w-auto object-contain opacity-80 transition-all duration-300 group-hover:opacity-100 group-hover:-translate-y-1" />
+        <img src={`${import.meta.env.BASE_URL}Company_Logo.jpeg`} alt="AuthBrain Logo" class="h-10 sm:h-12 w-auto object-contain opacity-90 transition-all duration-300 group-hover:opacity-100 group-hover:-translate-y-0.5" />
       </a>
 
-      <p class="text-sm text-white/[0.52]">© 2026 AuthBrain. Enterprise Predictive AI & Identity Security Infrastructure.</p>
+      <p class="text-sm text-gray-500 font-medium">
+        © 2026 AuthBrain. Enterprise Predictive AI & Identity Security Infrastructure.
+      </p>
 
       <!-- Bangladesh 1971 Tribute -->
-      <div class="group flex items-center gap-3 rounded-full border border-white/5 bg-white/[0.02] px-4 py-2 hover:bg-white/10 hover:border-green-500/30 transition-all duration-500 shrink-0 cursor-default">
-        <div class="relative flex h-4 w-6 items-center justify-center rounded-[2px] bg-[#006a4e] overflow-hidden shadow-sm">
-          <div class="h-2.5 w-2.5 rounded-full bg-[#f42a41] animate-pulse"></div>
+      <div class="flex items-center gap-2.5 rounded-full border border-gray-200 bg-gray-50 px-3.5 py-1.5 transition-colors hover:border-emerald-300 hover:bg-emerald-50/50 shrink-0">
+        <div class="relative flex h-3.5 w-5 items-center justify-center rounded-[2px] bg-[#006a4e] overflow-hidden shadow-xs">
+          <div class="h-2 w-2 rounded-full bg-[#f42a41]"></div>
         </div>
-        <p class="text-[11px] sm:text-xs font-medium text-white/60 group-hover:text-white/90 transition-colors">
-          Honoring the <span class="text-green-400">1971</span> Freedom Fighters of <span class="text-red-400">Bangladesh</span>.
+        <p class="text-xs font-medium text-gray-600">
+          Honoring the <span class="font-semibold text-emerald-700">1971</span> Freedom Fighters of <span class="font-semibold text-rose-600">Bangladesh</span>.
         </p>
       </div>
     </div>

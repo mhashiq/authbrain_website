@@ -2,140 +2,225 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
+
+const softwareSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  'name': 'MultiClipboard',
+  'applicationCategory': 'DeveloperApplication',
+  'operatingSystem': 'Chrome Browser, Windows, macOS, Linux',
+  'description': 'Manifest V3 Chrome Extension for multi-item clipboard history, smart snippet categorization, and rich-text/plain-text formatting.',
+  'offers': {
+    '@type': 'Offer',
+    'price': '0',
+    'priceCurrency': 'USD'
+  }
+};
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  'itemListElement': [
+    { '@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': 'https://authbrain.tech/' },
+    { '@type': 'ListItem', 'position': 2, 'name': 'Products', 'item': 'https://authbrain.tech/products/' },
+    { '@type': 'ListItem', 'position': 3, 'name': 'MultiClipboard', 'item': 'https://authbrain.tech/products/multiclipboard/' }
+  ]
+};
 ---
 
 <BaseLayout
-  title="MultiClipboard — Modern Chrome Extension for Smart Multi-Item Clipboard Management | AuthBrain"
-  description="Manifest V3 Chrome Extension for multi-item clipboard history, NLP-powered content tagging, smart snippet categorization, and real-time sync."
+  title="MultiClipboard | Chrome Extension for Smart Multi-Item Clipboard Management"
+  description="Manifest V3 Chrome Extension for multi-item clipboard history, smart snippet categorization, and rich-text/plain-text formatting."
+  jsonLdSchema={[softwareSchema, breadcrumbSchema]}
 >
   <Header />
-  <main>
+  <main class="bg-[#FAFAFA] text-gray-900">
 
-    <!-- Breadcrumb -->
-    <nav class="mx-auto max-w-7xl px-4 pt-8 sm:px-6 lg:px-8">
-      <ol class="flex items-center gap-2 text-xs font-mono text-white/40">
-        <li><a href={import.meta.env.BASE_URL} class="hover:text-white transition">Home</a></li>
-        <li class="text-white/20">/</li>
-        <li><a href={`${import.meta.env.BASE_URL}products/`} class="hover:text-white transition">Products</a></li>
-        <li class="text-white/20">/</li>
-        <li class="text-white/70">MultiClipboard</li>
+    <!-- 1. Breadcrumb -->
+    <nav class="mx-auto max-w-7xl px-4 pt-6 sm:px-6 lg:px-8">
+      <ol class="flex items-center gap-2 text-xs font-medium text-gray-500">
+        <li><a href={import.meta.env.BASE_URL} class="hover:text-blue-600 transition">Home</a></li>
+        <li>/</li>
+        <li><a href={`${import.meta.env.BASE_URL}products/`} class="hover:text-blue-600 transition">Products</a></li>
+        <li>/</li>
+        <li class="text-gray-900 font-semibold">MultiClipboard</li>
       </ol>
     </nav>
 
-    <!-- Hero -->
-    <section class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
-      <div class="grid gap-12 lg:grid-cols-[1fr_auto] lg:items-start">
-        <div>
-          <div class="flex flex-wrap items-center gap-3 mb-6">
-            <span class="inline-flex items-center gap-1.5 rounded-full border border-amber-400/20 bg-amber-400/10 px-3 py-1 text-[11px] font-mono uppercase tracking-widest text-amber-400">
-              Developer Tools
-            </span>
-            <span class="rounded-full border border-blue-500/20 bg-blue-500/10 px-3 py-1 text-[11px] font-mono uppercase tracking-wide text-blue-400">
-              ● Published
-            </span>
-          </div>
-
-          <h1 class="text-4xl font-semibold tracking-[-0.04em] text-white sm:text-5xl mb-4">MultiClipboard</h1>
-          <p class="text-base font-mono text-white/50 mb-6">Modern Chrome Extension for Smart Multi-Item Clipboard Management</p>
-          <p class="text-base leading-7 text-white/[0.72] max-w-2xl mb-8">
-            Architected and published a Manifest V3 Chrome Extension for multi-item clipboard history, smart snippet categorization, and rich-text/plain-text formatting. Integrated client-side NLP algorithms for automated content tagging, fast search indexing, and real-time synchronization, delivering an optimized productivity workflow for developers and power users.
-          </p>
-
-          <div class="flex flex-wrap gap-4">
-            <a
-              href="https://chromewebstore.google.com/detail/naigcmklidmmeinjpllcnbodpbdndbof"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3 text-sm font-medium text-white transition hover:bg-accent/90 focus:outline-none focus:ring-2 focus:ring-accent"
-            >
-              <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 4.8a7.2 7.2 0 1 1 0 14.4 7.2 7.2 0 0 1 0-14.4zm0 2.4a4.8 4.8 0 1 0 0 9.6 4.8 4.8 0 0 0 0-9.6z"/></svg>
-              Chrome Web Store (Live)
-            </a>
-            <a
-              href="https://github.com/mhashiq/MultiClipboard"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-medium text-black transition hover:bg-white/90 focus:outline-none focus:ring-2 focus:ring-white"
-            >
-              <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-              View on GitHub
-            </a>
-            <a href={`${import.meta.env.BASE_URL}products/`} class="inline-flex items-center gap-2 rounded-full border border-white/[0.12] bg-white/5 px-6 py-3 text-sm font-medium text-white/80 transition hover:bg-white/10">
-              ← Back to Products
-            </a>
-          </div>
+    <!-- 2. Hero Block -->
+    <section class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8 lg:py-10 border-b border-gray-200">
+      <div class="max-w-4xl space-y-4">
+        <div class="flex flex-wrap items-center gap-3">
+          <span class="inline-flex items-center gap-1.5 rounded-full border border-blue-200 bg-blue-50 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-blue-700">
+            <span class="h-1.5 w-1.5 rounded-full bg-blue-500"></span>
+            Published
+          </span>
+          <span class="inline-flex items-center gap-1 text-xs font-semibold uppercase tracking-wider text-gray-500">
+            DEVELOPER TOOLS
+          </span>
         </div>
 
-        <div class="rounded-2xl border border-white/[0.08] bg-white/[0.02] p-6 min-w-[220px]">
-          <p class="text-xs font-mono uppercase tracking-widest text-white/40 mb-4">Tech Stack</p>
-          <div class="flex flex-col gap-2">
-            {['JavaScript (ES6+)', 'Manifest V3', 'Web Extension API', 'HTML5/CSS3', 'Chrome Storage API'].map((t) => (
-              <span class="rounded-lg border border-white/[0.08] bg-white/[0.03] px-3 py-2 text-xs font-mono text-white/70">{t}</span>
-            ))}
-          </div>
+        <h1 class="text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl lg:text-6xl">
+          MultiClipboard
+        </h1>
+
+        <p class="text-lg font-semibold text-gray-700">
+          Modern Chrome Extension for Smart Multi-Item Clipboard Management
+        </p>
+
+        <p class="text-base leading-relaxed text-gray-600 max-w-3xl">
+          MultiClipboard is a Manifest V3 compliant Chrome Extension designed to eliminate context-switch friction for developers, researchers, and technical power users. MultiClipboard maintains a local zero-knowledge history of copied snippets, code blocks, and formatted rich text, allowing users to categorize, pin, and search their clipboard history seamlessly.
+        </p>
+
+        <!-- Primary CTA Row -->
+        <div class="flex flex-wrap items-center gap-4 pt-4">
+          <a
+            href="https://chromewebstore.google.com/detail/naigcmklidmmeinjpllcnbodpbdndbof"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-2 rounded-xl border border-gray-300 bg-white px-5 py-3 text-xs font-semibold text-gray-700 hover:bg-gray-50 shadow-xs transition"
+          >
+            <svg class="h-4 w-4 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+            </svg>
+            <span>View on Chrome Web Store</span>
+          </a>
+
+          <a
+            href="https://github.com/mhashiq/MultiClipboard"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-2 rounded-xl border border-gray-300 bg-white px-5 py-3 text-xs font-semibold text-gray-700 hover:bg-gray-50 shadow-xs transition"
+          >
+            <svg class="h-4 w-4 text-gray-700" fill="currentColor" viewBox="0 0 24 24">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
+            </svg>
+            <span>View on GitHub</span>
+          </a>
+
+          <a
+            href={`${import.meta.env.BASE_URL}contact/`}
+            class="inline-flex items-center gap-2 rounded-xl bg-blue-600 px-6 py-3 text-xs font-semibold text-white shadow-xs hover:bg-blue-700 transition"
+          >
+            <span>Request Enterprise Customization</span>
+            <span>&rarr;</span>
+          </a>
         </div>
       </div>
     </section>
 
-    <!-- Key Highlights -->
-    <section class="mx-auto max-w-7xl px-4 pb-16 sm:px-6 lg:px-8">
-      <h2 class="text-2xl font-semibold tracking-[-0.04em] text-white mb-8">Key Engineering Highlights</h2>
-      <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+    <!-- 3. Tech Stack Grid -->
+    <section class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8 border-b border-gray-200">
+      <h2 class="text-xs font-bold uppercase tracking-wider text-gray-500 mb-4">Extension Tech Stack</h2>
+      <div class="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-5">
         {[
-          { title: 'Multi-Item Clipboard History', body: 'Persists a full categorized history of clipboard items across browser sessions using the Chrome Storage API, eliminating data loss from clipboard overwrites.' },
-          { title: 'NLP-Powered Auto-Tagging', body: 'Client-side NLP algorithms analyze clipboard content at write time to automatically assign categories (code, URL, text, data) without requiring user input.' },
-          { title: 'Rich-Text & Plain-Text Formatting', body: 'Every clipboard item can be retrieved in either rich-text or plain-text format, giving users precise control over paste behavior across different contexts.' },
-          { title: 'Fast Search Indexing', body: 'Full-text search across the entire clipboard history is indexed client-side, returning instant results without any server roundtrips or storage backend.' },
-          { title: 'Real-Time Chrome Storage Sync', body: 'Clipboard state is synchronized in real time via the Chrome Storage API, ensuring clipboard history remains consistent across multiple active browser windows.' },
-          { title: 'Manifest V3 Architecture', body: 'Built on Chrome Manifest V3 — the current security-first extension standard — ensuring full compliance with Chrome Web Store publishing requirements and permission minimization.' },
-        ].map((h) => (
-          <div class="rounded-2xl border border-white/[0.08] bg-white/[0.02] p-6">
-            <h3 class="text-sm font-semibold text-white mb-2">{h.title}</h3>
-            <p class="text-xs leading-5 text-white/60">{h.body}</p>
+          { name: 'JavaScript ES6+', desc: 'Modern Client Logic' },
+          { name: 'Manifest V3', desc: 'Secure Extension Spec' },
+          { name: 'Web Extension API', desc: 'Browser Clipboard Event Hooks' },
+          { name: 'HTML5 & CSS3', desc: 'Responsive Popup UI' },
+          { name: 'Chrome Storage API', desc: 'Local Zero-Knowledge Persistence' },
+        ].map((t) => (
+          <div class="rounded-xl border border-gray-200 bg-white p-3.5 text-center shadow-xs">
+            <p class="text-xs font-mono font-bold text-gray-900">{t.name}</p>
+            <p class="text-[10px] text-gray-500 font-medium mt-0.5">{t.desc}</p>
           </div>
         ))}
       </div>
     </section>
 
-    <!-- Extension Activity Panel -->
-    <section class="mx-auto max-w-7xl px-4 pb-20 sm:px-6 lg:px-8">
-      <div class="rounded-[2rem] border border-white/10 bg-black/60 p-6 backdrop-blur-xl">
-        <div class="flex items-center justify-between border-b border-white/10 pb-4 mb-5">
-          <span class="font-mono text-xs font-semibold tracking-wider text-white/60">MULTICLIPBOARD // EXTENSION ACTIVITY LOG</span>
-          <span class="rounded-full bg-blue-500/10 px-2.5 py-1 font-mono text-[11px] font-medium text-blue-400 border border-blue-500/20">PUBLISHED MV3</span>
+    <!-- 4. Key Capabilities & Outcomes -->
+    <section class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8 border-b border-gray-200">
+      <h2 class="text-2xl font-bold text-gray-900 mb-6">Key Engineering Capabilities</h2>
+      <div class="grid gap-6 sm:grid-cols-2">
+        <div class="rounded-2xl border border-gray-200 bg-white p-6 shadow-xs">
+          <div class="h-8 w-8 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center font-bold text-sm mb-3">📋</div>
+          <h3 class="text-base font-bold text-gray-900 mb-2">Multi-Item Clipboard History</h3>
+          <p class="text-xs text-gray-600 leading-relaxed">
+            Automatically intercepts and saves multiple copied items so text or code snippets are never overwritten.
+          </p>
         </div>
-        <div class="space-y-3 font-mono text-xs">
-          <div class="rounded-xl border border-white/[0.06] bg-white/[0.02] p-4">
-            <div class="flex items-center justify-between text-white/40 text-[11px] mb-1.5">
-              <span>CLIPBOARD_WRITE // NLP_TAG</span><span>just now</span>
-            </div>
-            <div class="flex items-center justify-between">
-              <span class="font-sans text-sm font-medium text-white">Item captured → auto-tagged: <span class="text-blue-300">code/python</span></span>
-              <span class="rounded bg-blue-500/10 px-2 py-0.5 text-[10px] text-blue-400 border border-blue-500/20">INDEXED [2ms]</span>
-            </div>
-            <p class="mt-1 font-sans text-xs text-white/50 font-mono">def predict_risk(user_session: dict) → float: ...</p>
-          </div>
-          <div class="rounded-xl border border-white/[0.06] bg-white/[0.02] p-4">
-            <div class="flex items-center justify-between text-white/40 text-[11px] mb-1.5">
-              <span>CLIPBOARD_SEARCH // FULL_TEXT</span><span>5s ago</span>
-            </div>
-            <div class="flex items-center justify-between">
-              <span class="font-sans text-sm font-medium text-white">Query: "auth token" → 3 results returned</span>
-              <span class="rounded bg-emerald-500/10 px-2 py-0.5 text-[10px] text-emerald-400 border border-emerald-500/20">SEARCH [1ms]</span>
-            </div>
-            <p class="mt-1 font-sans text-xs text-white/50">Items [12, 7, 3] matched · Ranked by recency · Plain-text mode</p>
-          </div>
-          <div class="rounded-xl border border-white/[0.06] bg-white/[0.02] p-4">
-            <div class="flex items-center justify-between text-white/40 text-[11px] mb-1.5">
-              <span>STORAGE_SYNC // CHROME_API</span><span>12s ago</span>
-            </div>
-            <div class="flex items-center justify-between">
-              <span class="font-sans text-sm font-medium text-white">48 clipboard items synced across 2 windows</span>
-              <span class="rounded bg-amber-500/10 px-2 py-0.5 text-[10px] text-amber-400 border border-amber-500/20">SYNC [4ms]</span>
-            </div>
-            <p class="mt-1 font-sans text-xs text-white/50">Chrome storage quota: 12% used · Encrypted at rest</p>
-          </div>
+
+        <div class="rounded-2xl border border-gray-200 bg-white p-6 shadow-xs">
+          <div class="h-8 w-8 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center font-bold text-sm mb-3">🔒</div>
+          <h3 class="text-base font-bold text-gray-900 mb-2">Local Zero-Knowledge Storage</h3>
+          <p class="text-xs text-gray-600 leading-relaxed">
+            All snippet histories remain entirely in your browser's local encrypted storage with zero external cloud transmission.
+          </p>
         </div>
+
+        <div class="rounded-2xl border border-gray-200 bg-blue-50/30 border-blue-200 p-6 shadow-xs">
+          <div class="h-8 w-8 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center font-bold text-sm mb-3">⚡</div>
+          <h3 class="text-base font-bold text-gray-900 mb-2">Instant Fuzzy Search & Filtering</h3>
+          <p class="text-xs text-gray-600 leading-relaxed">
+            Search hundreds of historical snippets instantly using sub-millisecond keyword lookup in the extension popup.
+          </p>
+        </div>
+
+        <div class="rounded-2xl border border-gray-200 bg-white p-6 shadow-xs">
+          <div class="h-8 w-8 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center font-bold text-sm mb-3">⚙️</div>
+          <h3 class="text-base font-bold text-gray-900 mb-2">Rich-Text & Plain-Text Paste Options</h3>
+          <p class="text-xs text-gray-600 leading-relaxed">
+            Toggle between raw code snippet formatting and sanitized plain text with one key combo before pasting.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Target Use Cases -->
+    <section class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8 border-b border-gray-200">
+      <h2 class="text-2xl font-bold text-gray-900 mb-6">Built For Power Users</h2>
+      <div class="grid gap-6 sm:grid-cols-3">
+        <div class="rounded-2xl border border-gray-200 bg-white p-6 shadow-xs text-center">
+          <div class="text-2xl mb-2">💻</div>
+          <h3 class="text-sm font-bold text-gray-900 mb-1">Software Engineers</h3>
+          <p class="text-xs text-gray-600">Store and categorize recurring code blocks, API keys, and CLI commands locally.</p>
+        </div>
+        <div class="rounded-2xl border border-gray-200 bg-white p-6 shadow-xs text-center">
+          <div class="text-2xl mb-2">🔬</div>
+          <h3 class="text-sm font-bold text-gray-900 mb-1">Academic Researchers</h3>
+          <p class="text-xs text-gray-600">Collect paper citations, DOIs, and excerpt notes across dozens of open tabs without losing state.</p>
+        </div>
+        <div class="rounded-2xl border border-gray-200 bg-white p-6 shadow-xs text-center">
+          <div class="text-2xl mb-2">⚡</div>
+          <h3 class="text-sm font-bold text-gray-900 mb-1">Technical Content Creators</h3>
+          <p class="text-xs text-gray-600">Manage multi-part documentation drafts and markdown formatting templates seamlessly.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Related Products -->
+    <section class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8 border-b border-gray-200">
+      <h2 class="text-2xl font-bold text-gray-900 mb-6">Related Platforms</h2>
+      <div class="grid gap-6 sm:grid-cols-2">
+        <a href={`${import.meta.env.BASE_URL}products/statpilot/`} class="group rounded-2xl border border-gray-200 bg-white p-6 shadow-xs hover:border-blue-300 hover:shadow-md transition">
+          <span class="inline-block rounded-full bg-blue-50 border border-blue-200 px-2.5 py-0.5 text-[10px] font-semibold text-blue-700 mb-2">Published</span>
+          <h3 class="text-lg font-bold text-gray-900 group-hover:text-blue-600 transition">StatPilot</h3>
+          <p class="text-xs text-gray-600 mt-1">Automated, Transparent Statistical Analysis & Decision Engine</p>
+        </a>
+
+        <a href={`${import.meta.env.BASE_URL}products/authb2b/`} class="group rounded-2xl border border-gray-200 bg-white p-6 shadow-xs hover:border-blue-300 hover:shadow-md transition">
+          <span class="inline-block rounded-full bg-emerald-50 border border-emerald-200 px-2.5 py-0.5 text-[10px] font-semibold text-emerald-700 mb-2">Production</span>
+          <h3 class="text-lg font-bold text-gray-900 group-hover:text-blue-600 transition">AuthB2B</h3>
+          <p class="text-xs text-gray-600 mt-1">Enterprise B2B AI-Driven Adaptive Authentication Platform</p>
+        </a>
+      </div>
+    </section>
+
+    <!-- 7. Final CTA Band -->
+    <section class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
+      <div class="rounded-3xl border border-blue-200 bg-blue-50/60 p-8 text-center shadow-xs">
+        <h2 class="text-2xl font-bold text-gray-900 sm:text-3xl mb-2">
+          Interested in deploying MultiClipboard across your engineering team?
+        </h2>
+        <p class="text-sm text-gray-600 max-w-xl mx-auto mb-6">
+          Schedule a consultation to discuss custom enterprise extension policies or team snippet syncing.
+        </p>
+        <a
+          href={`${import.meta.env.BASE_URL}contact/`}
+          class="inline-flex items-center justify-center rounded-xl bg-blue-600 px-7 py-3.5 text-sm font-semibold text-white shadow-xs hover:bg-blue-700 transition"
+        >
+          Schedule Technical Demo
+        </a>
       </div>
     </section>
 

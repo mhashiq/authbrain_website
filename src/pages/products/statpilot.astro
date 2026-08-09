@@ -2,223 +2,227 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
+
+const softwareSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  'name': 'StatPilot',
+  'applicationCategory': 'DeveloperApplication',
+  'operatingSystem': 'Python 3.9+, Linux, macOS, Windows',
+  'description': 'Automated statistical analysis engine evaluating distribution normality and variance homogeneity to pick optimal parametric or non-parametric tests with audit-ready reports.',
+  'offers': {
+    '@type': 'Offer',
+    'price': '0',
+    'priceCurrency': 'USD'
+  }
+};
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  'itemListElement': [
+    { '@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': 'https://authbrain.tech/' },
+    { '@type': 'ListItem', 'position': 2, 'name': 'Products', 'item': 'https://authbrain.tech/products/' },
+    { '@type': 'ListItem', 'position': 3, 'name': 'StatPilot', 'item': 'https://authbrain.tech/products/statpilot/' }
+  ]
+};
 ---
 
 <BaseLayout
-  title="StatPilot — Automated, Transparent Statistical Analysis & Decision Engine | AuthBrain"
+  title="StatPilot | Automated Statistical Analysis & Decision Engine"
   description="Automated statistical analysis engine evaluating distribution normality and variance homogeneity to pick optimal parametric or non-parametric tests with audit-ready reports."
+  jsonLdSchema={[softwareSchema, breadcrumbSchema]}
 >
   <Header />
-  <main>
+  <main class="bg-[#FAFAFA] text-gray-900">
 
-    <!-- Breadcrumb -->
-    <nav class="mx-auto max-w-7xl px-4 pt-8 sm:px-6 lg:px-8">
-      <ol class="flex items-center gap-2 text-xs font-mono text-white/40">
-        <li><a href={import.meta.env.BASE_URL} class="hover:text-white transition">Home</a></li>
-        <li class="text-white/20">/</li>
-        <li><a href={`${import.meta.env.BASE_URL}products/`} class="hover:text-white transition">Products</a></li>
-        <li class="text-white/20">/</li>
-        <li class="text-white/70">StatPilot</li>
+    <!-- 1. Breadcrumb -->
+    <nav class="mx-auto max-w-7xl px-4 pt-6 sm:px-6 lg:px-8">
+      <ol class="flex items-center gap-2 text-xs font-medium text-gray-500">
+        <li><a href={import.meta.env.BASE_URL} class="hover:text-blue-600 transition">Home</a></li>
+        <li>/</li>
+        <li><a href={`${import.meta.env.BASE_URL}products/`} class="hover:text-blue-600 transition">Products</a></li>
+        <li>/</li>
+        <li class="text-gray-900 font-semibold">StatPilot</li>
       </ol>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
-      <div class="grid gap-12 lg:grid-cols-[1fr_auto] lg:items-start">
-        <div>
-          <div class="flex flex-wrap items-center gap-3 mb-6">
-            <span class="inline-flex items-center gap-1.5 rounded-full border border-indigo-400/20 bg-indigo-400/10 px-3 py-1 text-[11px] font-mono uppercase tracking-widest text-indigo-400">
-              Data Science & Analytics
-            </span>
-            <span class="rounded-full border border-emerald-500/20 bg-emerald-500/10 px-3 py-1 text-[11px] font-mono uppercase tracking-wide text-emerald-400">
-              ● Published v1.1.0
-            </span>
-          </div>
-
-          <h1 class="text-4xl font-semibold tracking-[-0.04em] text-white sm:text-5xl mb-4">StatPilot 🧭</h1>
-          <p class="text-base font-mono text-white/50 mb-6">Automated, Transparent Statistical Analysis for Researchers & Data Scientists</p>
-          <p class="text-base leading-7 text-white/[0.72] max-w-2xl mb-8">
-            StatPilot simplifies complex statistical workflows by automating group comparison selection and assumption testing. Instead of manually checking assumptions across multiple software tools, StatPilot evaluates your dataset's distribution, runs Shapiro-Wilk normality and Levene's variance homogeneity diagnostics, picks the correct parametric or non-parametric test, calculates effect sizes, and outputs transparent, publication-ready Markdown reports.
-          </p>
-
-          <!-- CTAs -->
-          <div class="flex flex-wrap gap-4">
-            <a
-              href="https://pypi.org/project/statpilot/"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3 text-sm font-medium text-white transition hover:bg-accent/90 focus:outline-none focus:ring-2 focus:ring-accent"
-            >
-              <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0L1.75 6v12L12 24l10.25-6V6L12 0zm-1.25 3.5h2.5v3.5h-2.5V3.5zM4.5 7.5h3.5v2.5H4.5V7.5zm11.5 0h3.5v2.5H16V7.5zm-8 4h8v2.5h-8V11.5zm-3.5 4h3.5v2.5H4.5V15.5zm11.5 0h3.5v2.5H16V15.5z"/></svg>
-              PyPI Package (Live)
-            </a>
-            <a
-              href="https://github.com/mhashiq/statpilot"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-medium text-black transition hover:bg-white/90 focus:outline-none focus:ring-2 focus:ring-white"
-            >
-              <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-              View on GitHub
-            </a>
-            <a href={`${import.meta.env.BASE_URL}products/`} class="inline-flex items-center gap-2 rounded-full border border-white/[0.12] bg-white/5 px-6 py-3 text-sm font-medium text-white/80 transition hover:bg-white/10">
-              ← Back to Products
-            </a>
-          </div>
+    <!-- 2. Hero Block -->
+    <section class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8 lg:py-10 border-b border-gray-200">
+      <div class="max-w-4xl space-y-4">
+        <div class="flex flex-wrap items-center gap-3">
+          <span class="inline-flex items-center gap-1.5 rounded-full border border-blue-200 bg-blue-50 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-blue-700">
+            <span class="h-1.5 w-1.5 rounded-full bg-blue-500"></span>
+            Published
+          </span>
+          <span class="inline-flex items-center gap-1 text-xs font-semibold uppercase tracking-wider text-gray-500">
+            DATA SCIENCE
+          </span>
         </div>
 
-        <!-- Tech Stack Sidebar -->
-        <div class="rounded-2xl border border-white/[0.08] bg-white/[0.02] p-6 min-w-[220px]">
-          <p class="text-xs font-mono uppercase tracking-widest text-white/40 mb-4">Tech Stack</p>
-          <div class="flex flex-col gap-2">
-            {['Python (3.9+)', 'Pandas', 'SciPy', 'Rich CLI', 'Seaborn', 'PyTest', 'Jinja2'].map((t) => (
-              <span class="rounded-lg border border-white/[0.08] bg-white/[0.03] px-3 py-2 text-xs font-mono text-white/70">{t}</span>
-            ))}
-          </div>
+        <h1 class="text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl lg:text-6xl">
+          StatPilot
+        </h1>
+
+        <p class="text-lg font-semibold text-gray-700">
+          Automated, Transparent Statistical Analysis & Decision Engine
+        </p>
+
+        <p class="text-base leading-relaxed text-gray-600 max-w-3xl">
+          StatPilot is an automated statistical decision engine engineered in Python for researchers, clinical trialists, and data scientists. StatPilot evaluates distribution normality (Shapiro-Wilk, D’Agostino-Pearson) and variance homogeneity (Levene’s test) across experimental datasets to select and execute the mathematically optimal parametric or non-parametric statistical tests, outputting audit-ready statistical reports.
+        </p>
+
+        <!-- Primary CTA Row -->
+        <div class="flex flex-wrap items-center gap-4 pt-4">
+          <a
+            href="https://pypi.org/project/statpilot/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-2 rounded-xl border border-gray-300 bg-white px-5 py-3 text-xs font-semibold text-gray-700 hover:bg-gray-50 shadow-xs transition"
+          >
+            <svg class="h-4 w-4 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
+            </svg>
+            <span>View on PyPI</span>
+          </a>
+
+          <a
+            href="https://github.com/mhashiq/statpilot"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-2 rounded-xl border border-gray-300 bg-white px-5 py-3 text-xs font-semibold text-gray-700 hover:bg-gray-50 shadow-xs transition"
+          >
+            <svg class="h-4 w-4 text-gray-700" fill="currentColor" viewBox="0 0 24 24">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
+            </svg>
+            <span>View on GitHub</span>
+          </a>
+
+          <a
+            href={`${import.meta.env.BASE_URL}contact/`}
+            class="inline-flex items-center gap-2 rounded-xl bg-blue-600 px-6 py-3 text-xs font-semibold text-white shadow-xs hover:bg-blue-700 transition"
+          >
+            <span>Request Enterprise Analytics Integration</span>
+            <span>&rarr;</span>
+          </a>
         </div>
       </div>
     </section>
 
-    <!-- Key Highlights -->
-    <section class="mx-auto max-w-7xl px-4 pb-16 sm:px-6 lg:px-8">
-      <h2 class="text-2xl font-semibold tracking-[-0.04em] text-white mb-8">Key Engineering Highlights</h2>
-      <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+    <!-- 3. Tech Stack Grid -->
+    <section class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8 border-b border-gray-200">
+      <h2 class="text-xs font-bold uppercase tracking-wider text-gray-500 mb-4">Core Python Library Stack</h2>
+      <div class="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-7">
         {[
-          { title: 'Automated Statistical Decision Engine', body: 'Evaluates group count, sample pairing, normality (Shapiro-Wilk), and equal variance (Levene’s test) to automatically select the optimal statistical test.' },
-          { title: 'Transparent Audit Diagnostics', body: 'Documents step-by-step reasoning for test selection, removing black-box ambiguity for manuscript reviewers and auditors.' },
-          { title: 'Automated Effect Size Metric Computation', body: 'Calculates standardized effect sizes — Cohen’s d, Rank-Biserial r, Eta-squared (η²), and Epsilon-squared (ϵ²) — alongside p-values and confidence intervals.' },
-          { title: 'Publication-Ready Markdown Reports', body: 'Generates formatted statistical write-ups directly exportable into academic papers and clinical trial submissions.' },
-          { title: 'Rich Terminal Visuals & Seaborn Graphics', body: 'Outputs formatted terminal summary tables via Rich and publication-quality distribution box plots using Seaborn.' },
-          { title: 'Seamless Python API & CLI Tooling', body: 'Designed for effortless integration into Python scripts, Jupyter notebooks, or directly executed from terminal shell scripts.' },
-        ].map((h) => (
-          <div class="rounded-2xl border border-white/[0.08] bg-white/[0.02] p-6">
-            <h3 class="text-sm font-semibold text-white mb-2">{h.title}</h3>
-            <p class="text-xs leading-5 text-white/60">{h.body}</p>
+          { name: 'Python 3.9+', desc: 'Core Engine' },
+          { name: 'Pandas', desc: 'Dataframe Wrangling' },
+          { name: 'SciPy', desc: 'Hypothesis Testing' },
+          { name: 'Rich CLI', desc: 'Formatted Terminal Reports' },
+          { name: 'Seaborn', desc: 'Diagnostic Plots' },
+          { name: 'PyTest', desc: '100% Test Coverage' },
+          { name: 'CLI & API', desc: 'Dual Invocation' },
+        ].map((t) => (
+          <div class="rounded-xl border border-gray-200 bg-white p-3.5 text-center shadow-xs">
+            <p class="text-xs font-mono font-bold text-gray-900">{t.name}</p>
+            <p class="text-[10px] text-gray-500 font-medium mt-0.5">{t.desc}</p>
           </div>
         ))}
       </div>
     </section>
 
-    <!-- Decision Matrix Table -->
-    <section class="mx-auto max-w-7xl px-4 pb-16 sm:px-6 lg:px-8">
-      <div class="rounded-[2rem] border border-white/[0.08] bg-white/[0.02] p-8">
-        <h2 class="text-xl font-semibold tracking-[-0.04em] text-white mb-2">Automated Statistical Decision Tree</h2>
-        <p class="text-xs text-white/50 mb-6 font-mono">StatPilot automates assumption testing and selects tests according to standard statistical decision matrices:</p>
+    <!-- 4. Key Capabilities & Outcomes -->
+    <section class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8 border-b border-gray-200">
+      <h2 class="text-2xl font-bold text-gray-900 mb-6">Key Engineering Capabilities</h2>
+      <div class="grid gap-6 sm:grid-cols-2">
+        <div class="rounded-2xl border border-gray-200 bg-white p-6 shadow-xs">
+          <div class="h-8 w-8 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center font-bold text-sm mb-3">📈</div>
+          <h3 class="text-base font-bold text-gray-900 mb-2">Automated Assumption Testing</h3>
+          <p class="text-xs text-gray-600 leading-relaxed">
+            Evaluates Shapiro-Wilk normality and Levene’s variance homogeneity before running hypothesis tests to eliminate statistical bias.
+          </p>
+        </div>
 
-        <div class="overflow-x-auto">
-          <table class="w-full text-left text-xs font-mono border-collapse">
-            <thead>
-              <tr class="border-b border-white/10 text-white/40 uppercase tracking-wider">
-                <th class="py-3 px-4">Groups</th>
-                <th class="py-3 px-4">Paired / Repeated</th>
-                <th class="py-3 px-4">Normality (Shapiro-Wilk)</th>
-                <th class="py-3 px-4">Equal Variance (Levene)</th>
-                <th class="py-3 px-4 text-emerald-400">Test Selected</th>
-                <th class="py-3 px-4 text-indigo-400">Effect Size Metric</th>
-              </tr>
-            </thead>
-            <tbody class="divide-y divide-white/[0.06] text-white/80">
-              <tr>
-                <td class="py-3 px-4">2 Groups</td>
-                <td class="py-3 px-4">No</td>
-                <td class="py-3 px-4 text-emerald-400">Normal (α = 0.05)</td>
-                <td class="py-3 px-4 text-emerald-400">Equal (α = 0.05)</td>
-                <td class="py-3 px-4 font-semibold text-white">Independent Samples t-test</td>
-                <td class="py-3 px-4 text-indigo-300">Cohen's d</td>
-              </tr>
-              <tr>
-                <td class="py-3 px-4">2 Groups</td>
-                <td class="py-3 px-4">No</td>
-                <td class="py-3 px-4 text-emerald-400">Normal (α = 0.05)</td>
-                <td class="py-3 px-4 text-amber-400">Unequal (α &lt; 0.05)</td>
-                <td class="py-3 px-4 font-semibold text-white">Welch's t-test</td>
-                <td class="py-3 px-4 text-indigo-300">Cohen's d</td>
-              </tr>
-              <tr>
-                <td class="py-3 px-4">2 Groups</td>
-                <td class="py-3 px-4">No</td>
-                <td class="py-3 px-4 text-amber-400">Non-Normal (α &lt; 0.05)</td>
-                <td class="py-3 px-4 text-white/30">N/A</td>
-                <td class="py-3 px-4 font-semibold text-white">Mann-Whitney U</td>
-                <td class="py-3 px-4 text-indigo-300">Rank-Biserial r</td>
-              </tr>
-              <tr>
-                <td class="py-3 px-4">2 Groups</td>
-                <td class="py-3 px-4 text-cyan-400">Yes</td>
-                <td class="py-3 px-4 text-emerald-400">Normal (α = 0.05)</td>
-                <td class="py-3 px-4 text-white/30">N/A</td>
-                <td class="py-3 px-4 font-semibold text-white">Paired Samples t-test</td>
-                <td class="py-3 px-4 text-indigo-300">Cohen's d</td>
-              </tr>
-              <tr>
-                <td class="py-3 px-4">2 Groups</td>
-                <td class="py-3 px-4 text-cyan-400">Yes</td>
-                <td class="py-3 px-4 text-amber-400">Non-Normal (α &lt; 0.05)</td>
-                <td class="py-3 px-4 text-white/30">N/A</td>
-                <td class="py-3 px-4 font-semibold text-white">Wilcoxon Signed-Rank</td>
-                <td class="py-3 px-4 text-indigo-300">Rank-Biserial r</td>
-              </tr>
-              <tr>
-                <td class="py-3 px-4">3+ Groups</td>
-                <td class="py-3 px-4">No</td>
-                <td class="py-3 px-4 text-emerald-400">Normal (α = 0.05)</td>
-                <td class="py-3 px-4 text-emerald-400">Equal (α = 0.05)</td>
-                <td class="py-3 px-4 font-semibold text-white">One-Way ANOVA</td>
-                <td class="py-3 px-4 text-indigo-300">Eta-squared (η²)</td>
-              </tr>
-              <tr>
-                <td class="py-3 px-4">3+ Groups</td>
-                <td class="py-3 px-4">No</td>
-                <td class="py-3 px-4 text-amber-400">Non-Normal / Heterogeneous</td>
-                <td class="py-3 px-4 text-white/30">N/A</td>
-                <td class="py-3 px-4 font-semibold text-white">Kruskal-Wallis H</td>
-                <td class="py-3 px-4 text-indigo-300">Epsilon-squared (ϵ²)</td>
-              </tr>
-            </tbody>
-          </table>
+        <div class="rounded-2xl border border-gray-200 bg-white p-6 shadow-xs">
+          <div class="h-8 w-8 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center font-bold text-sm mb-3">⚖️</div>
+          <h3 class="text-base font-bold text-gray-900 mb-2">Parametric vs Non-Parametric Decision Tree</h3>
+          <p class="text-xs text-gray-600 leading-relaxed">
+            Dynamically selects between Student's t-test, Mann-Whitney U, ANOVA, or Kruskal-Wallis based on empirical distribution properties.
+          </p>
+        </div>
+
+        <div class="rounded-2xl border border-gray-200 bg-white p-6 shadow-xs">
+          <div class="h-8 w-8 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center font-bold text-sm mb-3">📑</div>
+          <h3 class="text-base font-bold text-gray-900 mb-2">Audit-Ready Markdown & Rich Terminal Outputs</h3>
+          <p class="text-xs text-gray-600 leading-relaxed">
+            Outputs human-readable and publication-ready statistical summary tables with exact p-values, test statistics, and effect sizes.
+          </p>
+        </div>
+
+        <div class="rounded-2xl border border-gray-200 bg-white p-6 shadow-xs">
+          <div class="h-8 w-8 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center font-bold text-sm mb-3">⚡</div>
+          <h3 class="text-base font-bold text-gray-900 mb-2">CLI & Python Library Invocation</h3>
+          <p class="text-xs text-gray-600 leading-relaxed">
+            Callable via simple terminal commands (`statpilot data.csv`) or directly imported into Jupyter notebooks and automated data pipelines.
+          </p>
         </div>
       </div>
     </section>
 
-    <!-- Execution Telemetry Panel -->
-    <section class="mx-auto max-w-7xl px-4 pb-20 sm:px-6 lg:px-8">
-      <div class="rounded-[2rem] border border-white/10 bg-black/60 p-6 backdrop-blur-xl">
-        <div class="flex items-center justify-between border-b border-white/10 pb-4 mb-5">
-          <span class="font-mono text-xs font-semibold tracking-wider text-white/60">STATPILOT // AUTOMATED ANALYSIS TRACE</span>
-          <span class="rounded-full bg-emerald-500/10 px-2.5 py-1 font-mono text-[11px] font-medium text-emerald-400 border border-emerald-500/20">PYPI v1.1.0</span>
+    <!-- 5. Target Use Cases -->
+    <section class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8 border-b border-gray-200">
+      <h2 class="text-2xl font-bold text-gray-900 mb-6">Built For Data Leaders</h2>
+      <div class="grid gap-6 sm:grid-cols-3">
+        <div class="rounded-2xl border border-gray-200 bg-white p-6 shadow-xs text-center">
+          <div class="text-2xl mb-2">🔬</div>
+          <h3 class="text-sm font-bold text-gray-900 mb-1">Clinical Trial Statisticians</h3>
+          <p class="text-xs text-gray-600">Eliminate manual testing selection errors when evaluating clinical biomarker group differences.</p>
         </div>
-        <div class="space-y-3 font-mono text-xs">
-          <div class="rounded-xl border border-white/[0.06] bg-white/[0.02] p-4">
-            <div class="flex items-center justify-between text-white/40 text-[11px] mb-1.5">
-              <span>DATA_LOAD // DATAFRAME_CHECK</span><span>0ms</span>
-            </div>
-            <div class="flex items-center justify-between">
-              <span class="font-sans text-sm font-medium text-white">Dataset: research_data.csv (N=342 samples)</span>
-              <span class="rounded bg-indigo-500/10 px-2 py-0.5 text-[10px] text-indigo-400 border border-indigo-500/20">PASSED [1ms]</span>
-            </div>
-            <p class="mt-1 font-sans text-xs text-white/50">Target: response_time · Group: treatment_group (Control vs Treatment)</p>
-          </div>
-          <div class="rounded-xl border border-white/[0.06] bg-white/[0.02] p-4">
-            <div class="flex items-center justify-between text-white/40 text-[11px] mb-1.5">
-              <span>ASSUMPTION_DIAGNOSTICS // SHAPIRO_LEVENE</span><span>3ms</span>
-            </div>
-            <div class="flex items-center justify-between">
-              <span class="font-sans text-sm font-medium text-white">Shapiro-Wilk W=0.988 (p=0.241) · Levene statistic=1.12 (p=0.291)</span>
-              <span class="rounded bg-emerald-500/10 px-2 py-0.5 text-[10px] text-emerald-400 border border-emerald-500/20">NORMAL & EQUAL VAR</span>
-            </div>
-            <p class="mt-1 font-sans text-xs text-white/50">Normality confirmed (p &gt; 0.05) · Homogeneity of variance confirmed (p &gt; 0.05)</p>
-          </div>
-          <div class="rounded-xl border border-white/[0.06] bg-white/[0.02] p-4">
-            <div class="flex items-center justify-between text-white/40 text-[11px] mb-1.5">
-              <span>TEST_EXECUTION // INDEPENDENT_TTEST</span><span>5ms</span>
-            </div>
-            <div class="flex items-center justify-between">
-              <span class="font-sans text-sm font-medium text-white">Independent Samples t-test: t=4.82, p=2.1e-06, Cohen's d=0.52</span>
-              <span class="rounded bg-cyan-500/10 px-2 py-0.5 text-[10px] text-cyan-400 border border-cyan-500/20">REPORT GENERATED</span>
-            </div>
-            <p class="mt-1 font-sans text-xs text-white/50">Statistically significant difference detected · Markdown report exported to report.md</p>
-          </div>
+        <div class="rounded-2xl border border-gray-200 bg-white p-6 shadow-xs text-center">
+          <div class="text-2xl mb-2">📊</div>
+          <h3 class="text-sm font-bold text-gray-900 mb-1">Data Science Engineering Teams</h3>
+          <p class="text-xs text-gray-600">Integrate automated statistical validation checks into automated ML feature engineering pipelines.</p>
         </div>
+        <div class="rounded-2xl border border-gray-200 bg-white p-6 shadow-xs text-center">
+          <div class="text-2xl mb-2">🎓</div>
+          <h3 class="text-sm font-bold text-gray-900 mb-1">Academic & Technical Authors</h3>
+          <p class="text-xs text-gray-600">Generate transparent, reproducible statistical method documentation for peer-reviewed submissions.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Related Products -->
+    <section class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8 border-b border-gray-200">
+      <h2 class="text-2xl font-bold text-gray-900 mb-6">Related Platforms</h2>
+      <div class="grid gap-6 sm:grid-cols-2">
+        <a href={`${import.meta.env.BASE_URL}products/multiclipboard/`} class="group rounded-2xl border border-gray-200 bg-white p-6 shadow-xs hover:border-blue-300 hover:shadow-md transition">
+          <span class="inline-block rounded-full bg-blue-50 border border-blue-200 px-2.5 py-0.5 text-[10px] font-semibold text-blue-700 mb-2">Published</span>
+          <h3 class="text-lg font-bold text-gray-900 group-hover:text-blue-600 transition">MultiClipboard</h3>
+          <p class="text-xs text-gray-600 mt-1">Modern Chrome Extension for Smart Multi-Item Clipboard Management</p>
+        </a>
+
+        <a href={`${import.meta.env.BASE_URL}products/3dsegmaunet/`} class="group rounded-2xl border border-gray-200 bg-white p-6 shadow-xs hover:border-amber-300 hover:shadow-md transition">
+          <span class="inline-block rounded-full bg-amber-50 border border-amber-200 px-2.5 py-0.5 text-[10px] font-semibold text-amber-800 mb-2">Research</span>
+          <h3 class="text-lg font-bold text-gray-900 group-hover:text-blue-600 transition">3DSegmaUNet</h3>
+          <p class="text-xs text-gray-600 mt-1">AI-Powered 3D Medical Imaging & Volumetric Liver Segmentation</p>
+        </a>
+      </div>
+    </section>
+
+    <!-- 7. Final CTA Band -->
+    <section class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
+      <div class="rounded-3xl border border-blue-200 bg-blue-50/60 p-8 text-center shadow-xs">
+        <h2 class="text-2xl font-bold text-gray-900 sm:text-3xl mb-2">
+          Interested in integrating StatPilot into your analytics infrastructure?
+        </h2>
+        <p class="text-sm text-gray-600 max-w-xl mx-auto mb-6">
+          Schedule a consultation with our data science team for custom enterprise statistical reporting extensions.
+        </p>
+        <a
+          href={`${import.meta.env.BASE_URL}contact/`}
+          class="inline-flex items-center justify-center rounded-xl bg-blue-600 px-7 py-3.5 text-sm font-semibold text-white shadow-xs hover:bg-blue-700 transition"
+        >
+          Schedule Technical Demo
+        </a>
       </div>
     </section>
 

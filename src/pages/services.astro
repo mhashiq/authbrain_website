@@ -2,69 +2,108 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+
+const faqs = [
+  {
+    q: 'What is zero-trust authentication and how does it work?',
+    a: 'Zero-trust authentication is a security paradigm operating on the principle of "never trust, always verify." AuthBrain continuously evaluates user session vectors, device fingerprints, and behavioral risk scores in real time to authorize access dynamically without relying on static IP or network perimeter trust.'
+  },
+  {
+    q: 'How does AI detect synthetic identity fraud?',
+    a: 'AuthBrain fuses facial biometric embeddings with Graph Neural Networks (GNNs) to construct relational transaction graphs. By analyzing node clusters and biometric conflicts across accounts, our AI identifies synthetic identity rings and automated fraud syndicates before fraudulent transactions settle.'
+  },
+  {
+    q: 'Is AuthBrain\'s clinical AI platform HIPAA compliant?',
+    a: 'Yes. AuthBrain\'s clinical prediction engines and 3D medical imaging pipelines enforce AES-256 encryption, zero-knowledge storage standards, and immutable audit logs, fully satisfying HIPAA, HITECH, and GDPR regulatory compliance requirements for health systems.'
+  },
+  {
+    q: 'Can AuthBrain be deployed on-premise or only in the cloud?',
+    a: 'AuthBrain supports containerized Docker and Kubernetes deployments for on-premise hospital data centers, private cloud VPCs, or hybrid enterprise environments, ensuring complete data sovereignty and zero external telemetry leaks.'
+  },
+  {
+    q: 'How fast are AuthBrain\'s authentication decisions?',
+    a: 'AuthBrain delivers complete access decisions — including machine learning risk inference and policy evaluations — in under 50 milliseconds (average latency telemetry of 16.4ms), ensuring zero operational friction for legitimate user sessions.'
+  }
+];
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  'mainEntity': faqs.map((faq) => ({
+    '@type': 'Question',
+    'name': faq.q,
+    'acceptedAnswer': {
+      '@type': 'Answer',
+      'text': faq.a
+    }
+  }))
+};
 ---
 
-<BaseLayout title="AuthBrain | AI & Enterprise Solutions" description="Enterprise-grade AI solutions, medical imaging platforms, autonomous agents, and scalable software products.">
+<BaseLayout 
+  title="AuthBrain | Services & Enterprise AI Capabilities" 
+  description="Enterprise-grade AI solutions, medical imaging platforms, autonomous zero-trust engines, and scalable software architecture."
+  jsonLdSchema={faqSchema}
+>
   <Header />
-  <main>
+  <main class="bg-[#FAFAFA] text-gray-900">
     <!-- 1. Hero Banner -->
-    <section class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-24 text-center">
-      <div class="max-w-4xl mx-auto space-y-8">
-        <span class="inline-flex rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-mono uppercase tracking-[0.28em] text-white/[0.72]">
+    <section class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8 lg:py-12 text-center border-b border-gray-200 bg-white">
+      <div class="max-w-4xl mx-auto space-y-6">
+        <span class="inline-flex rounded-full bg-blue-100 px-3.5 py-1 text-xs font-semibold uppercase tracking-wider text-blue-700">
           Enterprise AI Services
         </span>
-        <h1 class="text-5xl font-semibold leading-none tracking-[-0.05em] text-white sm:text-6xl lg:text-7xl text-balance">
+        <h1 class="text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl lg:text-6xl">
           Transform Data Into Intelligent Business Decisions
         </h1>
-        <p class="text-base leading-7 text-white/[0.72] sm:text-lg max-w-3xl mx-auto">
-          We help organizations leverage Artificial Intelligence, Data Analytics, and Healthcare AI solutions to improve efficiency, reduce costs, and accelerate growth.
+        <p class="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          We help health systems and financial enterprises leverage Predictive AI, Zero-Trust Access Control, and Medical Imaging AI to increase operational speed and maintain regulatory compliance.
         </p>
-        <div class="flex flex-col sm:flex-row justify-center gap-4 pt-4">
-          <a href={`${import.meta.env.BASE_URL}contact/`} class="inline-flex items-center justify-center rounded-full bg-accent px-8 py-4 text-sm font-medium text-white transition hover:bg-accent/90">
+        <div class="flex flex-col sm:flex-row justify-center gap-4 pt-2">
+          <a href={`${import.meta.env.BASE_URL}contact/`} class="inline-flex items-center justify-center rounded-xl bg-blue-600 px-7 py-3.5 text-base font-semibold text-white shadow-sm hover:bg-blue-700 transition">
             Request Consultation
           </a>
-          <a href="#case-studies" class="inline-flex items-center justify-center rounded-full border border-white/[0.12] bg-white/5 px-8 py-4 text-sm font-medium text-white/[0.80] transition hover:bg-white/[0.1]">
-            View Case Studies
+          <a href="#faq" class="inline-flex items-center justify-center rounded-xl border border-gray-300 bg-white px-7 py-3.5 text-base font-semibold text-gray-700 hover:bg-gray-50 transition">
+            Frequently Asked Questions
           </a>
         </div>
       </div>
     </section>
 
-    <!-- 2. AI Strategy & Consulting (Onboarding) -->
-    <section class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 border-t border-white/[0.08]">
-      <div class="clinical-frame relative overflow-hidden rounded-[2rem] border border-white/[0.08] bg-white/[0.02] p-8 md:p-12 lg:p-16">
-        <div class="absolute -right-20 -top-20 h-64 w-64 rounded-full bg-accent/10 blur-[80px]"></div>
-        <div class="grid gap-12 lg:grid-cols-[1fr_1.5fr] lg:items-center relative z-10">
+    <!-- 2. AI Strategy & Consulting -->
+    <section class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8 border-b border-gray-200">
+      <div class="rounded-3xl border border-gray-200 bg-white p-8 md:p-12 lg:p-14 shadow-xs">
+        <div class="grid gap-12 lg:grid-cols-[1fr_1.5fr] lg:items-center">
           <div>
-            <span class="text-accent text-sm font-mono uppercase tracking-widest mb-4 block">Where to Start</span>
-            <h2 class="text-3xl font-semibold tracking-[-0.04em] text-white sm:text-4xl mb-6">AI Strategy & Consulting</h2>
-            <p class="text-base leading-relaxed text-white/[0.72] mb-8">
-              For businesses that want to adopt AI but don't know where to start. We analyze your operations and build a tangible implementation roadmap.
+            <span class="text-blue-600 text-xs font-bold uppercase tracking-wider mb-2 block">Where to Start</span>
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">AI Strategy & Architectural Consulting</h2>
+            <p class="text-base leading-relaxed text-gray-600 mb-6">
+              For enterprise organizations requiring clear roadmaps to integrate zero-trust access control and predictive AI engines without operational friction.
             </p>
-            <div class="flex flex-wrap gap-3">
-              <span class="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-medium text-white/80">SMEs</span>
-              <span class="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-medium text-white/80">Healthcare Orgs</span>
-              <span class="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-medium text-white/80">Startups</span>
-              <span class="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-medium text-white/80">Research Institutions</span>
+            <div class="flex flex-wrap gap-2">
+              <span class="rounded-full bg-gray-100 border border-gray-200 px-3.5 py-1 text-xs font-medium text-gray-700">Health Systems</span>
+              <span class="rounded-full bg-gray-100 border border-gray-200 px-3.5 py-1 text-xs font-medium text-gray-700">Financial Institutions</span>
+              <span class="rounded-full bg-gray-100 border border-gray-200 px-3.5 py-1 text-xs font-medium text-gray-700">Enterprise CISOs</span>
+              <span class="rounded-full bg-gray-100 border border-gray-200 px-3.5 py-1 text-xs font-medium text-gray-700">Radiology Centers</span>
             </div>
           </div>
           <div class="grid sm:grid-cols-2 gap-6">
-            <div class="bg-black/20 rounded-2xl p-6 border border-white/[0.04]">
-              <h3 class="text-lg font-semibold text-white mb-4 flex items-center gap-2"><span>🎯</span> What We Offer</h3>
-              <ul class="space-y-3 text-sm text-white/[0.68]">
-                <li class="flex items-start gap-2"><span class="text-accent">✓</span> AI readiness assessment</li>
-                <li class="flex items-start gap-2"><span class="text-accent">✓</span> Business process analysis</li>
-                <li class="flex items-start gap-2"><span class="text-accent">✓</span> AI opportunity identification</li>
-                <li class="flex items-start gap-2"><span class="text-accent">✓</span> ROI estimation</li>
+            <div class="bg-gray-50 rounded-2xl p-6 border border-gray-200">
+              <h3 class="text-lg font-bold text-gray-900 mb-3">🎯 What We Offer</h3>
+              <ul class="space-y-2.5 text-sm text-gray-600">
+                <li class="flex items-center gap-2"><span class="text-blue-600 font-bold">✓</span> AI readiness assessment</li>
+                <li class="flex items-center gap-2"><span class="text-blue-600 font-bold">✓</span> Business process analysis</li>
+                <li class="flex items-center gap-2"><span class="text-blue-600 font-bold">✓</span> AI opportunity identification</li>
+                <li class="flex items-center gap-2"><span class="text-blue-600 font-bold">✓</span> ROI & latency estimation</li>
               </ul>
             </div>
-            <div class="bg-black/20 rounded-2xl p-6 border border-white/[0.04]">
-              <h3 class="text-lg font-semibold text-white mb-4 flex items-center gap-2"><span>📋</span> Deliverables</h3>
-              <ul class="space-y-3 text-sm text-white/[0.68]">
-                <li class="flex items-start gap-2"><span class="text-accent">✓</span> AI strategy report</li>
-                <li class="flex items-start gap-2"><span class="text-accent">✓</span> Implementation plan</li>
-                <li class="flex items-start gap-2"><span class="text-accent">✓</span> Cost-benefit analysis</li>
-                <li class="flex items-start gap-2"><span class="text-accent">✓</span> Tech recommendations</li>
+            <div class="bg-gray-50 rounded-2xl p-6 border border-gray-200">
+              <h3 class="text-lg font-bold text-gray-900 mb-3">📋 Deliverables</h3>
+              <ul class="space-y-2.5 text-sm text-gray-600">
+                <li class="flex items-center gap-2"><span class="text-blue-600 font-bold">✓</span> AI strategy report</li>
+                <li class="flex items-center gap-2"><span class="text-blue-600 font-bold">✓</span> Implementation plan</li>
+                <li class="flex items-center gap-2"><span class="text-blue-600 font-bold">✓</span> Cost-benefit analysis</li>
+                <li class="flex items-center gap-2"><span class="text-blue-600 font-bold">✓</span> Tech recommendations</li>
               </ul>
             </div>
           </div>
@@ -73,214 +112,89 @@ import Footer from '../components/Footer.astro';
     </section>
 
     <!-- 3. Flagship Healthcare AI Solutions -->
-    <section class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
-      <div class="group relative overflow-hidden rounded-[2rem] border border-accent/30 bg-accent/5 p-8 md:p-12 transition-all hover:bg-accent/10 hover:shadow-2xl hover:shadow-accent/20">
-        <div class="absolute -left-12 -top-12 h-40 w-40 rounded-full bg-accent/20 blur-[60px] transition-all duration-500 group-hover:bg-accent/30"></div>
-        <div class="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-8">
+    <section class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
+      <div class="rounded-3xl border border-blue-200 bg-blue-50/50 p-8 md:p-12 shadow-xs">
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-8">
           <div class="max-w-2xl">
-            <div class="mb-4 inline-flex items-center gap-2 rounded-full border border-accent/40 bg-accent/20 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-accent">
+            <div class="mb-3 inline-flex items-center gap-2 rounded-full bg-blue-600 px-3.5 py-1 text-xs font-bold uppercase tracking-wider text-white">
               <span>⭐ Flagship Service</span>
-              <span class="border-l border-accent/40 pl-2">$50–$200+/hour</span>
+              <span class="border-l border-blue-400 pl-2">Enterprise Scale</span>
             </div>
-            <h2 class="text-3xl font-semibold tracking-[-0.04em] text-white sm:text-4xl mb-4">Healthcare AI Analytics</h2>
-            <p class="text-base leading-relaxed text-white/[0.8] mb-6">
-              Leveraging our deep background in medical imaging and liver segmentation, we deliver domain-specific AI solutions that hold immense clinical and business value.
+            <h2 class="text-3xl font-bold text-gray-900 mb-3">Healthcare & Imaging AI Analytics</h2>
+            <p class="text-base text-gray-600 leading-relaxed mb-6">
+              Leveraging our deep background in medical imaging and 3D organ segmentation, we deliver domain-specific AI solutions with immense clinical and operational value.
             </p>
-            <div class="grid grid-cols-2 gap-4">
-              <ul class="space-y-2 text-sm text-white/[0.7]">
-                <li class="flex items-center gap-2"><span class="text-accent">✓</span> Medical Image Analysis</li>
-                <li class="flex items-center gap-2"><span class="text-accent">✓</span> Disease Prediction Systems</li>
-                <li class="flex items-center gap-2"><span class="text-accent">✓</span> Hospital Analytics</li>
+            <div class="grid grid-cols-2 gap-3 text-sm text-gray-700 font-medium">
+              <ul class="space-y-2">
+                <li class="flex items-center gap-2"><span class="text-blue-600 font-bold">✓</span> Medical Image Analysis</li>
+                <li class="flex items-center gap-2"><span class="text-blue-600 font-bold">✓</span> Disease Prediction Systems</li>
+                <li class="flex items-center gap-2"><span class="text-blue-600 font-bold">✓</span> Hospital Analytics</li>
               </ul>
-              <ul class="space-y-2 text-sm text-white/[0.7]">
-                <li class="flex items-center gap-2"><span class="text-accent">✓</span> Clinical Decision Support</li>
-                <li class="flex items-center gap-2"><span class="text-accent">✓</span> Radiology AI</li>
-                <li class="flex items-center gap-2"><span class="text-accent">✓</span> 3D Organ Reconstruction</li>
+              <ul class="space-y-2">
+                <li class="flex items-center gap-2"><span class="text-blue-600 font-bold">✓</span> Clinical Decision Support</li>
+                <li class="flex items-center gap-2"><span class="text-blue-600 font-bold">✓</span> Radiology AI</li>
+                <li class="flex items-center gap-2"><span class="text-blue-600 font-bold">✓</span> 3D Organ Reconstruction</li>
               </ul>
             </div>
           </div>
-          <div class="shrink-0 text-center">
-            <div class="h-24 w-24 rounded-2xl bg-accent/20 flex items-center justify-center text-5xl border border-accent/30 shadow-[0_0_30px_rgba(var(--color-accent),0.3)] mx-auto mb-4">🏥</div>
-            <p class="text-sm font-semibold text-white">Trusted by Hospitals<br/>& Diagnostic Centers</p>
+          <div class="shrink-0 text-center rounded-2xl bg-white p-6 border border-blue-200 shadow-xs">
+            <div class="h-16 w-16 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center text-3xl mx-auto mb-3">🏥</div>
+            <p class="text-sm font-bold text-gray-900">Trusted by Hospitals<br/>& Health Systems</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- 4. Enterprise AI & Business Automation -->
-    <section class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 border-t border-white/[0.08]">
-      <div class="mb-12 text-center">
-        <span class="inline-flex rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-xs font-mono uppercase tracking-widest text-white/60 mb-4">Scalable Growth</span>
-        <h2 class="text-3xl font-semibold tracking-[-0.04em] text-white sm:text-4xl">Enterprise AI & Business Operations</h2>
-      </div>
-      <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-        
-        <!-- Agentic AI -->
-        <div class="group relative overflow-hidden rounded-[2rem] border border-white/[0.08] bg-white/[0.02] p-8 transition-all hover:-translate-y-1 hover:border-white/20 hover:bg-white/[0.04]">
-          <div class="flex justify-between items-start mb-6">
-            <div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-white/5 text-2xl group-hover:scale-110 transition-transform">🤖</div>
-            <span class="rounded-full border border-green-500/30 bg-green-500/10 px-3 py-1 text-xs font-semibold text-green-400">$1k–$20k+</span>
-          </div>
-          <h3 class="text-xl font-semibold text-white mb-3">AI Automation & Agents</h3>
-          <p class="text-sm text-white/70 mb-6 line-clamp-3">Our highest demand service. Measurable ROI from intelligent agents handling customer support, email automation, and proposal generation.</p>
-          <div class="border-t border-white/[0.08] pt-4">
-            <p class="text-xs font-mono text-white/50 mb-2 uppercase">Use Cases</p>
-            <p class="text-sm font-medium text-white/80">AI Receptionists, Sales Assistants, Research Agents</p>
-          </div>
-        </div>
-
-        <!-- Predictive Analytics -->
-        <div class="group relative overflow-hidden rounded-[2rem] border border-white/[0.08] bg-white/[0.02] p-8 transition-all hover:-translate-y-1 hover:border-white/20 hover:bg-white/[0.04]">
-          <div class="flex justify-between items-start mb-6">
-            <div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-white/5 text-2xl group-hover:scale-110 transition-transform">📈</div>
-          </div>
-          <h3 class="text-xl font-semibold text-white mb-3">Predictive Analytics & Forecasting</h3>
-          <p class="text-sm text-white/70 mb-6 line-clamp-3">High-value AI identifying what products will sell, which customers may leave, and forecasting next month's sales with precision.</p>
-          <div class="border-t border-white/[0.08] pt-4">
-            <p class="text-xs font-mono text-white/50 mb-2 uppercase">Tools & Tech</p>
-            <p class="text-sm font-medium text-white/80">Python, Power BI, XGBoost, LightGBM</p>
-          </div>
-        </div>
-
-        <!-- Data Engineering -->
-        <div class="group relative overflow-hidden rounded-[2rem] border border-white/[0.08] bg-white/[0.02] p-8 transition-all hover:-translate-y-1 hover:border-white/20 hover:bg-white/[0.04]">
-          <div class="flex justify-between items-start mb-6">
-            <div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-white/5 text-2xl group-hover:scale-110 transition-transform">🏗️</div>
-          </div>
-          <h3 class="text-xl font-semibold text-white mb-3">Data Engineering & AI Readiness</h3>
-          <p class="text-sm text-white/70 mb-6 line-clamp-3">You can't use AI if your data is messy. We build robust ETL pipelines, optimize databases, and construct AI-ready data infrastructure.</p>
-          <div class="border-t border-white/[0.08] pt-4">
-            <p class="text-xs font-mono text-white/50 mb-2 uppercase">Tools & Tech</p>
-            <p class="text-sm font-medium text-white/80">SQL, Snowflake, Databricks, AWS, Azure</p>
-          </div>
-        </div>
-
-        <!-- BI Dashboards -->
-        <div class="group relative overflow-hidden rounded-[2rem] border border-white/[0.08] bg-white/[0.02] p-8 transition-all hover:-translate-y-1 hover:border-white/20 hover:bg-white/[0.04]">
-          <div class="flex justify-between items-start mb-6">
-            <div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-white/5 text-2xl group-hover:scale-110 transition-transform">📊</div>
-          </div>
-          <h3 class="text-xl font-semibold text-white mb-3">Business Intelligence Dashboards</h3>
-          <p class="text-sm text-white/70 mb-6 line-clamp-3">Going beyond commoditized charts. We combine executive, financial, and sales dashboards with deep machine learning insights.</p>
-          <div class="border-t border-white/[0.08] pt-4">
-            <p class="text-xs font-mono text-white/50 mb-2 uppercase">Tools & Tech</p>
-            <p class="text-sm font-medium text-white/80">Power BI, Tableau, Looker Studio</p>
-          </div>
-        </div>
-
-        <!-- Custom Software -->
-        <div class="group relative overflow-hidden rounded-[2rem] border border-white/[0.08] bg-white/[0.02] p-8 transition-all hover:-translate-y-1 hover:border-white/20 hover:bg-white/[0.04]">
-          <div class="flex justify-between items-start mb-6">
-            <div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-white/5 text-2xl group-hover:scale-110 transition-transform">💻</div>
-          </div>
-          <h3 class="text-xl font-semibold text-white mb-3">Custom AI Software Development</h3>
-          <p class="text-sm text-white/70 mb-6 line-clamp-3">End-to-end development of web applications, AI SaaS platforms, and secure APIs deployed smoothly into cloud infrastructure.</p>
-          <div class="border-t border-white/[0.08] pt-4">
-            <p class="text-xs font-mono text-white/50 mb-2 uppercase">Tools & Tech</p>
-            <p class="text-sm font-medium text-white/80">FastAPI, TensorFlow, PyTorch, React</p>
-          </div>
-        </div>
-
-        <!-- Marketing AI -->
-        <div class="group relative overflow-hidden rounded-[2rem] border border-white/[0.08] bg-white/[0.02] p-8 transition-all hover:-translate-y-1 hover:border-white/20 hover:bg-white/[0.04]">
-          <div class="flex justify-between items-start mb-6">
-            <div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-white/5 text-2xl group-hover:scale-110 transition-transform">🎯</div>
-          </div>
-          <h3 class="text-xl font-semibold text-white mb-3">Marketing Analytics + AI</h3>
-          <p class="text-sm text-white/70 mb-6 line-clamp-3">One of the most common commercial AI applications. Automate customer segmentation, lead scoring, and marketing ROI prediction.</p>
-          <div class="border-t border-white/[0.08] pt-4">
-            <p class="text-xs font-mono text-white/50 mb-2 uppercase">Use Cases</p>
-            <p class="text-sm font-medium text-white/80">Ad Optimization, Behavior Analytics</p>
-          </div>
-        </div>
-
-        <!-- Data Annotation -->
-        <div class="group relative overflow-hidden rounded-[2rem] border border-white/[0.08] bg-white/[0.02] p-8 transition-all hover:-translate-y-1 hover:border-white/20 hover:bg-white/[0.04]">
-          <div class="flex justify-between items-start mb-6">
-            <div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-white/5 text-2xl group-hover:scale-110 transition-transform">🏷️</div>
-            <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs font-semibold text-white/60">Scalable Teams</span>
-          </div>
-          <h3 class="text-xl font-semibold text-white mb-3">Data Annotation & Datasets</h3>
-          <p class="text-sm text-white/70 mb-6 line-clamp-3">Power your AI model development with high-quality datasets. Highly competitive rates utilizing our skilled teams.</p>
-          <div class="border-t border-white/[0.08] pt-4">
-            <p class="text-xs font-mono text-white/50 mb-2 uppercase">Use Cases</p>
-            <p class="text-sm font-medium text-white/80">Medical Annotation, Image Labeling, NLP</p>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- 5. Academic Research & Publications (Search Papers) -->
-    <section class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 border-t border-white/[0.08] bg-white/[0.01]">
-      <div class="flex flex-col md:flex-row md:items-center justify-between gap-8 mb-12">
-        <div class="max-w-2xl">
-          <h2 class="text-3xl font-semibold tracking-[-0.04em] text-white mb-4">Academic Excellence & Research Papers</h2>
-          <p class="text-base text-white/70">Our enterprise AI is built on rigorous academic foundations. Search and read our peer-reviewed publications, medical imaging research, and computer vision advancements.</p>
-        </div>
-        <a href={`${import.meta.env.BASE_URL}research/`} class="inline-flex shrink-0 items-center justify-center rounded-full border border-white/[0.2] bg-white/5 px-6 py-3 text-sm font-medium text-white hover:bg-white/10 transition">
-          Search All Papers &rarr;
-        </a>
-      </div>
-      <div class="grid gap-4 sm:grid-cols-3">
-        <div class="clinical-frame rounded-2xl p-6 text-center">
-          <p class="text-4xl font-bold text-accent mb-2">100+</p>
-          <p class="text-sm text-white/80">Published Papers</p>
-        </div>
-        <div class="clinical-frame rounded-2xl p-6 text-center">
-          <p class="text-4xl font-bold text-accent mb-2">2100+</p>
-          <p class="text-sm text-white/80">Academic Citations</p>
-        </div>
-        <div class="clinical-frame rounded-2xl p-6 text-center">
-          <p class="text-4xl font-bold text-accent mb-2">9</p>
-          <p class="text-sm text-white/80">Books Authored</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- 6. Project Workflow -->
-    <section class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 border-t border-white/[0.08]">
-      <div class="mb-12 text-center">
-        <h2 class="text-3xl font-semibold tracking-[-0.04em] text-white">End-to-End Workflow</h2>
-      </div>
-      <div class="grid gap-4 md:grid-cols-6 text-center">
-        <div class="clinical-frame p-6 rounded-2xl"><div class="text-2xl mb-2">🔍</div><h3 class="text-sm font-bold text-white mb-1">Discover</h3><p class="text-xs text-white/60">Requirements & Data</p></div>
-        <div class="clinical-frame p-6 rounded-2xl"><div class="text-2xl mb-2">📐</div><h3 class="text-sm font-bold text-white mb-1">Design</h3><p class="text-xs text-white/60">Architecture & ML</p></div>
-        <div class="clinical-frame p-6 rounded-2xl"><div class="text-2xl mb-2">🧪</div><h3 class="text-sm font-bold text-white mb-1">Prototype</h3><p class="text-xs text-white/60">PoC & Viability</p></div>
-        <div class="clinical-frame p-6 rounded-2xl"><div class="text-2xl mb-2">💻</div><h3 class="text-sm font-bold text-white mb-1">Develop</h3><p class="text-xs text-white/60">Code & Train</p></div>
-        <div class="clinical-frame p-6 rounded-2xl"><div class="text-2xl mb-2">🚀</div><h3 class="text-sm font-bold text-white mb-1">Deploy</h3><p class="text-xs text-white/60">Cloud & MLOps</p></div>
-        <div class="clinical-frame p-6 rounded-2xl"><div class="text-2xl mb-2">📈</div><h3 class="text-sm font-bold text-white mb-1">Optimize</h3><p class="text-xs text-white/60">Scale & Support</p></div>
-      </div>
-    </section>
-
-    <!-- 7. Case Studies -->
-    <section id="case-studies" class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 border-y border-white/[0.08] bg-white/[0.01]">
-      <div class="mb-12 flex justify-between items-end">
-        <h2 class="text-3xl font-semibold tracking-[-0.04em] text-white">Featured Case Studies</h2>
+    <!-- 4. Featured Case Studies -->
+    <section id="case-studies" class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8 border-t border-gray-200">
+      <div class="mb-8">
+        <h2 class="text-3xl font-bold text-gray-900">Featured Case Studies</h2>
       </div>
       <div class="grid gap-6 md:grid-cols-2">
-        <div class="clinical-frame p-8 rounded-[1.5rem] hover:bg-white/[0.03] transition cursor-pointer"><p class="text-xs font-mono text-accent mb-2 uppercase">Healthcare</p><h3 class="text-xl font-bold text-white mb-2">AI Liver Segmentation & 3D Imaging Platform</h3><p class="text-sm text-white/70">Automated processing of CT/MRI scans for rapid anomaly detection and 3D organ reconstruction.</p></div>
-        <div class="clinical-frame p-8 rounded-[1.5rem] hover:bg-white/[0.03] transition cursor-pointer"><p class="text-xs font-mono text-accent mb-2 uppercase">Research</p><h3 class="text-xl font-bold text-white mb-2">Multi-Agent Research & Knowledge Assistant</h3><p class="text-sm text-white/70">Autonomous agents orchestrating large-scale data mining and publication report generation.</p></div>
-        <div class="clinical-frame p-8 rounded-[1.5rem] hover:bg-white/[0.03] transition cursor-pointer"><p class="text-xs font-mono text-accent mb-2 uppercase">Industrial</p><h3 class="text-xl font-bold text-white mb-2">Predictive Maintenance Analytics Solution</h3><p class="text-sm text-white/70">IoT data integration and machine learning forecasting to predict equipment failure before it happens.</p></div>
-        <div class="clinical-frame p-8 rounded-[1.5rem] hover:bg-white/[0.03] transition cursor-pointer"><p class="text-xs font-mono text-accent mb-2 uppercase">Manufacturing</p><h3 class="text-xl font-bold text-white mb-2">Smart Computer Vision Inspection</h3><p class="text-sm text-white/70">Real-time object detection and quality control deployed directly on the manufacturing line.</p></div>
-      </div>
-    </section>
-
-    <!-- 8. CTA -->
-    <section class="mx-auto max-w-5xl px-4 py-16 sm:px-6 lg:px-8 text-center">
-      <div class="clinical-frame rounded-[2rem] p-10 lg:p-16 bg-accent/5 border-accent/20 relative overflow-hidden">
-        <div class="absolute -left-20 -top-20 h-64 w-64 rounded-full bg-accent/10 blur-[80px]"></div>
-        <h2 class="relative z-10 text-4xl font-semibold tracking-tight text-white mb-10">Ready to Transform Your Business with AI?</h2>
-        <div class="relative z-10 flex flex-col sm:flex-row justify-center gap-4">
-          <a href={`${import.meta.env.BASE_URL}contact/`} class="inline-flex items-center justify-center rounded-full bg-white px-8 py-4 text-sm font-medium text-black transition hover:bg-white/90">
-            Schedule Consultation
-          </a>
-          <a href={`${import.meta.env.BASE_URL}contact/`} class="inline-flex items-center justify-center rounded-full border border-white/[0.2] bg-black/20 px-8 py-4 text-sm font-medium text-white transition hover:bg-black/40">
-            Contact Our Team
-          </a>
+        <div class="rounded-2xl border border-gray-200 bg-white p-8 shadow-xs hover:shadow-md transition">
+          <p class="text-xs font-semibold text-blue-600 uppercase mb-2">Healthcare</p>
+          <h3 class="text-xl font-bold text-gray-900 mb-2">AI Liver Segmentation & 3D Imaging Platform</h3>
+          <p class="text-sm text-gray-600">Automated processing of CT/MRI scans for rapid anomaly detection and 3D organ reconstruction in seconds.</p>
+        </div>
+        <div class="rounded-2xl border border-gray-200 bg-white p-8 shadow-xs hover:shadow-md transition">
+          <p class="text-xs font-semibold text-blue-600 uppercase mb-2">Security & Identity</p>
+          <h3 class="text-xl font-bold text-gray-900 mb-2">Adaptive Zero-Trust Authentication Engine</h3>
+          <p class="text-sm text-gray-600">Sub-50ms continuous risk-based access control protecting sensitive financial and patient endpoints.</p>
         </div>
       </div>
     </section>
+
+    <!-- 5. FAQ Accordion Section (Schema-Backed) -->
+    <section id="faq" class="mx-auto max-w-5xl px-4 py-12 sm:px-6 lg:px-8 border-t border-gray-200">
+      <div class="text-center mb-10 max-w-3xl mx-auto">
+        <span class="inline-flex rounded-full bg-blue-100 px-3.5 py-1 text-xs font-semibold uppercase tracking-wider text-blue-700 mb-3">
+          Got Questions?
+        </span>
+        <h2 class="text-3xl font-bold text-gray-900">Frequently Asked Questions</h2>
+        <p class="mt-2 text-sm text-gray-600">
+          Learn how AuthBrain delivers sub-50ms zero-trust security and HIPAA-compliant clinical AI.
+        </p>
+      </div>
+
+      <div class="space-y-4">
+        {faqs.map((faq, index) => (
+          <details class="group rounded-2xl border border-gray-200 bg-white p-6 transition-all hover:border-blue-300">
+            <summary class="flex cursor-pointer items-center justify-between font-bold text-gray-900 text-base leading-snug list-none">
+              <span>{faq.q}</span>
+              <span class="ml-4 flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-blue-50 text-blue-600 transition-transform group-open:rotate-180">
+                <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </span>
+            </summary>
+            <div class="mt-4 pt-4 border-t border-gray-100 text-sm leading-relaxed text-gray-600">
+              {faq.a}
+            </div>
+          </details>
+        ))}
+      </div>
+    </section>
+
   </main>
   <Footer />
 </BaseLayout>
