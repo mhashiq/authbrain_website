@@ -12,13 +12,18 @@
   }
 
   body {
-    @apply bg-[#FAFAFA] text-[#111827] antialiased;
-    background-color: #FAFAFA;
+    @apply bg-[#FAFAF8] text-[#3A3A3A] antialiased;
+    background-color: #FAFAF8;
+    color: #3A3A3A;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    color: #0D0D0D;
   }
 
   ::selection {
-    background: rgba(26, 86, 219, 0.15);
-    color: #1A56DB;
+    background: rgba(230, 74, 37, 0.15);
+    color: #E64A25;
   }
 }
 

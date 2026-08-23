@@ -1,0 +1,302 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+const softwareSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  'name': 'Extension Trust Auditor',
+  'applicationCategory': 'SecurityApplication',
+  'operatingSystem': 'Chrome Browser, Windows, macOS, Linux',
+  'description': 'A lightweight, privacy-first permission & update watchdog Chrome Extension that monitors installed extensions for permission expansions, ownership/version jumps, and security risks.',
+  'offers': {
+    '@type': 'Offer',
+    'price': '0',
+    'priceCurrency': 'USD'
+  }
+};
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  'itemListElement': [
+    { '@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': 'https://authbrain.tech/' },
+    { '@type': 'ListItem', 'position': 2, 'name': 'Products', 'item': 'https://authbrain.tech/products/' },
+    { '@type': 'ListItem', 'position': 3, 'name': 'Extension Trust Auditor', 'item': 'https://authbrain.tech/products/extensiontrustauditor/' }
+  ]
+};
+---
+
+<BaseLayout
+  title="Extension Trust Auditor | Privacy-First Chrome Extension Watchdog by AuthBrain"
+  description="A lightweight, privacy-first permission & update watchdog Chrome Extension that monitors your installed extensions for permission expansions, version jumps, and security risks."
+  jsonLdSchema={[softwareSchema, breadcrumbSchema]}
+>
+  <Header />
+  <main class="bg-[#FAFAF8] text-[#3A3A3A]">
+
+    <!-- 1. Breadcrumb -->
+    <nav class="mx-auto max-w-7xl px-4 pt-6 sm:px-6 lg:px-8">
+      <ol class="flex items-center gap-2 text-xs font-medium text-gray-500">
+        <li><a href={import.meta.env.BASE_URL} class="hover:text-[#E64A25] transition">Home</a></li>
+        <li>/</li>
+        <li><a href={`${import.meta.env.BASE_URL}products/`} class="hover:text-[#E64A25] transition">Products</a></li>
+        <li>/</li>
+        <li class="text-[#0D0D0D] font-semibold">Extension Trust Auditor</li>
+      </ol>
+    </nav>
+
+    <!-- 2. Hero Block -->
+    <section class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8 lg:py-10 border-b border-[#E5E3E0]">
+      <div class="max-w-4xl space-y-4">
+        <div class="flex flex-wrap items-center gap-3">
+          <span class="inline-flex items-center gap-1.5 rounded-full border border-[#F8D5CE] bg-[#FDF2F0] px-3 py-1 text-xs font-semibold uppercase tracking-wider text-[#E64A25]">
+            <span class="h-1.5 w-1.5 rounded-full bg-[#E64A25]"></span>
+            Published
+          </span>
+          <span class="inline-flex items-center gap-1 text-xs font-semibold uppercase tracking-wider text-gray-500">
+            SECURITY & PRIVACY
+          </span>
+        </div>
+
+        <h1 class="text-4xl font-extrabold tracking-tight text-[#0D0D0D] sm:text-5xl lg:text-6xl">
+          Extension Trust Auditor
+        </h1>
+
+        <p class="text-lg font-semibold text-[#3A3A3A]">
+          A lightweight, privacy-first permission & update watchdog Chrome Extension
+        </p>
+
+        <p class="text-base leading-relaxed text-[#3A3A3A] max-w-3xl">
+          Extension Trust Auditor is an open-source, privacy-first permission and update watchdog for Google Chrome developed by <a href="https://www.authbrain.io/" target="_blank" rel="noopener noreferrer" class="text-[#E64A25] underline font-medium hover:text-[#C93E1D]">AuthBrain</a>. It continuously monitors your installed extensions for silent permission expansions, version/ownership jumps, and security risks — translating complex Chrome API permissions into clear, human-understandable language 100% offline.
+        </p>
+
+        <!-- Primary CTA Row -->
+        <div class="flex flex-wrap items-center gap-4 pt-4">
+          <a
+            href="https://github.com/mhashiq/Trust_Auditor"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-2 rounded-xl border border-[#E5E3E0] bg-white px-5 py-3 text-xs font-semibold text-[#0D0D0D] hover:bg-[#F4F3F1] shadow-xs transition"
+          >
+            <svg class="h-4 w-4 text-[#0D0D0D]" fill="currentColor" viewBox="0 0 24 24">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
+            </svg>
+            <span>View Source on GitHub</span>
+          </a>
+
+          <a
+            href={`${import.meta.env.BASE_URL}contact/`}
+            class="inline-flex items-center gap-2 rounded-xl bg-[#E64A25] px-6 py-3 text-xs font-semibold text-white shadow-xs hover:bg-[#C93E1D] transition"
+          >
+            <span>Request Enterprise Customization</span>
+            <span>&rarr;</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Tech Stack Grid -->
+    <section class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8 border-b border-[#E5E3E0]">
+      <h2 class="text-xs font-bold uppercase tracking-wider text-gray-500 mb-4">Extension Architecture Stack</h2>
+      <div class="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-6">
+        {[
+          { name: 'JavaScript ES6+', desc: 'Pure Client Logic' },
+          { name: 'Manifest V3', desc: 'Secure Service Worker' },
+          { name: 'Chrome Management API', desc: 'Permission Footprint Hooks' },
+          { name: 'Chrome Alarms API', desc: 'Background Alarm Watchdog' },
+          { name: 'HTML5 & CSS3', desc: 'Popup & Dashboard Console' },
+          { name: 'Zero Telemetry', desc: '100% Offline Local Processing' },
+        ].map((t) => (
+          <div class="rounded-xl border border-[#E5E3E0] bg-white p-3.5 text-center shadow-xs">
+            <p class="text-xs font-mono font-bold text-[#0D0D0D]">{t.name}</p>
+            <p class="text-[10px] text-gray-500 font-medium mt-0.5">{t.desc}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- 4. Key Capabilities & Features -->
+    <section class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8 border-b border-[#E5E3E0]">
+      <h2 class="text-2xl font-bold text-[#0D0D0D] mb-6">🌟 Key Features & Security Watchdog</h2>
+      <div class="grid gap-6 sm:grid-cols-2 md:grid-cols-3">
+        <div class="rounded-2xl border border-[#E5E3E0] bg-white p-6 shadow-xs">
+          <div class="h-8 w-8 rounded-lg bg-[#FDF2F0] text-[#E64A25] flex items-center justify-center font-bold text-sm mb-3">🛡️</div>
+          <h3 class="text-base font-bold text-[#0D0D0D] mb-2">Automated Permission Watchdog</h3>
+          <p class="text-xs text-[#3A3A3A] leading-relaxed">
+            Continuously monitors declared permissions and host permissions across all installed Chrome extensions to detect unexpected scope changes.
+          </p>
+        </div>
+
+        <div class="rounded-2xl border border-[#E5E3E0] bg-white p-6 shadow-xs">
+          <div class="h-8 w-8 rounded-lg bg-[#FDF2F0] text-[#E64A25] flex items-center justify-center font-bold text-sm mb-3">🚦</div>
+          <h3 class="text-base font-bold text-[#0D0D0D] mb-2">Traffic-Light Risk Scoring</h3>
+          <p class="text-xs text-[#3A3A3A] leading-relaxed">
+            Instantly classifies extensions into High Risk (🔴), Moderate Risk (🟡), and Safe (🟢) based on permission footprints and scope expansions.
+          </p>
+        </div>
+
+        <div class="rounded-2xl border border-[#E5E3E0] bg-white p-6 shadow-xs">
+          <div class="h-8 w-8 rounded-lg bg-[#FDF2F0] text-[#E64A25] flex items-center justify-center font-bold text-sm mb-3">🗣️</div>
+          <h3 class="text-base font-bold text-[#0D0D0D] mb-2">Plain-Language Translations</h3>
+          <p class="text-xs text-[#3A3A3A] leading-relaxed">
+            Translates cryptic API permissions (<code class="bg-[#F4F3F1] px-1 py-0.5 rounded text-[11px]">webRequest</code>, <code class="bg-[#F4F3F1] px-1 py-0.5 rounded text-[11px]">&lt;all_urls&gt;</code>, <code class="bg-[#F4F3F1] px-1 py-0.5 rounded text-[11px]">declarativeNetRequest</code>, <code class="bg-[#F4F3F1] px-1 py-0.5 rounded text-[11px]">cookies</code>, <code class="bg-[#F4F3F1] px-1 py-0.5 rounded text-[11px]">tabs</code>) into plain human sentences.
+          </p>
+        </div>
+
+        <div class="rounded-2xl border border-[#E5E3E0] bg-white p-6 shadow-xs">
+          <div class="h-8 w-8 rounded-lg bg-[#FDF2F0] text-[#E64A25] flex items-center justify-center font-bold text-sm mb-3">🔔</div>
+          <h3 class="text-base font-bold text-[#0D0D0D] mb-2">Instant Desktop Notifications</h3>
+          <p class="text-xs text-[#3A3A3A] leading-relaxed">
+            Delivers immediate alerts whenever an installed extension silently expands its scope to gain access to all websites or sensitive browser APIs.
+          </p>
+        </div>
+
+        <div class="rounded-2xl border border-[#E5E3E0] bg-white p-6 shadow-xs">
+          <div class="h-8 w-8 rounded-lg bg-[#FDF2F0] text-[#E64A25] flex items-center justify-center font-bold text-sm mb-3">📊</div>
+          <h3 class="text-base font-bold text-[#0D0D0D] mb-2">Security Audit Console</h3>
+          <p class="text-xs text-[#3A3A3A] leading-relaxed">
+            Comprehensive dashboard featuring snapshot history timelines, extension enable/disable toggles, quick uninstall shortcuts, and downloadable JSON security audit reports.
+          </p>
+        </div>
+
+        <div class="rounded-2xl border border-emerald-200 bg-emerald-50/50 p-6 shadow-xs">
+          <div class="h-8 w-8 rounded-lg bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-sm mb-3">🔒</div>
+          <h3 class="text-base font-bold text-[#0D0D0D] mb-2">100% Offline & Private</h3>
+          <p class="text-xs text-[#3A3A3A] leading-relaxed">
+            Zero network requests, zero telemetry, and zero external servers. All permission parsing and risk analysis runs strictly inside your local browser.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. How to Install & Run -->
+    <section class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8 border-b border-[#E5E3E0]">
+      <h2 class="text-2xl font-bold text-[#0D0D0D] mb-2">🚀 How to Install & Run in Chrome</h2>
+      <p class="text-xs text-gray-600 mb-6">Quick instructions for running Extension Trust Auditor in developer mode:</p>
+      
+      <div class="rounded-2xl border border-[#E5E3E0] bg-white p-6 sm:p-8 shadow-xs">
+        <ol class="space-y-4 text-xs sm:text-sm text-[#3A3A3A]">
+          <li class="flex items-start gap-3">
+            <span class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#E64A25] text-xs font-bold text-white">1</span>
+            <span>Clone or download the repository from <a href="https://github.com/mhashiq/Trust_Auditor" target="_blank" rel="noopener noreferrer" class="text-[#E64A25] underline font-semibold">GitHub</a>.</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#E64A25] text-xs font-bold text-white">2</span>
+            <span>Open Google Chrome and navigate to <code class="bg-[#F4F3F1] px-2 py-0.5 rounded font-mono text-[#E64A25]">chrome://extensions</code> in your address bar.</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#E64A25] text-xs font-bold text-white">3</span>
+            <span>Enable <strong>Developer mode</strong> using the toggle switch located in the top-right corner of the page.</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#E64A25] text-xs font-bold text-white">4</span>
+            <span>Click the <strong>Load unpacked</strong> button in the top-left corner.</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#E64A25] text-xs font-bold text-white">5</span>
+            <span>Select the project folder containing the <code class="bg-[#F4F3F1] px-2 py-0.5 rounded font-mono text-[#0D0D0D]">manifest.json</code> file.</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#E64A25] text-xs font-bold text-white">6</span>
+            <span>Click the extension puzzle icon in Chrome's toolbar and pin <strong>Extension Trust Auditor</strong> for instant access.</span>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- 6. File Structure -->
+    <section class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8 border-b border-[#E5E3E0]">
+      <h2 class="text-2xl font-bold text-[#0D0D0D] mb-2">📁 File Structure</h2>
+      <p class="text-xs text-gray-600 mb-4">Clean, modular codebase design optimized for zero dependencies and high performance:</p>
+      
+      <div class="rounded-2xl border border-[#0D0D0D] bg-[#0D0D0D] p-6 text-gray-100 font-mono text-xs overflow-x-auto shadow-inner">
+        <pre class="leading-relaxed">
+Extension_Trust_Auditor/
+├── manifest.json            # Manifest V3 specification
+├── background.js           # Background service worker (snapshot engine & alarm watchdog)
+├── popup.html / .css / .js # Compact extension popup UI
+├── dashboard.html / .css / .js # Security audit console dashboard
+├── lib/
+│   ├── permissionExplainer.js # Plain language translation dictionary & diff generator
+│   └── riskScoring.js       # Deterministic traffic-light risk algorithm
+├── data/
+│   └── knownRisky.json      # Offline bundled security advisories
+├── icons/
+│   ├── 16.png              # Traffic-light shield PNG icon (16x16)
+│   ├── 48.png              # Traffic-light shield PNG icon (48x48)
+│   └── 128.png             # Traffic-light shield PNG icon (128x128)
+├── CHROMEWEBSTORE.md       # Web Store listing metadata & permission justifications
+└── README.md
+        </pre>
+      </div>
+    </section>
+
+    <!-- 7. Target Use Cases -->
+    <section class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8 border-b border-[#E5E3E0]">
+      <h2 class="text-2xl font-bold text-[#0D0D0D] mb-6">Built For Security & Privacy Enthusiasts</h2>
+      <div class="grid gap-6 sm:grid-cols-3">
+        <div class="rounded-2xl border border-[#E5E3E0] bg-white p-6 shadow-xs text-center">
+          <div class="text-2xl mb-2">🛡️</div>
+          <h3 class="text-sm font-bold text-[#0D0D0D] mb-1">Security-Conscious Users</h3>
+          <p class="text-xs text-[#3A3A3A]">Detect stealthy permission expansions or ownership changes when Chrome extensions update in the background.</p>
+        </div>
+        <div class="rounded-2xl border border-[#E5E3E0] bg-white p-6 shadow-xs text-center">
+          <div class="text-2xl mb-2">🏢</div>
+          <h3 class="text-sm font-bold text-[#0D0D0D] mb-1">Enterprise Admins & IT Sec</h3>
+          <p class="text-xs text-[#3A3A3A]">Export downloadable JSON security audit reports for compliance tracking and browser threat surface analysis.</p>
+        </div>
+        <div class="rounded-2xl border border-[#E5E3E0] bg-white p-6 shadow-xs text-center">
+          <div class="text-2xl mb-2">💻</div>
+          <h3 class="text-sm font-bold text-[#0D0D0D] mb-1">Web Extension Engineers</h3>
+          <p class="text-xs text-[#3A3A3A]">Test Manifest V3 permission footprints and inspect human-language translation outputs during extension development.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. Related Products -->
+    <section class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8 border-b border-[#E5E3E0]">
+      <h2 class="text-2xl font-bold text-[#0D0D0D] mb-6">Related Platforms</h2>
+      <div class="grid gap-6 sm:grid-cols-3">
+        <a href={`${import.meta.env.BASE_URL}products/multiclipboard/`} class="group rounded-2xl border border-[#E5E3E0] bg-white p-6 shadow-xs hover:border-[#E64A25] hover:shadow-md transition">
+          <span class="inline-block rounded-full bg-[#FDF2F0] border border-[#F8D5CE] px-2.5 py-0.5 text-[10px] font-semibold text-[#E64A25] mb-2">Published</span>
+          <h3 class="text-lg font-bold text-[#0D0D0D] group-hover:text-[#E64A25] transition">MultiClipboard</h3>
+          <p class="text-xs text-[#3A3A3A] mt-1">Modern Chrome Extension for Smart Multi-Item Clipboard Management</p>
+        </a>
+
+        <a href={`${import.meta.env.BASE_URL}products/authb2b/`} class="group rounded-2xl border border-[#E5E3E0] bg-white p-6 shadow-xs hover:border-[#E64A25] hover:shadow-md transition">
+          <span class="inline-block rounded-full bg-emerald-50 border border-emerald-200 px-2.5 py-0.5 text-[10px] font-semibold text-emerald-700 mb-2">Production</span>
+          <h3 class="text-lg font-bold text-[#0D0D0D] group-hover:text-[#E64A25] transition">AuthB2B</h3>
+          <p class="text-xs text-[#3A3A3A] mt-1">Enterprise B2B AI-Driven Adaptive Authentication Platform</p>
+        </a>
+
+        <a href={`${import.meta.env.BASE_URL}products/authfacegraph/`} class="group rounded-2xl border border-[#E5E3E0] bg-white p-6 shadow-xs hover:border-[#E64A25] hover:shadow-md transition">
+          <span class="inline-block rounded-full bg-emerald-50 border border-emerald-200 px-2.5 py-0.5 text-[10px] font-semibold text-emerald-700 mb-2">Production</span>
+          <h3 class="text-lg font-bold text-[#0D0D0D] group-hover:text-[#E64A25] transition">AuthFaceGraph</h3>
+          <p class="text-xs text-[#3A3A3A] mt-1">Biometric Facial Recognition & Graph Neural Network Security</p>
+        </a>
+      </div>
+    </section>
+
+    <!-- 9. Final CTA Band -->
+    <section class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
+      <div class="rounded-3xl border border-[#F8D5CE] bg-[#FDF2F0]/80 p-8 text-center shadow-xs">
+        <h2 class="text-2xl font-bold text-[#0D0D0D] sm:text-3xl mb-2">
+          Need custom browser security tools or team permission policies?
+        </h2>
+        <p class="text-sm text-[#3A3A3A] max-w-xl mx-auto mb-6">
+          AuthBrain develops custom enterprise security extensions, zero-trust tools, and auditing infrastructure tailored to your needs.
+        </p>
+        <a
+          href={`${import.meta.env.BASE_URL}contact/`}
+          class="inline-flex items-center justify-center rounded-xl bg-[#E64A25] px-7 py-3.5 text-sm font-semibold text-white shadow-xs hover:bg-[#C93E1D] transition"
+        >
+          Schedule Technical Consultation
+        </a>
+      </div>
+    </section>
+
+  </main>
+  <Footer />
+</BaseLayout>

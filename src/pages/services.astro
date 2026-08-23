@@ -46,24 +46,24 @@ const faqSchema = {
   jsonLdSchema={faqSchema}
 >
   <Header />
-  <main class="bg-[#FAFAFA] text-gray-900">
+  <main class="bg-[#FAFAF8] text-[#3A3A3A]">
     <!-- 1. Hero Banner -->
-    <section class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8 lg:py-12 text-center border-b border-gray-200 bg-white">
+    <section class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8 lg:py-12 text-center border-b border-[#E5E3E0] bg-white">
       <div class="max-w-4xl mx-auto space-y-6">
-        <span class="inline-flex rounded-full bg-blue-100 px-3.5 py-1 text-xs font-semibold uppercase tracking-wider text-blue-700">
+        <span class="inline-flex rounded-full bg-[#FDF2F0] border border-[#F8D5CE] px-3.5 py-1 text-xs font-semibold uppercase tracking-wider text-[#E64A25]">
           Enterprise AI Services
         </span>
-        <h1 class="text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl lg:text-6xl">
+        <h1 class="text-4xl font-extrabold tracking-tight text-[#0D0D0D] sm:text-5xl lg:text-6xl">
           Transform Data Into Intelligent Business Decisions
         </h1>
-        <p class="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
+        <p class="text-base sm:text-lg text-[#3A3A3A] max-w-3xl mx-auto leading-relaxed">
           We help health systems and financial enterprises leverage Predictive AI, Zero-Trust Access Control, and Medical Imaging AI to increase operational speed and maintain regulatory compliance.
         </p>
         <div class="flex flex-col sm:flex-row justify-center gap-4 pt-2">
-          <a href={`${import.meta.env.BASE_URL}contact/`} class="inline-flex items-center justify-center rounded-xl bg-blue-600 px-7 py-3.5 text-base font-semibold text-white shadow-sm hover:bg-blue-700 transition">
+          <a href={`${import.meta.env.BASE_URL}contact/`} class="inline-flex items-center justify-center rounded-xl bg-[#E64A25] px-7 py-3.5 text-base font-semibold text-white shadow-sm hover:bg-[#C93E1D] transition">
             Request Consultation
           </a>
-          <a href="#faq" class="inline-flex items-center justify-center rounded-xl border border-gray-300 bg-white px-7 py-3.5 text-base font-semibold text-gray-700 hover:bg-gray-50 transition">
+          <a href="#faq" class="inline-flex items-center justify-center rounded-xl border border-[#E5E3E0] bg-white px-7 py-3.5 text-base font-semibold text-[#0D0D0D] hover:bg-[#F4F3F1] transition">
             Frequently Asked Questions
           </a>
         </div>
@@ -71,39 +71,39 @@ const faqSchema = {
     </section>
 
     <!-- 2. AI Strategy & Consulting -->
-    <section class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8 border-b border-gray-200">
-      <div class="rounded-3xl border border-gray-200 bg-white p-8 md:p-12 lg:p-14 shadow-xs">
+    <section class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8 border-b border-[#E5E3E0]">
+      <div class="rounded-3xl border border-[#E5E3E0] bg-white p-8 md:p-12 lg:p-14 shadow-xs">
         <div class="grid gap-12 lg:grid-cols-[1fr_1.5fr] lg:items-center">
           <div>
-            <span class="text-blue-600 text-xs font-bold uppercase tracking-wider mb-2 block">Where to Start</span>
-            <h2 class="text-3xl font-bold text-gray-900 mb-4">AI Strategy & Architectural Consulting</h2>
-            <p class="text-base leading-relaxed text-gray-600 mb-6">
+            <span class="text-[#E64A25] text-xs font-bold uppercase tracking-wider mb-2 block">Where to Start</span>
+            <h2 class="text-3xl font-bold text-[#0D0D0D] mb-4">AI Strategy & Architectural Consulting</h2>
+            <p class="text-base leading-relaxed text-[#3A3A3A] mb-6">
               For enterprise organizations requiring clear roadmaps to integrate zero-trust access control and predictive AI engines without operational friction.
             </p>
             <div class="flex flex-wrap gap-2">
-              <span class="rounded-full bg-gray-100 border border-gray-200 px-3.5 py-1 text-xs font-medium text-gray-700">Health Systems</span>
-              <span class="rounded-full bg-gray-100 border border-gray-200 px-3.5 py-1 text-xs font-medium text-gray-700">Financial Institutions</span>
-              <span class="rounded-full bg-gray-100 border border-gray-200 px-3.5 py-1 text-xs font-medium text-gray-700">Enterprise CISOs</span>
-              <span class="rounded-full bg-gray-100 border border-gray-200 px-3.5 py-1 text-xs font-medium text-gray-700">Radiology Centers</span>
+              <span class="rounded-full bg-[#F4F3F1] border border-[#E5E3E0] px-3.5 py-1 text-xs font-medium text-[#0D0D0D]">Health Systems</span>
+              <span class="rounded-full bg-[#F4F3F1] border border-[#E5E3E0] px-3.5 py-1 text-xs font-medium text-[#0D0D0D]">Financial Institutions</span>
+              <span class="rounded-full bg-[#F4F3F1] border border-[#E5E3E0] px-3.5 py-1 text-xs font-medium text-[#0D0D0D]">Enterprise CISOs</span>
+              <span class="rounded-full bg-[#F4F3F1] border border-[#E5E3E0] px-3.5 py-1 text-xs font-medium text-[#0D0D0D]">Radiology Centers</span>
             </div>
           </div>
           <div class="grid sm:grid-cols-2 gap-6">
-            <div class="bg-gray-50 rounded-2xl p-6 border border-gray-200">
-              <h3 class="text-lg font-bold text-gray-900 mb-3">🎯 What We Offer</h3>
-              <ul class="space-y-2.5 text-sm text-gray-600">
-                <li class="flex items-center gap-2"><span class="text-blue-600 font-bold">✓</span> AI readiness assessment</li>
-                <li class="flex items-center gap-2"><span class="text-blue-600 font-bold">✓</span> Business process analysis</li>
-                <li class="flex items-center gap-2"><span class="text-blue-600 font-bold">✓</span> AI opportunity identification</li>
-                <li class="flex items-center gap-2"><span class="text-blue-600 font-bold">✓</span> ROI & latency estimation</li>
+            <div class="bg-[#F4F3F1] rounded-2xl p-6 border border-[#E5E3E0]">
+              <h3 class="text-lg font-bold text-[#0D0D0D] mb-3">🎯 What We Offer</h3>
+              <ul class="space-y-2.5 text-sm text-[#3A3A3A]">
+                <li class="flex items-center gap-2"><span class="text-[#E64A25] font-bold">✓</span> AI readiness assessment</li>
+                <li class="flex items-center gap-2"><span class="text-[#E64A25] font-bold">✓</span> Business process analysis</li>
+                <li class="flex items-center gap-2"><span class="text-[#E64A25] font-bold">✓</span> AI opportunity identification</li>
+                <li class="flex items-center gap-2"><span class="text-[#E64A25] font-bold">✓</span> ROI & latency estimation</li>
               </ul>
             </div>
-            <div class="bg-gray-50 rounded-2xl p-6 border border-gray-200">
-              <h3 class="text-lg font-bold text-gray-900 mb-3">📋 Deliverables</h3>
-              <ul class="space-y-2.5 text-sm text-gray-600">
-                <li class="flex items-center gap-2"><span class="text-blue-600 font-bold">✓</span> AI strategy report</li>
-                <li class="flex items-center gap-2"><span class="text-blue-600 font-bold">✓</span> Implementation plan</li>
-                <li class="flex items-center gap-2"><span class="text-blue-600 font-bold">✓</span> Cost-benefit analysis</li>
-                <li class="flex items-center gap-2"><span class="text-blue-600 font-bold">✓</span> Tech recommendations</li>
+            <div class="bg-[#F4F3F1] rounded-2xl p-6 border border-[#E5E3E0]">
+              <h3 class="text-lg font-bold text-[#0D0D0D] mb-3">📋 Deliverables</h3>
+              <ul class="space-y-2.5 text-sm text-[#3A3A3A]">
+                <li class="flex items-center gap-2"><span class="text-[#E64A25] font-bold">✓</span> AI strategy report</li>
+                <li class="flex items-center gap-2"><span class="text-[#E64A25] font-bold">✓</span> Implementation plan</li>
+                <li class="flex items-center gap-2"><span class="text-[#E64A25] font-bold">✓</span> Cost-benefit analysis</li>
+                <li class="flex items-center gap-2"><span class="text-[#E64A25] font-bold">✓</span> Tech recommendations</li>
               </ul>
             </div>
           </div>
@@ -113,81 +113,81 @@ const faqSchema = {
 
     <!-- 3. Flagship Healthcare AI Solutions -->
     <section class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
-      <div class="rounded-3xl border border-blue-200 bg-blue-50/50 p-8 md:p-12 shadow-xs">
+      <div class="rounded-3xl border border-[#F8D5CE] bg-[#FDF2F0]/60 p-8 md:p-12 shadow-xs">
         <div class="flex flex-col md:flex-row md:items-center justify-between gap-8">
           <div class="max-w-2xl">
-            <div class="mb-3 inline-flex items-center gap-2 rounded-full bg-blue-600 px-3.5 py-1 text-xs font-bold uppercase tracking-wider text-white">
+            <div class="mb-3 inline-flex items-center gap-2 rounded-full bg-[#E64A25] px-3.5 py-1 text-xs font-bold uppercase tracking-wider text-white">
               <span>⭐ Flagship Service</span>
-              <span class="border-l border-blue-400 pl-2">Enterprise Scale</span>
+              <span class="border-l border-[#F8D5CE] pl-2">Enterprise Scale</span>
             </div>
-            <h2 class="text-3xl font-bold text-gray-900 mb-3">Healthcare & Imaging AI Analytics</h2>
-            <p class="text-base text-gray-600 leading-relaxed mb-6">
+            <h2 class="text-3xl font-bold text-[#0D0D0D] mb-3">Healthcare & Imaging AI Analytics</h2>
+            <p class="text-base text-[#3A3A3A] leading-relaxed mb-6">
               Leveraging our deep background in medical imaging and 3D organ segmentation, we deliver domain-specific AI solutions with immense clinical and operational value.
             </p>
-            <div class="grid grid-cols-2 gap-3 text-sm text-gray-700 font-medium">
+            <div class="grid grid-cols-2 gap-3 text-sm text-[#3A3A3A] font-medium">
               <ul class="space-y-2">
-                <li class="flex items-center gap-2"><span class="text-blue-600 font-bold">✓</span> Medical Image Analysis</li>
-                <li class="flex items-center gap-2"><span class="text-blue-600 font-bold">✓</span> Disease Prediction Systems</li>
-                <li class="flex items-center gap-2"><span class="text-blue-600 font-bold">✓</span> Hospital Analytics</li>
+                <li class="flex items-center gap-2"><span class="text-[#E64A25] font-bold">✓</span> Medical Image Analysis</li>
+                <li class="flex items-center gap-2"><span class="text-[#E64A25] font-bold">✓</span> Disease Prediction Systems</li>
+                <li class="flex items-center gap-2"><span class="text-[#E64A25] font-bold">✓</span> Hospital Analytics</li>
               </ul>
               <ul class="space-y-2">
-                <li class="flex items-center gap-2"><span class="text-blue-600 font-bold">✓</span> Clinical Decision Support</li>
-                <li class="flex items-center gap-2"><span class="text-blue-600 font-bold">✓</span> Radiology AI</li>
-                <li class="flex items-center gap-2"><span class="text-blue-600 font-bold">✓</span> 3D Organ Reconstruction</li>
+                <li class="flex items-center gap-2"><span class="text-[#E64A25] font-bold">✓</span> Clinical Decision Support</li>
+                <li class="flex items-center gap-2"><span class="text-[#E64A25] font-bold">✓</span> Radiology AI</li>
+                <li class="flex items-center gap-2"><span class="text-[#E64A25] font-bold">✓</span> 3D Organ Reconstruction</li>
               </ul>
             </div>
           </div>
-          <div class="shrink-0 text-center rounded-2xl bg-white p-6 border border-blue-200 shadow-xs">
-            <div class="h-16 w-16 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center text-3xl mx-auto mb-3">🏥</div>
-            <p class="text-sm font-bold text-gray-900">Trusted by Hospitals<br/>& Health Systems</p>
+          <div class="shrink-0 text-center rounded-2xl bg-white p-6 border border-[#F8D5CE] shadow-xs">
+            <div class="h-16 w-16 rounded-xl bg-[#FDF2F0] text-[#E64A25] flex items-center justify-center text-3xl mx-auto mb-3">🏥</div>
+            <p class="text-sm font-bold text-[#0D0D0D]">Trusted by Hospitals<br/>& Health Systems</p>
           </div>
         </div>
       </div>
     </section>
 
     <!-- 4. Featured Case Studies -->
-    <section id="case-studies" class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8 border-t border-gray-200">
+    <section id="case-studies" class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8 border-t border-[#E5E3E0]">
       <div class="mb-8">
-        <h2 class="text-3xl font-bold text-gray-900">Featured Case Studies</h2>
+        <h2 class="text-3xl font-bold text-[#0D0D0D]">Featured Case Studies</h2>
       </div>
       <div class="grid gap-6 md:grid-cols-2">
-        <div class="rounded-2xl border border-gray-200 bg-white p-8 shadow-xs hover:shadow-md transition">
-          <p class="text-xs font-semibold text-blue-600 uppercase mb-2">Healthcare</p>
-          <h3 class="text-xl font-bold text-gray-900 mb-2">AI Liver Segmentation & 3D Imaging Platform</h3>
-          <p class="text-sm text-gray-600">Automated processing of CT/MRI scans for rapid anomaly detection and 3D organ reconstruction in seconds.</p>
+        <div class="rounded-2xl border border-[#E5E3E0] bg-white p-8 shadow-xs hover:shadow-md transition hover:border-[#F8D5CE]">
+          <p class="text-xs font-semibold text-[#E64A25] uppercase mb-2">Healthcare</p>
+          <h3 class="text-xl font-bold text-[#0D0D0D] mb-2">AI Liver Segmentation & 3D Imaging Platform</h3>
+          <p class="text-sm text-[#3A3A3A]">Automated processing of CT/MRI scans for rapid anomaly detection and 3D organ reconstruction in seconds.</p>
         </div>
-        <div class="rounded-2xl border border-gray-200 bg-white p-8 shadow-xs hover:shadow-md transition">
-          <p class="text-xs font-semibold text-blue-600 uppercase mb-2">Security & Identity</p>
-          <h3 class="text-xl font-bold text-gray-900 mb-2">Adaptive Zero-Trust Authentication Engine</h3>
-          <p class="text-sm text-gray-600">Sub-50ms continuous risk-based access control protecting sensitive financial and patient endpoints.</p>
+        <div class="rounded-2xl border border-[#E5E3E0] bg-white p-8 shadow-xs hover:shadow-md transition hover:border-[#F8D5CE]">
+          <p class="text-xs font-semibold text-[#E64A25] uppercase mb-2">Security & Identity</p>
+          <h3 class="text-xl font-bold text-[#0D0D0D] mb-2">Adaptive Zero-Trust Authentication Engine</h3>
+          <p class="text-sm text-[#3A3A3A]">Sub-50ms continuous risk-based access control protecting sensitive financial and patient endpoints.</p>
         </div>
       </div>
     </section>
 
     <!-- 5. FAQ Accordion Section (Schema-Backed) -->
-    <section id="faq" class="mx-auto max-w-5xl px-4 py-12 sm:px-6 lg:px-8 border-t border-gray-200">
+    <section id="faq" class="mx-auto max-w-5xl px-4 py-12 sm:px-6 lg:px-8 border-t border-[#E5E3E0]">
       <div class="text-center mb-10 max-w-3xl mx-auto">
-        <span class="inline-flex rounded-full bg-blue-100 px-3.5 py-1 text-xs font-semibold uppercase tracking-wider text-blue-700 mb-3">
+        <span class="inline-flex rounded-full bg-[#FDF2F0] border border-[#F8D5CE] px-3.5 py-1 text-xs font-semibold uppercase tracking-wider text-[#E64A25] mb-3">
           Got Questions?
         </span>
-        <h2 class="text-3xl font-bold text-gray-900">Frequently Asked Questions</h2>
-        <p class="mt-2 text-sm text-gray-600">
+        <h2 class="text-3xl font-bold text-[#0D0D0D]">Frequently Asked Questions</h2>
+        <p class="mt-2 text-sm text-[#3A3A3A]">
           Learn how AuthBrain delivers sub-50ms zero-trust security and HIPAA-compliant clinical AI.
         </p>
       </div>
 
       <div class="space-y-4">
         {faqs.map((faq, index) => (
-          <details class="group rounded-2xl border border-gray-200 bg-white p-6 transition-all hover:border-blue-300">
-            <summary class="flex cursor-pointer items-center justify-between font-bold text-gray-900 text-base leading-snug list-none">
+          <details class="group rounded-2xl border border-[#E5E3E0] bg-white p-6 transition-all hover:border-[#F8D5CE]">
+            <summary class="flex cursor-pointer items-center justify-between font-bold text-[#0D0D0D] text-base leading-snug list-none">
               <span>{faq.q}</span>
-              <span class="ml-4 flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-blue-50 text-blue-600 transition-transform group-open:rotate-180">
+              <span class="ml-4 flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#FDF2F0] text-[#E64A25] transition-transform group-open:rotate-180">
                 <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                 </svg>
               </span>
             </summary>
-            <div class="mt-4 pt-4 border-t border-gray-100 text-sm leading-relaxed text-gray-600">
+            <div class="mt-4 pt-4 border-t border-[#E5E3E0] text-sm leading-relaxed text-[#3A3A3A]">
               {faq.a}
             </div>
           </details>

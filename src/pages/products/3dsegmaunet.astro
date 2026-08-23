@@ -8,7 +8,7 @@ const softwareSchema = {
   '@type': 'SoftwareApplication',
   'name': '3DSegmaUNet',
   'applicationCategory': 'MedicalApplication',
-  'operatingSystem': 'Linux, Docker, Cloud',
+  'operatingSystem': 'Linux, Docker, PACS',
   'description': 'End-to-end medical AI application for automated 3D volumetric liver segmentation from CT scans with high Dice similarity coefficients.',
   'offers': {
     '@type': 'Offer',
@@ -34,21 +34,21 @@ const breadcrumbSchema = {
   jsonLdSchema={[softwareSchema, breadcrumbSchema]}
 >
   <Header />
-  <main class="bg-[#FAFAFA] text-gray-900">
+  <main class="bg-[#FAFAF8] text-[#3A3A3A]">
 
     <!-- 1. Breadcrumb -->
     <nav class="mx-auto max-w-7xl px-4 pt-6 sm:px-6 lg:px-8">
       <ol class="flex items-center gap-2 text-xs font-medium text-gray-500">
-        <li><a href={import.meta.env.BASE_URL} class="hover:text-blue-600 transition">Home</a></li>
+        <li><a href={import.meta.env.BASE_URL} class="hover:text-[#E64A25] transition">Home</a></li>
         <li>/</li>
-        <li><a href={`${import.meta.env.BASE_URL}products/`} class="hover:text-blue-600 transition">Products</a></li>
+        <li><a href={`${import.meta.env.BASE_URL}products/`} class="hover:text-[#E64A25] transition">Products</a></li>
         <li>/</li>
-        <li class="text-gray-900 font-semibold">3DSegmaUNet</li>
+        <li class="text-[#0D0D0D] font-semibold">3DSegmaUNet</li>
       </ol>
     </nav>
 
     <!-- 2. Hero Block -->
-    <section class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8 lg:py-10 border-b border-gray-200">
+    <section class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8 lg:py-10 border-b border-[#E5E3E0]">
       <div class="max-w-4xl space-y-4">
         <div class="flex flex-wrap items-center gap-3">
           <span class="inline-flex items-center gap-1.5 rounded-full border border-amber-200 bg-amber-50 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-amber-700">
@@ -60,15 +60,15 @@ const breadcrumbSchema = {
           </span>
         </div>
 
-        <h1 class="text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl lg:text-6xl">
+        <h1 class="text-4xl font-extrabold tracking-tight text-[#0D0D0D] sm:text-5xl lg:text-6xl">
           3DSegmaUNet
         </h1>
 
-        <p class="text-lg font-semibold text-gray-700">
+        <p class="text-lg font-semibold text-[#3A3A3A]">
           AI-Powered 3D Medical Imaging & Volumetric Liver Segmentation
         </p>
 
-        <p class="text-base leading-relaxed text-gray-600 max-w-3xl">
+        <p class="text-base leading-relaxed text-[#3A3A3A] max-w-3xl">
           3DSegmaUNet is an end-to-end medical AI application engineered for automated 3D volumetric liver and lesion segmentation from abdominal DICOM CT scans. Utilizing 3D U-Net neural architectures and MONAI medical frameworks, 3DSegmaUNet processes multi-slice radiological volumes to generate precise 3D organ mesh geometries for surgical planning and PACS diagnostic workflows.
         </p>
 
@@ -80,7 +80,7 @@ const breadcrumbSchema = {
 
           <a
             href={`${import.meta.env.BASE_URL}contact/`}
-            class="inline-flex items-center gap-2 rounded-xl bg-blue-600 px-6 py-3 text-xs font-semibold text-white shadow-xs hover:bg-blue-700 transition"
+            class="inline-flex items-center gap-2 rounded-xl bg-[#E64A25] px-6 py-3 text-xs font-semibold text-white shadow-xs hover:bg-[#C93E1D] transition"
           >
             <span>Request Clinical Trial Partnering</span>
             <span>&rarr;</span>
@@ -90,7 +90,7 @@ const breadcrumbSchema = {
     </section>
 
     <!-- 3. Tech Stack Grid -->
-    <section class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8 border-b border-gray-200">
+    <section class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8 border-b border-[#E5E3E0]">
       <h2 class="text-xs font-bold uppercase tracking-wider text-gray-500 mb-4">Clinical AI Stack Architecture</h2>
       <div class="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-7">
         {[
@@ -102,8 +102,8 @@ const breadcrumbSchema = {
           { name: 'Docker', desc: 'PACS Container' },
           { name: '3D Slicer', desc: 'Volumetric Viz' },
         ].map((t) => (
-          <div class="rounded-xl border border-gray-200 bg-white p-3.5 text-center shadow-xs">
-            <p class="text-xs font-mono font-bold text-gray-900">{t.name}</p>
+          <div class="rounded-xl border border-[#E5E3E0] bg-white p-3.5 text-center shadow-xs">
+            <p class="text-xs font-mono font-bold text-[#0D0D0D]">{t.name}</p>
             <p class="text-[10px] text-gray-500 font-medium mt-0.5">{t.desc}</p>
           </div>
         ))}
@@ -111,37 +111,37 @@ const breadcrumbSchema = {
     </section>
 
     <!-- 4. Key Capabilities & Outcomes -->
-    <section class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8 border-b border-gray-200">
-      <h2 class="text-2xl font-bold text-gray-900 mb-6">Key Clinical Capabilities</h2>
+    <section class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8 border-b border-[#E5E3E0]">
+      <h2 class="text-2xl font-bold text-[#0D0D0D] mb-6">Key Clinical Capabilities</h2>
       <div class="grid gap-6 sm:grid-cols-2">
-        <div class="rounded-2xl border border-gray-200 bg-white p-6 shadow-xs">
-          <div class="h-8 w-8 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center font-bold text-sm mb-3">🩺</div>
-          <h3 class="text-base font-bold text-gray-900 mb-2">Automated 3D Volumetric Segmentation</h3>
-          <p class="text-xs text-gray-600 leading-relaxed">
+        <div class="rounded-2xl border border-[#E5E3E0] bg-white p-6 shadow-xs">
+          <div class="h-8 w-8 rounded-lg bg-[#FDF2F0] text-[#E64A25] flex items-center justify-center font-bold text-sm mb-3">🩺</div>
+          <h3 class="text-base font-bold text-[#0D0D0D] mb-2">Automated 3D Volumetric Segmentation</h3>
+          <p class="text-xs text-[#3A3A3A] leading-relaxed">
             Segments organ volumes directly from multi-slice CT/MRI DICOM scans, replacing manual slice-by-slice contouring.
           </p>
         </div>
 
-        <div class="rounded-2xl border border-gray-200 bg-white p-6 shadow-xs">
-          <div class="h-8 w-8 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center font-bold text-sm mb-3">🎯</div>
-          <h3 class="text-base font-bold text-gray-900 mb-2">High Dice Similarity Coefficients</h3>
-          <p class="text-xs text-gray-600 leading-relaxed">
+        <div class="rounded-2xl border border-[#E5E3E0] bg-white p-6 shadow-xs">
+          <div class="h-8 w-8 rounded-lg bg-[#FDF2F0] text-[#E64A25] flex items-center justify-center font-bold text-sm mb-3">🎯</div>
+          <h3 class="text-base font-bold text-[#0D0D0D] mb-2">High Dice Similarity Coefficients</h3>
+          <p class="text-xs text-[#3A3A3A] leading-relaxed">
             Achieves high overlap accuracy against ground-truth radiologist annotations for organ and lesion boundaries.
           </p>
         </div>
 
-        <div class="rounded-2xl border border-gray-200 bg-white p-6 shadow-xs">
-          <div class="h-8 w-8 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center font-bold text-sm mb-3">⚡</div>
-          <h3 class="text-base font-bold text-gray-900 mb-2">40% Decrease in Contour Time</h3>
-          <p class="text-xs text-gray-600 leading-relaxed">
+        <div class="rounded-2xl border border-[#E5E3E0] bg-white p-6 shadow-xs">
+          <div class="h-8 w-8 rounded-lg bg-[#FDF2F0] text-[#E64A25] flex items-center justify-center font-bold text-sm mb-3">⚡</div>
+          <h3 class="text-base font-bold text-[#0D0D0D] mb-2">40% Decrease in Contour Time</h3>
+          <p class="text-xs text-[#3A3A3A] leading-relaxed">
             Reduces radiological review and pre-operative liver resection planning time from hours to seconds.
           </p>
         </div>
 
-        <div class="rounded-2xl border border-gray-200 bg-white p-6 shadow-xs">
-          <div class="h-8 w-8 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center font-bold text-sm mb-3">🏥</div>
-          <h3 class="text-base font-bold text-gray-900 mb-2">PACS & 3D Slicer Integration</h3>
-          <p class="text-xs text-gray-600 leading-relaxed">
+        <div class="rounded-2xl border border-[#E5E3E0] bg-white p-6 shadow-xs">
+          <div class="h-8 w-8 rounded-lg bg-[#FDF2F0] text-[#E64A25] flex items-center justify-center font-bold text-sm mb-3">🏥</div>
+          <h3 class="text-base font-bold text-[#0D0D0D] mb-2">PACS & 3D Slicer Integration</h3>
+          <p class="text-xs text-[#3A3A3A] leading-relaxed">
             Exports 3D mesh files directly to PACS systems and 3D Slicer workstations for surgical navigation.
           </p>
         </div>
@@ -149,57 +149,57 @@ const breadcrumbSchema = {
     </section>
 
     <!-- 5. Target Use Cases -->
-    <section class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8 border-b border-gray-200">
-      <h2 class="text-2xl font-bold text-gray-900 mb-6">Built For Clinical Teams</h2>
+    <section class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8 border-b border-[#E5E3E0]">
+      <h2 class="text-2xl font-bold text-[#0D0D0D] mb-6">Built For Clinical Teams</h2>
       <div class="grid gap-6 sm:grid-cols-3">
-        <div class="rounded-2xl border border-gray-200 bg-white p-6 shadow-xs text-center">
+        <div class="rounded-2xl border border-[#E5E3E0] bg-white p-6 shadow-xs text-center">
           <div class="text-2xl mb-2">👨‍⚕️</div>
-          <h3 class="text-sm font-bold text-gray-900 mb-1">Radiologists & Imaging Centers</h3>
-          <p class="text-xs text-gray-600">Automate volumetric measurement reports for abdominal CT and MRI scans.</p>
+          <h3 class="text-sm font-bold text-[#0D0D0D] mb-1">Radiologists & Imaging Centers</h3>
+          <p class="text-xs text-[#3A3A3A]">Automate volumetric measurement reports for abdominal CT and MRI scans.</p>
         </div>
-        <div class="rounded-2xl border border-gray-200 bg-white p-6 shadow-xs text-center">
+        <div class="rounded-2xl border border-[#E5E3E0] bg-white p-6 shadow-xs text-center">
           <div class="text-2xl mb-2">🏥</div>
-          <h3 class="text-sm font-bold text-gray-900 mb-1">Surgical Operations Teams</h3>
-          <p class="text-xs text-gray-600">Reconstruct 3D organ geometries for pre-operative liver resection planning.</p>
+          <h3 class="text-sm font-bold text-[#0D0D0D] mb-1">Surgical Operations Teams</h3>
+          <p class="text-xs text-[#3A3A3A]">Reconstruct 3D organ geometries for pre-operative liver resection planning.</p>
         </div>
-        <div class="rounded-2xl border border-gray-200 bg-white p-6 shadow-xs text-center">
+        <div class="rounded-2xl border border-[#E5E3E0] bg-white p-6 shadow-xs text-center">
           <div class="text-2xl mb-2">🔬</div>
-          <h3 class="text-sm font-bold text-gray-900 mb-1">Biomedical AI Researchers</h3>
-          <p class="text-xs text-gray-600">Benchmark MONAI-based 3D U-Net architectures on clinical DICOM datasets.</p>
+          <h3 class="text-sm font-bold text-[#0D0D0D] mb-1">Biomedical AI Researchers</h3>
+          <p class="text-xs text-[#3A3A3A]">Benchmark MONAI-based 3D U-Net architectures on clinical DICOM datasets.</p>
         </div>
       </div>
     </section>
 
     <!-- 6. Related Products -->
-    <section class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8 border-b border-gray-200">
-      <h2 class="text-2xl font-bold text-gray-900 mb-6">Related Platforms</h2>
+    <section class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8 border-b border-[#E5E3E0]">
+      <h2 class="text-2xl font-bold text-[#0D0D0D] mb-6">Related Platforms</h2>
       <div class="grid gap-6 sm:grid-cols-2">
-        <a href={`${import.meta.env.BASE_URL}products/authb2b/`} class="group rounded-2xl border border-gray-200 bg-white p-6 shadow-xs hover:border-blue-300 hover:shadow-md transition">
+        <a href={`${import.meta.env.BASE_URL}products/authb2b/`} class="group rounded-2xl border border-[#E5E3E0] bg-white p-6 shadow-xs hover:border-[#F8D5CE] hover:shadow-md transition">
           <span class="inline-block rounded-full bg-emerald-50 border border-emerald-200 px-2.5 py-0.5 text-[10px] font-semibold text-emerald-700 mb-2">Production</span>
-          <h3 class="text-lg font-bold text-gray-900 group-hover:text-blue-600 transition">AuthB2B</h3>
-          <p class="text-xs text-gray-600 mt-1">Enterprise B2B AI-Driven Adaptive Authentication Platform</p>
+          <h3 class="text-lg font-bold text-[#0D0D0D] group-hover:text-[#E64A25] transition">AuthB2B</h3>
+          <p class="text-xs text-[#3A3A3A] mt-1">Enterprise B2B AI-Driven Adaptive Authentication Platform</p>
         </a>
 
-        <a href={`${import.meta.env.BASE_URL}products/statpilot/`} class="group rounded-2xl border border-gray-200 bg-white p-6 shadow-xs hover:border-blue-300 hover:shadow-md transition">
-          <span class="inline-block rounded-full bg-blue-50 border border-blue-200 px-2.5 py-0.5 text-[10px] font-semibold text-blue-700 mb-2">Published</span>
-          <h3 class="text-lg font-bold text-gray-900 group-hover:text-blue-600 transition">StatPilot</h3>
-          <p class="text-xs text-gray-600 mt-1">Automated, Transparent Statistical Analysis & Decision Engine</p>
+        <a href={`${import.meta.env.BASE_URL}products/statpilot/`} class="group rounded-2xl border border-[#E5E3E0] bg-white p-6 shadow-xs hover:border-[#F8D5CE] hover:shadow-md transition">
+          <span class="inline-block rounded-full bg-[#FDF2F0] border border-[#F8D5CE] px-2.5 py-0.5 text-[10px] font-semibold text-[#E64A25] mb-2">Published</span>
+          <h3 class="text-lg font-bold text-[#0D0D0D] group-hover:text-[#E64A25] transition">StatPilot</h3>
+          <p class="text-xs text-[#3A3A3A] mt-1">Automated, Transparent Statistical Analysis & Decision Engine</p>
         </a>
       </div>
     </section>
 
     <!-- 7. Final CTA Band -->
     <section class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
-      <div class="rounded-3xl border border-blue-200 bg-blue-50/60 p-8 text-center shadow-xs">
-        <h2 class="text-2xl font-bold text-gray-900 sm:text-3xl mb-2">
+      <div class="rounded-3xl border border-[#F8D5CE] bg-[#FDF2F0]/80 p-8 text-center shadow-xs">
+        <h2 class="text-2xl font-bold text-[#0D0D0D] sm:text-3xl mb-2">
           Interested in clinical evaluation for 3DSegmaUNet?
         </h2>
-        <p class="text-sm text-gray-600 max-w-xl mx-auto mb-6">
+        <p class="text-sm text-[#3A3A3A] max-w-xl mx-auto mb-6">
           Connect with our biomedical AI engineering team to partner on clinical trial deployments or DICOM integration.
         </p>
         <a
           href={`${import.meta.env.BASE_URL}contact/`}
-          class="inline-flex items-center justify-center rounded-xl bg-blue-600 px-7 py-3.5 text-sm font-semibold text-white shadow-xs hover:bg-blue-700 transition"
+          class="inline-flex items-center justify-center rounded-xl bg-[#E64A25] px-7 py-3.5 text-sm font-semibold text-white shadow-xs hover:bg-[#C93E1D] transition"
         >
           Schedule Technical Demo
         </a>

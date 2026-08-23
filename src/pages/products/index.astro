@@ -70,6 +70,22 @@ const products = [
     detailUrl: `${import.meta.env.BASE_URL}products/multiclipboard/`
   },
   {
+    id: 'extensiontrustauditor',
+    slug: 'extensiontrustauditor',
+    name: 'Extension Trust Auditor',
+    category: 'Security & Privacy',
+    catKey: 'security',
+    status: 'Published',
+    statusClass: 'bg-blue-50 text-blue-700 border-blue-200',
+    tagline: 'Lightweight, Privacy-First Permission & Update Watchdog Chrome Extension',
+    summary: 'Monitors installed Chrome extensions for permission expansions, ownership/version jumps, and security risks — translating complex Chrome permissions into clear, human language.',
+    tech: ['JavaScript (ES6+)', 'Manifest V3', 'Web Extension API', 'Chrome Alarms API', 'HTML5/CSS3', 'Zero-Telemetry Storage'],
+    links: [
+      { label: 'View on GitHub', url: 'https://github.com/mhashiq/Trust_Auditor', type: 'github' }
+    ],
+    detailUrl: `${import.meta.env.BASE_URL}products/extensiontrustauditor/`
+  },
+  {
     id: 'statpilot',
     slug: 'statpilot',
     name: 'StatPilot',
@@ -91,40 +107,40 @@ const products = [
 
 <BaseLayout 
   title="Enterprise AI Products | AuthBrain Security & Clinical Platforms" 
-  description="Explore AuthBrain's production AI platforms: adaptive authentication, biometric fraud detection, medical imaging segmentation, and statistical analysis tools."
+  description="Explore AuthBrain's production AI platforms: adaptive authentication, biometric fraud detection, medical imaging segmentation, extension trust auditing, and statistical analysis tools."
 >
   <Header />
-  <main class="bg-[#FAFAFA] text-gray-900">
+  <main class="bg-[#FAFAF8] text-[#3A3A3A]">
 
     <!-- Page Header -->
-    <section class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8 lg:py-12 border-b border-gray-200 bg-white">
+    <section class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8 lg:py-12 border-b border-[#E5E3E0] bg-white">
       <div class="max-w-3xl">
-        <span class="inline-flex items-center gap-2 rounded-full bg-blue-100 px-3.5 py-1 text-xs font-semibold uppercase tracking-wider text-blue-700 mb-3">
+        <span class="inline-flex items-center gap-2 rounded-full bg-[#FDF2F0] border border-[#F8D5CE] px-3.5 py-1 text-xs font-semibold uppercase tracking-wider text-[#E64A25] mb-3">
           Flagship Software
         </span>
-        <h1 class="text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl lg:text-6xl mb-4">
+        <h1 class="text-4xl font-extrabold tracking-tight text-[#0D0D0D] sm:text-5xl lg:text-6xl mb-4">
           Enterprise Systems & Platforms
         </h1>
-        <p class="text-base sm:text-lg text-gray-600 leading-relaxed">
+        <p class="text-base sm:text-lg text-[#3A3A3A] leading-relaxed">
           Production-grade platforms engineered at the intersection of zero-trust security, clinical AI, developer infrastructure, and statistical science.
         </p>
       </div>
 
       <!-- Filter / Tab Bar -->
-      <div class="mt-8 flex flex-wrap items-center gap-2 border-t border-gray-100 pt-6">
-        <button data-filter="all" class="filter-tab active rounded-xl border border-blue-600 bg-blue-600 px-4 py-2 text-xs font-semibold text-white shadow-xs transition">
-          All Systems (5)
+      <div class="mt-8 flex flex-wrap items-center gap-2 border-t border-[#E5E3E0] pt-6">
+        <button data-filter="all" class="filter-tab active rounded-xl border border-[#E64A25] bg-[#E64A25] px-4 py-2 text-xs font-semibold text-white shadow-xs transition">
+          All Systems (6)
         </button>
-        <button data-filter="security" class="filter-tab rounded-xl border border-gray-200 bg-white px-4 py-2 text-xs font-medium text-gray-600 hover:bg-gray-50 transition">
+        <button data-filter="security" class="filter-tab rounded-xl border border-[#E5E3E0] bg-white px-4 py-2 text-xs font-medium text-[#3A3A3A] hover:bg-[#F4F3F1] transition">
           Security & Fraud
         </button>
-        <button data-filter="medical" class="filter-tab rounded-xl border border-gray-200 bg-white px-4 py-2 text-xs font-medium text-gray-600 hover:bg-gray-50 transition">
+        <button data-filter="medical" class="filter-tab rounded-xl border border-[#E5E3E0] bg-white px-4 py-2 text-xs font-medium text-[#3A3A3A] hover:bg-[#F4F3F1] transition">
           Medical AI
         </button>
-        <button data-filter="devtools" class="filter-tab rounded-xl border border-gray-200 bg-white px-4 py-2 text-xs font-medium text-gray-600 hover:bg-gray-50 transition">
+        <button data-filter="devtools" class="filter-tab rounded-xl border border-[#E5E3E0] bg-white px-4 py-2 text-xs font-medium text-[#3A3A3A] hover:bg-[#F4F3F1] transition">
           Developer Tools
         </button>
-        <button data-filter="datascience" class="filter-tab rounded-xl border border-gray-200 bg-white px-4 py-2 text-xs font-medium text-gray-600 hover:bg-gray-50 transition">
+        <button data-filter="datascience" class="filter-tab rounded-xl border border-[#E5E3E0] bg-white px-4 py-2 text-xs font-medium text-[#3A3A3A] hover:bg-[#F4F3F1] transition">
           Data Science
         </button>
       </div>
@@ -134,7 +150,7 @@ const products = [
     <section class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
       <div class="grid gap-6 lg:grid-cols-2">
         {products.map((product) => (
-          <div data-cat={product.catKey} class="product-card rounded-2xl border border-gray-200 bg-white p-7 shadow-xs transition-all duration-300 hover:-translate-y-1 hover:border-blue-300 hover:shadow-lg flex flex-col justify-between">
+          <div data-cat={product.catKey} class="product-card rounded-2xl border border-[#E5E3E0] bg-white p-7 shadow-xs transition-all duration-300 hover:-translate-y-1 hover:border-[#F8D5CE] hover:shadow-lg flex flex-col justify-between">
             <div>
               <!-- Top Row: Status Pill & Category Label + Icon -->
               <div class="flex items-center justify-between mb-4">
@@ -146,22 +162,22 @@ const products = [
                 <div class="flex items-center gap-2 text-gray-500 text-xs font-semibold uppercase tracking-wider">
                   <span>{product.category}</span>
                   {product.catKey === 'security' && (
-                    <svg class="h-4 w-4 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg class="h-4 w-4 text-[#E64A25]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
                     </svg>
                   )}
                   {product.catKey === 'medical' && (
-                    <svg class="h-4 w-4 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg class="h-4 w-4 text-[#E64A25]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                   )}
                   {product.catKey === 'devtools' && (
-                    <svg class="h-4 w-4 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg class="h-4 w-4 text-[#E64A25]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
                     </svg>
                   )}
                   {product.catKey === 'datascience' && (
-                    <svg class="h-4 w-4 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg class="h-4 w-4 text-[#E64A25]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
                     </svg>
                   )}
@@ -169,14 +185,14 @@ const products = [
               </div>
 
               <!-- Title & Tagline -->
-              <h2 class="text-2xl font-extrabold text-gray-900 mb-1">{product.name}</h2>
-              <p class="text-sm font-semibold text-gray-800 mb-3">{product.tagline}</p>
-              <p class="text-sm text-gray-600 leading-relaxed mb-5">{product.summary}</p>
+              <h2 class="text-2xl font-extrabold text-[#0D0D0D] mb-1">{product.name}</h2>
+              <p class="text-sm font-semibold text-[#0D0D0D] mb-3">{product.tagline}</p>
+              <p class="text-sm text-[#3A3A3A] leading-relaxed mb-5">{product.summary}</p>
 
               <!-- Stack Tags -->
               <div class="flex flex-wrap gap-1.5 mb-6">
                 {product.tech.map((t) => (
-                  <span class="rounded-lg bg-gray-100/80 border border-gray-200 px-2.5 py-1 text-xs font-mono font-medium text-gray-700">
+                  <span class="rounded-lg bg-[#F4F3F1] border border-[#E5E3E0] px-2.5 py-1 text-xs font-mono font-medium text-[#0D0D0D]">
                     {t}
                   </span>
                 ))}
@@ -184,7 +200,7 @@ const products = [
             </div>
 
             <!-- Footer Action Row -->
-            <div class="flex flex-wrap items-center justify-between gap-3 pt-5 border-t border-gray-100">
+            <div class="flex flex-wrap items-center justify-between gap-3 pt-5 border-t border-[#E5E3E0]">
               <div class="flex flex-wrap items-center gap-2">
                 {product.links.map((link) => (
                   link.type === 'preview' ? (
@@ -196,20 +212,20 @@ const products = [
                       href={link.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      class="inline-flex items-center gap-1.5 rounded-xl border border-gray-300 bg-white px-3.5 py-2 text-xs font-semibold text-gray-700 hover:bg-gray-50 transition"
+                      class="inline-flex items-center gap-1.5 rounded-xl border border-[#E5E3E0] bg-white px-3.5 py-2 text-xs font-semibold text-[#3A3A3A] hover:bg-[#F4F3F1] transition"
                     >
                       {link.type === 'github' && (
-                        <svg class="h-4 w-4 text-gray-700" fill="currentColor" viewBox="0 0 24 24">
+                        <svg class="h-4 w-4 text-[#0D0D0D]" fill="currentColor" viewBox="0 0 24 24">
                           <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
                         </svg>
                       )}
                       {link.type === 'chrome' && (
-                        <svg class="h-4 w-4 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <svg class="h-4 w-4 text-[#E64A25]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
                         </svg>
                       )}
                       {link.type === 'pypi' && (
-                        <svg class="h-4 w-4 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <svg class="h-4 w-4 text-[#E64A25]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
                         </svg>
                       )}
@@ -222,7 +238,7 @@ const products = [
               <!-- Main Conversion CTA Button -->
               <a
                 href={product.detailUrl}
-                class="inline-flex items-center gap-1.5 rounded-xl bg-blue-600 px-4 py-2 text-xs font-semibold text-white shadow-xs hover:bg-blue-700 transition"
+                class="inline-flex items-center gap-1.5 rounded-xl bg-[#E64A25] px-4 py-2 text-xs font-semibold text-white shadow-xs hover:bg-[#C93E1D] transition"
               >
                 <span>View Product Details</span>
                 <span>&rarr;</span>
@@ -234,34 +250,34 @@ const products = [
     </section>
 
     <!-- Bottom Trust & Conversion Section -->
-    <section class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8 border-t border-gray-200">
+    <section class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8 border-t border-[#E5E3E0]">
       <!-- Short Stat Row -->
-      <div class="grid grid-cols-1 gap-4 sm:grid-cols-3 text-center mb-10 border border-gray-200 bg-white p-6 rounded-2xl shadow-xs">
+      <div class="grid grid-cols-1 gap-4 sm:grid-cols-3 text-center mb-10 border border-[#E5E3E0] bg-white p-6 rounded-2xl shadow-xs">
         <div>
-          <p class="text-2xl font-extrabold text-blue-600">5 Production-Grade Platforms</p>
+          <p class="text-2xl font-extrabold text-[#E64A25]">6 Production-Grade Platforms</p>
           <p class="text-xs font-medium text-gray-500 mt-0.5">Enterprise Security & Clinical AI</p>
         </div>
         <div>
-          <p class="text-2xl font-extrabold text-blue-600">6+ Years Combined Deployment</p>
+          <p class="text-2xl font-extrabold text-[#E64A25]">6+ Years Combined Deployment</p>
           <p class="text-xs font-medium text-gray-500 mt-0.5">Real Production Benchmarks</p>
         </div>
         <div>
-          <p class="text-2xl font-extrabold text-blue-600">Open Source + Enterprise Licensing</p>
+          <p class="text-2xl font-extrabold text-[#E64A25]">Open Source + Enterprise Licensing</p>
           <p class="text-xs font-medium text-gray-500 mt-0.5">Custom On-Prem Deployment</p>
         </div>
       </div>
 
       <!-- Closing CTA Band -->
-      <div class="rounded-3xl border border-blue-200 bg-blue-50/60 p-8 sm:p-10 text-center shadow-xs">
-        <h2 class="text-2xl font-extrabold text-gray-900 sm:text-3xl mb-2">
+      <div class="rounded-3xl border border-[#F8D5CE] bg-[#FDF2F0]/80 p-8 sm:p-10 text-center shadow-xs">
+        <h2 class="text-2xl font-extrabold text-[#0D0D0D] sm:text-3xl mb-2">
           Need a platform tailored to your infrastructure?
         </h2>
-        <p class="text-sm sm:text-base text-gray-600 max-w-2xl mx-auto mb-6">
+        <p class="text-sm sm:text-base text-[#3A3A3A] max-w-2xl mx-auto mb-6">
           Every product above can be customized, white-labeled, or deployed on-premise for enterprise clients.
         </p>
         <a
           href={`${import.meta.env.BASE_URL}contact/`}
-          class="inline-flex items-center justify-center rounded-xl bg-blue-600 px-7 py-3.5 text-sm font-semibold text-white shadow-xs hover:bg-blue-700 transition"
+          class="inline-flex items-center justify-center rounded-xl bg-[#E64A25] px-7 py-3.5 text-sm font-semibold text-white shadow-xs hover:bg-[#C93E1D] transition"
         >
           Schedule Technical Demo
         </a>
@@ -279,11 +295,11 @@ const products = [
   tabs.forEach((tab) => {
     tab.addEventListener('click', () => {
       tabs.forEach((t) => {
-        t.classList.remove('bg-blue-600', 'text-white', 'border-blue-600', 'shadow-xs');
-        t.classList.add('bg-white', 'text-gray-600', 'border-gray-200');
+        t.classList.remove('bg-[#E64A25]', 'text-white', 'border-[#E64A25]', 'shadow-xs');
+        t.classList.add('bg-white', 'text-[#3A3A3A]', 'border-[#E5E3E0]');
       });
-      tab.classList.remove('bg-white', 'text-gray-600', 'border-gray-200');
-      tab.classList.add('bg-blue-600', 'text-white', 'border-blue-600', 'shadow-xs');
+      tab.classList.remove('bg-white', 'text-[#3A3A3A]', 'border-[#E5E3E0]');
+      tab.classList.add('bg-[#E64A25]', 'text-white', 'border-[#E64A25]', 'shadow-xs');
 
       const filter = tab.dataset.filter;
 
